@@ -1,16 +1,17 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const del 					= require('del');
+const del = require('del');
 const webpHtmlNosvg = require('gulp-webp-html-nosvg');
-const gcssmq 				= require('gulp-group-css-media-queries');
-const scss 					= require('gulp-sass')(require('sass'));
-const concat 				= require('gulp-concat');
-const browserSync 	= require('browser-sync').create();
-const autoprefixer 	= require('gulp-autoprefixer');
-const imagemin 			= require('gulp-imagemin');
-const webp 					= require('gulp-webp');
-const uglify 				= require('gulp-uglify-es').default;
-
+const gcssmq = require('gulp-group-css-media-queries');
+const scss = require('gulp-sass')(require('sass'));
+const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const uglify = require('gulp-uglify-es').default;
+const gulp = require('gulp');
+const git = require('gulp-git');
 
 
 function browsersync() {
@@ -23,8 +24,8 @@ function browsersync() {
 
 function html() {
 	return src('app/**/*.html')
-	.pipe(webpHtmlNosvg())
-	.pipe(dest('dist'))
+		.pipe(webpHtmlNosvg())
+		.pipe(dest('dist'))
 };
 
 function scripts() {
@@ -32,10 +33,10 @@ function scripts() {
 		// 'node_modules/jquery/dist/jquery.js',
 		'app/js/main.js'
 	])
-	.pipe(concat('main.min.js'))
-	.pipe(uglify())
-	.pipe(dest('app/js'))
-	.pipe(browserSync.stream())
+		.pipe(concat('main.min.js'))
+		.pipe(uglify())
+		.pipe(dest('app/js'))
+		.pipe(browserSync.stream())
 }
 
 
@@ -68,7 +69,7 @@ function styles() {
 			grid: true
 		}))
 		.pipe(gcssmq())
-		.pipe(scss({outputStyle: 'compressed'}))
+		.pipe(scss({ outputStyle: 'compressed' }))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
 }
@@ -86,7 +87,7 @@ function buildProject() {
 
 
 async function clean() {
-  return del.sync('dist/', { force: true })
+	return del.sync('dist/', { force: true })
 }
 
 
@@ -110,3 +111,11 @@ exports.default = parallel(styles, scripts, browsersync, watching);
 
 exports.build = series(clean, html, images, buildProject);
 
+gulp.task('clone-repo', function (done) {
+	git.clone('https://github.com/Ilya-Zab/sierrawestairlines.com.git', function (err) {
+		if (err) {
+			throw err;
+		}
+		done();
+	});
+});
