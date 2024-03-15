@@ -1,121 +1,204 @@
-const { src, dest, watch, parallel, series } = require('gulp');
+'use strict';
 
-const del = require('del');
-const webpHtmlNosvg = require('gulp-webp-html-nosvg');
-const gcssmq = require('gulp-group-css-media-queries');
-const scss = require('gulp-sass')(require('sass'));
-const concat = require('gulp-concat');
-const browserSync = require('browser-sync').create();
-const autoprefixer = require('gulp-autoprefixer');
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const uglify = require('gulp-uglify-es').default;
+/**
+ * Require "gulp"
+ */
 const gulp = require('gulp');
-const git = require('gulp-git');
+
+/**
+ * Require "gulp-rename"
+ */
+const rename = require('gulp-rename');
+
+/**
+ * Require "gulp-sass"
+ */
+const sass = require('gulp-sass')(require('sass'));
+
+/**
+ * Require "gulp-autoprefixer"
+ */
+const autoprefixer = require('gulp-autoprefixer');
+
+/**
+ * Require "gulp-sourcemaps"
+ */
+const sourcemaps = require('gulp-sourcemaps');
+
+/**
+ * Require "browser-sync"
+ */
+const browserSync = require('browser-sync').create();
+
+/**
+ * Require "gulp-file-include"
+ */
+const fileInclude = require('gulp-file-include');
 
 
-function browsersync() {
-	browserSync.init({
-		server: {
-			baseDir: 'app/'
-		}
-	});
-}
+/**
+ * Require "del"
+ */
+const removeFiles = require('del');
 
-function html() {
-	return src('app/**/*.html')
-		.pipe(webpHtmlNosvg())
-		.pipe(dest('dist'))
+// Ilya
+const yargs = require('yargs');
+
+const fileName = yargs.argv.file;
+
+
+
+
+
+/**
+ * Directory initialization
+ */
+const baseDir = 'public';
+const sourceDir = 'src';
+
+const path = {
+	build: {
+		html: baseDir + '/',
+		css: baseDir + '/css/',
+		js: baseDir + '/js/',
+		php: baseDir + '/php/',
+		inc: baseDir + '/inc/',
+		img: baseDir + '/img/',
+		fonts: baseDir + '/fonts/',
+		plugins: baseDir + '/plugins/',
+	},
+	source: {
+		html: [sourceDir + '/**/*.html', '!' + sourceDir + '/template-parts/*.html'],
+		// css: sourceDir + '/scss/style.sass',
+		css: sourceDir + '/scss/style.scss',
+		js: sourceDir + '/js/**/*.js',
+		php: sourceDir + '/php/**/*.php',
+		inc: sourceDir + '/inc/**/*',
+		img: sourceDir + '/img/**/*.{jpg,png,svg,gif,ico,webp,mp4}',
+		fonts: sourceDir + '/fonts/**/*',
+		plugins: sourceDir + '/plugins/**/*',
+	},
+	watch: {
+		html: sourceDir + '/**/*.html',
+		// css: sourceDir + '/scss/**/*.sass',
+		css: sourceDir + '/scss/**/*.scss',
+		js: sourceDir + '/js/**/*.js',
+		php: sourceDir + '/php/**/*.php',
+		inc: sourceDir + '/inc/**/*',
+		img: sourceDir + '/img/**/*.{jpg,png,svg,gif,ico,webp,mp4}',
+		fonts: sourceDir + '/fonts/**/*',
+		plugins: sourceDir + '/plugins/**/*',
+	},
+	clean: baseDir + '/',
 };
 
-function scripts() {
-	return src([
-		// 'node_modules/jquery/dist/jquery.js',
-		'app/js/main.js'
-	])
-		.pipe(concat('main.min.js'))
-		.pipe(uglify())
-		.pipe(dest('app/js'))
-		.pipe(browserSync.stream())
+
+/**
+ * Main scripts
+ */
+function browserReload() {
+	browserSync.reload();
 }
 
-
-
-function images() {
-	return src('app/images/**/*')
-		.pipe(imagemin([
-			imagemin.gifsicle({ interlaced: true }),
-			imagemin.mozjpeg({ quality: 75, progressive: true }),
-			imagemin.optipng({ optimizationLevel: 5 }),
-			imagemin.svgo({
-				plugins: [
-					{ removeViewBox: true },
-					{ cleanupIDs: false }
-				]
-			})
-		]))
-		.pipe(dest('dist/images'))
-		.pipe(webp())
-		.pipe(dest('dist/images'))
+function removeBuildFiles() {
+	return removeFiles(path.clean);
 }
 
-function styles() {
-	return src('app/scss/style.scss')
-		.pipe(scss())
-		// expanded(стандартный css), compressed(минифицированный файл)
-		.pipe(concat('style.min.css'))
-		.pipe(autoprefixer({
-			overrideBrowserslist: ['last 2 version'],
-			grid: true
+function preprocessCSS() {
+	return gulp.src(path.source.css)
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			errorLogToConsole: true,
+			outputStyle: 'expanded',
 		}))
-		.pipe(gcssmq())
-		.pipe(scss({ outputStyle: 'compressed' }))
-		.pipe(dest('app/css'))
-		.pipe(browserSync.stream())
+		.on('error', console.error.bind(console))
+		.pipe(rename({
+			extname: '.css',
+		}))
+		.pipe(autoprefixer({
+			cascade: false
+		}))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(path.build.css))
+		.pipe(browserSync.stream());
 }
 
-function buildProject() {
-	return src([
-		'app/css/style.min.css',
-		'app/fonts/**/*',
-		// 'app/images/**/*',
-		'app/js/main.min.js',
-		// 'app/*.html'
-	], { base: 'app' })
-		.pipe(dest('dist'))
+function preprocessHTML() {
+	return gulp.src(path.source.html)
+		.pipe(fileInclude())
+		.pipe(gulp.dest(path.build.html))
+		.pipe(browserSync.stream());
 }
 
-
-async function clean() {
-	return del.sync('dist/', { force: true })
+function preprocessImg() {
+	return gulp.src(path.source.img)
+		.pipe(gulp.dest(path.build.img))
+		.pipe(browserSync.stream());
 }
 
-
-function watching() {
-	watch(['app/scss/**/*.scss'], styles);
-	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-	watch(['app/*.html']).on('change', browserSync.reload);
+function preprocessJS() {
+	return gulp.src(path.source.js)
+		.pipe(gulp.dest(path.build.js))
+		.pipe(browserSync.stream());
 }
 
-exports.styles = styles;
-exports.scripts = scripts;
-exports.watching = watching;
-exports.browsersync = browsersync;
-// exports.build = build;
-exports.images = images;
-exports.clean = clean;
-exports.html = html;
-exports.buildProject = buildProject;
+function preprocessPHP() {
+	return gulp.src(path.source.php)
+		.pipe(gulp.dest(path.build.php))
+		.pipe(browserSync.stream());
+}
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+function preprocessInc() {
+	return gulp.src(path.source.inc)
+		.pipe(gulp.dest(path.build.inc))
+		.pipe(browserSync.stream());
+}
 
-exports.build = series(clean, html, images, buildProject);
+function preprocessFonts() {
+	return gulp.src(path.source.fonts)
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(browserSync.stream());
+}
 
-gulp.task('clone-repo', function (done) {
-	git.clone('https://github.com/Ilya-Zab/sierrawestairlines.com.git', function (err) {
-		if (err) {
-			throw err;
-		}
-		done();
+function preprocessPlugins() {
+	return gulp.src(path.source.plugins)
+		.pipe(gulp.dest(path.build.plugins))
+		.pipe(browserSync.stream());
+}
+
+function sync() {
+	return browserSync.init({
+		server: {
+			baseDir,
+			index: fileName // Где fileName - имя файла, переданное через параметры командной строки
+		},
+		port: 3000,
+		notify: false,
 	});
-});
+}
+
+
+/**
+ * Transitional scripts
+ */
+function watchFiles() {
+	gulp.watch(path.watch.html, preprocessHTML);
+	gulp.watch(path.watch.css, preprocessCSS);
+	gulp.watch(path.watch.img, preprocessImg);
+	gulp.watch(path.watch.js, preprocessJS);
+	// gulp.watch( path.watch.php, preprocessPHP );
+	gulp.watch(path.watch.fonts, preprocessFonts);
+	gulp.watch(path.watch.inc, preprocessInc);
+	gulp.watch(path.watch.plugins, preprocessPlugins);
+}
+
+
+/**
+ * Exports
+ */
+// const preprocessingFunctions = gulp.series(preprocessHTML, preprocessCSS, preprocessJS, preprocessPHP, preprocessInc, preprocessImg, preprocessFonts, preprocessPlugins);
+const preprocessingFunctions = gulp.series(preprocessHTML, preprocessCSS, preprocessJS, preprocessImg, preprocessFonts, preprocessPlugins);
+const parallelFunctions = gulp.parallel(watchFiles, sync);
+const seriesFunctions = gulp.series(removeBuildFiles, preprocessingFunctions, parallelFunctions);
+
+exports.default = seriesFunctions;

@@ -1,0 +1,194 @@
+@import "fonts";
+@import "vars";
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $text-font sans-serif;
+}
+
+.section-offset {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.sub-title-offset {
+  margin-bottom: 70px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: $title-font, Arial;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+.h1 {
+  font-size: 56px;
+  color: $white;
+}
+
+.h2 {
+  font-size: 48px;
+  color: $title;
+}
+
+.h3 {
+  font-weight: 400;
+  font-size: 21px;
+  color: $sub-title;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: $text-font;
+  line-height: 1.4em;
+  color: $desc;
+}
+
+.btn {
+  padding: 10px 30px;
+
+  font-weight: bold;
+  font-family: $text-font, Arial;
+  font-size: 24px;
+  line-height: 1.2em;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.btn-light {
+  background-color: transparent;
+  border: 1px solid $white;
+}
+
+.btn.transparent-btn:hover {
+  border-color: $black;
+}
+
+.btn-danger {
+  font-weight: 500;
+  background-color: $red;
+}
+
+.form-floating label {
+  color: $placeholder;
+}
+
+textarea {
+  resize: none;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  &__h1 {
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    height: 100vh;
+  }
+
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -20;
+  }
+}
+
+.main-blog {
+  &__sub-title {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+}
+
+// Components
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+
+  &__img {
+    margin-bottom: 40px;
+    border-radius: $img-b-radius;
+    overflow: hidden;
+  }
+
+  &__img img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: contain;
+  }
+}
+
+.main-experience {
+
+  &__desc {
+    max-width: 800px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+}
+
+.media-flex {
+
+  &__img {
+    border-radius: $img-b-radius;
+    object-fit: contain;
+  }
+
+  &__text {
+    max-width: 380px;
+  }
+}
+
+.main-talk {
+
+  &__desc {
+    max-width: 800px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__img {
+    border-radius: $img-b-radius;
+    overflow: hidden;
+  }
+}
