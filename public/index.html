@@ -12,8 +12,82 @@
 
 <body>
 
+	<header class="header">
+  <div class="container header__container">
+    <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+      aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    <a href="/" class="logo">
+      <img src="../img/logo.svg" alt="Logo">
+    </a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="/">
+            About
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="/">
+            Services
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#">
+            Jumpseat
+          </a>
+        </li>
+        <li class="nav__item dropdown">
+          <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Fleet
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Executive Fleet</a></li>
+            <li><a class="dropdown-item" href="#">Cargo Fleet</a></li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="/">
+            Contact
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="/">
+            Employees
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="/">
+            Giving
+          </a> back
+        </li>
+        <li class="nav__item">
+          <a href="/">
+            Careers
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      </ul>
+      <a href="/" class="btn btn-danger header__btn_mob">
+        Request a quote
+      </a>
+    </nav>
+    <a href="/" class="btn btn-danger header__btn">
+      Request a quote
+    </a>
+  </div>
+</header>
 	<section class="hero">
-  <video class="hero__video" src="../img/Website-loop-revised-2.mkv" autoplay muted></video>
+  <video class="hero__video" src="../img/main.mp4" autoplay muted loop></video>
 
   <div class="container hero__container">
     <div class="row h-100">
@@ -32,7 +106,7 @@
 	<section class="main-blog section-offset">
   <div class="container">
     <div class="main-blog__titles sub-title-offset">
-      <h2 class="h2 text-center mb-3">Sierra West Airlines</h2>
+      <h2 class="h2 text-center mb-sm-3 mb-xs-1">Sierra West Airlines</h2>
       <h3 class="h3 text-center main-blog__sub-title">Elevating Your Private Jet Experience</h3>
     </div>
     <div class="blog-grid">
@@ -42,10 +116,10 @@
         <img src="../img/blog-test_1.jpg" alt="">
       </div>
       <div class="blog-grid__content">
-        <h3 class="h3 mb-3">
+        <h3 class="h3 mb-sm-3 mb-xs-2">
           Customized Flight Experiences
         </h3>
-        <p>
+        <p class="desc">
           With our private jet offerings, we adapt every facet of your flight to suit your unique tastes and
           necessities. Enjoy a travel experience that’s designed exclusively around your individual preferences and
           demands whilst still being affordable.
@@ -62,7 +136,7 @@
         <h3 class="h3 mb-3">
           Fast & Flexible Cargo Services
         </h3>
-        <p>
+        <p class="desc">
           Whether it’s a large shipment or a small parcel, Sierra West excels in providing tailored cargo services. Our
           skilled team efficiently determines the best aircraft for your needs, balancing speed, cost, and overall value
           to ensure your cargo reaches its destination promptly and economically.
@@ -79,7 +153,7 @@
         <h3 class="h3 mb-3">
           Instant Flight Readiness
         </h3>
-        <p>
+        <p class="desc">
           In a world where time equates to value, Sierra West Airlines specializes in rapid transportation of
           passengers, cargo, and animals. Our commitment to on-demand service means we aim to be airborne within an hour
           of your call to action.
@@ -92,7 +166,7 @@
 </section>
 	<section class="main-experience section-offset">
   <div class="container">
-    <h2 class="h2 text-center mb-3">
+    <h2 class="h2 text-center mb-3 h2-sub ">
       Experience the Ultimate in Air Travel
     </h2>
     <div class="desc main-experience__desc sub-title-offset mx-auto">
@@ -101,11 +175,11 @@
     </div>
     <div class="media-flex">
   <div class="row sub-title-offset justify-content-between">
-    <div class="col-8">
+    <div class="col-xl-8 col-lg-8 col-sm-12 mb-lg-4 mb-sm-4 mb-mob-2">
       <img src="../img/plane-1.jpg" alt="" class="media-flex__img">
     </div>
-    <div class="col-4 d-flex flex-column justify-content-center media-flex__text">
-      <h3 class="h3 text-uppercase mb-3">
+    <div class="col-xl-4 col-lg-4 col-sm-12 d-flex flex-column justify-content-center media-flex__text">
+      <h3 class="h3 text-uppercase mb-lg-3 mb-sm-3 mb-mob-1">
         Executive fleet
       </h3>
       <p class="desc">
@@ -117,11 +191,11 @@
   </div>
 
   <div class="row sub-title-offset flex-row-reverse justify-content-between">
-    <div class="col-8">
+    <div class="col-xl-8 col-lg-8 col-sm-12 mb-lg-4 mb-sm-4 mb-mob-2">
       <img src="../img/plane-2.jpg" alt="" class="media-flex__img">
     </div>
-    <div class="col-4 d-flex flex-column justify-content-center media-flex__text">
-      <h3 class="h3 text-uppercase mb-3">
+    <div class="col-xl-4 col-lg-4 col-sm-12 d-flex flex-column justify-content-center media-flex__text">
+      <h3 class="h3 text-uppercase mb-lg-3 mb-sm-3 mb-mob-1">
         Executive fleet
       </h3>
       <p class="desc">
@@ -142,7 +216,7 @@
 </section>
 	<section class="main-talk section-offset">
   <div class="container">
-    <h2 class="h2 text-center mb-3">
+    <h2 class="h2 text-center mb-3 h2-sub">
       Let’s Take an Adventure!
     </h2>
     <div class="desc main-talk__desc sub-title-offset mx-auto text-center">
@@ -150,11 +224,11 @@
       journey seamless. Connect with us today!
     </div>
     <div class="main-talk__bottom row">
-      <div class="col-6">
+      <div class="col-xl-6 col-lg-6 col-sm-12 mb-sm-4 mob-hidden">
         <img src="../img/main-bottom.jpg" alt="" class="main-talk__img">
       </div>
-      <div class="col-6">
-        <form action="#">
+      <div class="col-xl-6 col-lg-6 col-sm-12 mb-sm-4">
+        <form action="#" class="small-form">
   <div class="form-floating mb-3">
     <input type="text" class="form-control" id="floatingText" placeholder="Name">
     <label for="floatingText">Name*</label>
@@ -172,7 +246,7 @@
       style="height: 100px"></textarea>
     <label for="floatingTextarea2">Message (optional)</label>
   </div>
-  <div class="">
+  <div class="text-sm-center">
     <button type="submit" class="btn btn-danger">Let’s talk</button>
   </div>
 </form>
@@ -181,7 +255,8 @@
   </div>
 </section>
 	<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-	<script src="js/main.min.js" defer></script>
+	<!-- <script src="js/main.min.js" defer></script> -->
+	<script src="./js/main.js" defer></script>
 </body>
 
 </html>
