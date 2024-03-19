@@ -30,6 +30,12 @@ body {
   font-family: $text-font sans-serif;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .section-offset {
   padding-top: 80px;
   padding-bottom: 50px;
@@ -341,6 +347,36 @@ textarea {
     border-radius: $img-b-radius;
     overflow: hidden;
   }
+}
+
+// Footer
+.footer {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-color: $desc;
+  color: $disabled-bg;
+  font-size: 18px;
+
+  &__container {
+    margin-bottom: 80px;
+  }
+}
+
+.address {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+
+  gap: 100px;
+
+  &__item:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+.all-rights {
+  padding: 0 20px;
+  color: $placeholder;
 }
 
 @import 'media';
