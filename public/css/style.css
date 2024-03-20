@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "NunitoSans";
   src: url("../fonts/NunitoSans_10pt-Medium.ttf");
@@ -40,7 +41,7 @@ html {
 html,
 body {
   font-size: 20px;
-  background-color: #eee;
+  background-color: #f5f5f5;
 }
 
 *,
@@ -72,6 +73,10 @@ ul {
 .section-offset {
   padding-top: 80px;
   padding-bottom: 50px;
+}
+
+.pt-5-с {
+  padding-top: 50px;
 }
 
 .pb-12 {
@@ -410,6 +415,40 @@ textarea {
   border-radius: 10px;
 }
 
+.jumpseat .h2 {
+  margin-bottom: 70px;
+}
+
+.schedule .h2-sub {
+  margin-bottom: 40px;
+}
+.schedule .desc:first-child {
+  margin-bottom: 5px;
+}
+
+.schedule-table {
+  margin-bottom: 15px;
+  max-width: 500px;
+}
+.schedule-table__jets {
+  color: #ce2026;
+}
+.schedule-table td,
+.schedule-table th {
+  padding-bottom: 15px;
+  background-color: transparent;
+}
+.schedule-table th {
+  color: #3f3f3f;
+  vertical-align: text-top;
+}
+.schedule-table tr {
+  border-color: #a5a5a5;
+}
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
 .footer {
   padding-top: 80px;
   padding-bottom: 60px;
@@ -588,6 +627,23 @@ textarea {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 60px;
   }
+  .jumpseat {
+    padding-bottom: 80px;
+  }
+  .jumpseat .row {
+    flex-direction: column-reverse;
+  }
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .schedule-table {
+    margin: 0 auto 40px;
+  }
+  .svg-map {
+    padding-bottom: 50px;
+  }
 }
 @media (max-width: 712px) {
   .footer {
@@ -720,6 +776,28 @@ textarea {
   }
   .grid-page__image {
     margin-bottom: 20px;
+  }
+  .jumpseat {
+    padding-top: 30px;
+  }
+  .jumpseat .h2 {
+    margin-bottom: 30px;
+  }
+  .schedule .h2-sub {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .schedule .btn {
+    margin-bottom: 25px !important;
+  }
+  .schedule-table {
+    margin-bottom: 20px;
+  }
+  .schedule-table .h3 {
+    font-size: 18px;
+  }
+  .svg-map {
+    padding-bottom: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

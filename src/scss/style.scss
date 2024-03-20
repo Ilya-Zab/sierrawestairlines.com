@@ -8,7 +8,7 @@ html {
 html,
 body {
   font-size: 20px;
-  background-color: $disabled-bg;
+  background-color: $custom-white;
 }
 
 *,
@@ -40,6 +40,10 @@ ul {
 .section-offset {
   padding-top: 80px;
   padding-bottom: 50px;
+}
+
+.pt-5-с {
+  padding-top: 50px;
 }
 
 .pb-12 {
@@ -443,6 +447,51 @@ textarea {
       object-fit: cover;
       border-radius: $img-b-radius;
     }
+  }
+}
+
+// Jumpseat
+.jumpseat {
+  .h2 {
+    margin-bottom: 70px;
+  }
+}
+
+.schedule {
+  .h2-sub {
+    margin-bottom: 40px;
+  }
+
+  .desc:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+.schedule-table {
+  margin-bottom: 15px;
+  max-width: 500px;
+
+  &__jets {
+    color: $red;
+  }
+
+  td,
+  th {
+    padding-bottom: 15px;
+    background-color: transparent;
+  }
+
+  th {
+    color: $title;
+    vertical-align: text-top;
+  }
+
+  tr {
+    border-color: $placeholder;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
   }
 }
 

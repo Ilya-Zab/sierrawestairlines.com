@@ -211,6 +211,29 @@
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 60px;
   }
+
+  // Jumpseat
+  .jumpseat {
+    padding-bottom: 80px;
+
+    .row {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .schedule-table {
+    margin: 0 auto 40px;
+  }
+
+  .svg-map {
+    padding-bottom: 50px;
+  }
 }
 
 @media (max-width: 712px) {
@@ -394,11 +417,43 @@
   }
 
   .grid-page {
-    // padding: 0 20px;
     grid-row-gap: 40px;
 
     &__image {
       margin-bottom: 20px;
     }
+  }
+
+  // Jumpseat
+  .jumpseat {
+    padding-top: 30px;
+
+    .h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .schedule {
+    .h2-sub {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .btn {
+      margin-bottom: 25px !important;
+    }
+  }
+
+  .schedule-table {
+    margin-bottom: 20px;
+
+    .h3 {
+      font-size: 18px;
+    }
+
+  }
+
+  .svg-map {
+    padding-bottom: 40px;
   }
 }
