@@ -42,6 +42,10 @@ ul {
   padding-bottom: 50px;
 }
 
+.pb-12 {
+  padding-bottom: 120px;
+}
+
 .sub-title-offset {
   margin-bottom: 70px;
 }
@@ -380,10 +384,6 @@ textarea {
   }
 }
 
-.certificate {
-  padding-bottom: 120px;
-}
-
 .certificate-card {
   &__list {
     display: grid;
@@ -409,7 +409,41 @@ textarea {
     padding-bottom: 20px;
     height: 80%;
   }
+}
 
+// Services
+.services {
+  padding-top: 50px;
+
+  .h2 {
+    margin-bottom: 70px;
+  }
+}
+
+.grid-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 80px;
+  grid-row-gap: 70px;
+
+  .desc {
+    margin-bottom: 0;
+  }
+
+  &__image {
+    margin-bottom: 40px;
+    padding-top: 57%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      border-radius: $img-b-radius;
+    }
+  }
 }
 
 // Footer

@@ -32,6 +32,11 @@
       font-size: 15px;
     }
   }
+
+  // Services
+  .grid-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media(max-width: 1068px) {
@@ -190,6 +195,21 @@
     &__item {
       max-width: 200px;
     }
+  }
+
+  // Services
+  .services {
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    .h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .grid-page {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 60px;
   }
 }
 
@@ -360,6 +380,25 @@
       padding-left: 60px;
       max-width: 100%;
       height: 250px;
+    }
+  }
+
+  // Services
+  .services {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .grid-page {
+    // padding: 0 20px;
+    grid-row-gap: 40px;
+
+    &__image {
+      margin-bottom: 20px;
     }
   }
 }
