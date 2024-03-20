@@ -161,6 +161,28 @@
     &__text {
       max-width: 100%;
     }
+
+    .btn {
+      margin: 0 auto;
+    }
+  }
+
+  // Fleet
+  .fleet {
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    .h2 {
+      margin-bottom: 50px;
+    }
+
+    .mb-sm-4 {
+      margin-bottom: 40px !important;
+    }
+
+    .sub-title-offset {
+      margin-bottom: 60px;
+    }
   }
 
   // About us
@@ -348,8 +370,8 @@
   }
 
   .media-flex {
-    &__img {
-      height: 200px;
+    &__img-wrap {
+      padding-top: 60%;
     }
 
     .sub-title-offset {
@@ -371,6 +393,29 @@
 
   .text-sm-center {
     text-align: center;
+  }
+
+  // Fleet
+  .fleet {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .h2 {
+      margin-bottom: 30px;
+    }
+
+    .h2-sub {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .mb-sm-4 {
+      margin-bottom: 30px !important;
+    }
+
+    .sub-title-offset {
+      margin-bottom: 50px;
+    }
   }
 
   // About Us

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "NunitoSans";
   src: url("../fonts/NunitoSans_10pt-Medium.ttf");
@@ -75,7 +74,7 @@ ul {
   padding-bottom: 50px;
 }
 
-.pt-5-с {
+.pt-5-c {
   padding-top: 50px;
 }
 
@@ -321,13 +320,26 @@ textarea {
   text-align: center;
 }
 
+.media-flex__img-wrap {
+  padding-top: 45%;
+  position: relative;
+}
 .media-flex__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 .media-flex__text {
   max-width: 380px;
+}
+.media-flex .btn {
+  max-width: 195px;
 }
 
 .main-talk__desc {
@@ -447,6 +459,10 @@ textarea {
 }
 .schedule-table tr:last-child td {
   border-bottom: none;
+}
+
+.fleet .h2 {
+  margin-bottom: 70px;
 }
 
 .footer {
@@ -594,6 +610,22 @@ textarea {
   .media-flex__text {
     max-width: 100%;
   }
+  .media-flex .btn {
+    margin: 0 auto;
+  }
+  .fleet {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .fleet .h2 {
+    margin-bottom: 50px;
+  }
+  .fleet .mb-sm-4 {
+    margin-bottom: 40px !important;
+  }
+  .fleet .sub-title-offset {
+    margin-bottom: 60px;
+  }
   .image-desc {
     padding-bottom: 20px;
   }
@@ -723,8 +755,8 @@ textarea {
   .main-experience__desc {
     font-size: 19px;
   }
-  .media-flex__img {
-    height: 200px;
+  .media-flex__img-wrap {
+    padding-top: 60%;
   }
   .media-flex .sub-title-offset {
     margin-bottom: 40px;
@@ -739,6 +771,23 @@ textarea {
   }
   .text-sm-center {
     text-align: center;
+  }
+  .fleet {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+  .fleet .h2 {
+    margin-bottom: 30px;
+  }
+  .fleet .h2-sub {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  .fleet .mb-sm-4 {
+    margin-bottom: 30px !important;
+  }
+  .fleet .sub-title-offset {
+    margin-bottom: 50px;
   }
   .image-desc {
     padding-bottom: 10px;

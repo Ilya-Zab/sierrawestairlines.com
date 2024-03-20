@@ -42,7 +42,7 @@ ul {
   padding-bottom: 50px;
 }
 
-.pt-5-с {
+.pt-5-c {
   padding-top: 50px;
 }
 
@@ -337,13 +337,27 @@ textarea {
 
 .media-flex {
 
+  &__img-wrap {
+    padding-top: 45%;
+    position: relative;
+  }
+
   &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     border-radius: $img-b-radius;
     object-fit: cover;
+    object-position: center;
   }
 
   &__text {
     max-width: 380px;
+  }
+
+  .btn {
+    max-width: 195px;
   }
 }
 
@@ -492,6 +506,13 @@ textarea {
 
   tr:last-child td {
     border-bottom: none;
+  }
+}
+
+// Fleet
+.fleet {
+  .h2 {
+    margin-bottom: 70px;
   }
 }
 
