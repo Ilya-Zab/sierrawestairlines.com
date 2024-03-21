@@ -37,6 +37,13 @@
   .grid-page {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  // Executive Fleet
+  .accordion {
+    &__list-img {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 @media(max-width: 1068px) {
@@ -57,6 +64,7 @@
   .address {
     gap: 50px;
   }
+
 }
 
 @media(max-width: 992px) {
@@ -165,6 +173,10 @@
     .btn {
       margin: 0 auto;
     }
+
+    &__row_lear>div:first-child {
+      margin-bottom: 50px;
+    }
   }
 
   // Fleet
@@ -255,6 +267,30 @@
 
   .svg-map {
     padding-bottom: 50px;
+  }
+
+  // Executive Fleet
+  .executive-fleet.pt-5-c {
+    padding-top: 40px;
+  }
+
+  .executive-fleet.pb-12 {
+    padding-bottom: 60px;
+  }
+
+  .accordion {
+    &__list {
+      gap: 60px;
+    }
+
+    &__list-img {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__body_media {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
   }
 }
 
@@ -377,6 +413,18 @@
     .sub-title-offset {
       margin-bottom: 40px;
     }
+
+    &__row_lear>div:first-child {
+      margin-bottom: 30px;
+    }
+
+    .h2-sub {
+      font-size: 24px;
+    }
+
+    .h2-sub.mb-mob-1 {
+      margin-bottom: 10px;
+    }
   }
 
   .main-talk {
@@ -495,10 +543,63 @@
     .h3 {
       font-size: 18px;
     }
-
   }
 
   .svg-map {
     padding-bottom: 40px;
+  }
+
+  // Executive Fleet
+  .executive-fleet.pt-5-c {
+    padding-top: 30px;
+  }
+
+  .executive-fleet.pb-12 {
+    padding-bottom: 50px;
+  }
+
+  .executive-fleet {
+    .h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .accordion {
+    &__body {
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
+
+    &__button {
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+
+    &__list {
+      li {
+        width: 100px;
+      }
+
+      li:last-child {
+        margin-right: auto;
+      }
+    }
+
+    &__list-img {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__body_media {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .flex-sm-wrap {
+      flex-wrap: wrap;
+    }
   }
 }

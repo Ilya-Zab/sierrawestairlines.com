@@ -352,6 +352,10 @@ textarea {
     object-position: center;
   }
 
+  &__img_bottom {
+    object-position: bottom;
+  }
+
   &__text {
     max-width: 380px;
   }
@@ -377,7 +381,6 @@ textarea {
 }
 
 // About Us
-
 .image-desc {
   padding-top: 50px;
 
@@ -514,6 +517,120 @@ textarea {
   .h2 {
     margin-bottom: 70px;
   }
+}
+
+// Executive-fleet
+.executive-fleet {
+  .h2 {
+    margin-bottom: 70px;
+  }
+}
+
+// Accordion
+.accordion {
+
+  &__list {
+    gap: 80px;
+
+    li {
+      width: 150px;
+      height: auto;
+      text-align: center;
+
+      img {
+        margin-bottom: 26px;
+        max-width: 40px;
+        max-height: 40px;
+      }
+    }
+  }
+
+  &__item {
+    border-radius: 15px;
+    border-radius: 15px !important;
+    overflow: hidden;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: $title;
+    font-family: 'NunitoSans', Arial;
+    line-height: 1.3em;
+  }
+
+  &__button {
+    margin-bottom: 0;
+    padding: 28px 30px;
+    border-radius: 0 !important;
+  }
+
+  &__button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &__body {
+    padding-top: 25px;
+    padding-bottom: 70px;
+  }
+
+  &__big-img {
+    margin-bottom: 70px;
+  }
+
+  &__list-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 21px;
+    flex-wrap: wrap;
+  }
+
+  &__img-wrap {
+    padding-top: 70%;
+    position: relative;
+    border-radius: $img-b-radius;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__body_media {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  &__video-wrap {
+    video {
+      max-height: 1140px;
+      border-radius: $img-b-radius;
+      max-width: 100%;
+    }
+  }
+}
+
+.accordion-button::after {
+  width: 14px;
+  height: 14px;
+  background-image: url('../img/accordion-arrow.svg');
+  background-size: 14px 14px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url('../img/accordion-arrow.svg');
+}
+
+.accordion-button:not(.collapsed) {
+  color: $title;
 }
 
 // Footer
