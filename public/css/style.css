@@ -561,6 +561,28 @@ textarea {
   color: #3f3f3f;
 }
 
+.cargo-fleet .h2 {
+  margin-bottom: 50px;
+}
+
+.metro-3 .h2-sub {
+  margin-bottom: 30px;
+}
+.metro-3 .desc:last-child {
+  margin-bottom: 0;
+}
+.metro-3__sub-title {
+  margin-bottom: 70px;
+  font-size: 24px;
+}
+.metro-3__in-sub {
+  display: block;
+}
+.metro-3__img-wrap img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .footer {
   padding-top: 80px;
   padding-bottom: 60px;
@@ -794,6 +816,22 @@ textarea {
     padding-right: 30px;
     padding-left: 30px;
   }
+  .cargo-fleet.pt-5-c {
+    padding-top: 40px;
+  }
+  .cargo-fleet.pb-12 {
+    padding-bottom: 80px;
+  }
+  .metro-3 .desc:first-child {
+    margin-bottom: 15px;
+  }
+  .metro-3__row.row {
+    margin-bottom: 40px;
+    flex-direction: column-reverse;
+  }
+  .metro-3__sub-title.desc {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 712px) {
   .footer {
@@ -1010,6 +1048,30 @@ textarea {
   }
   .accordion .flex-sm-wrap {
     flex-wrap: wrap;
+  }
+  .cargo-fleet.pt-5-c {
+    padding-top: 30px;
+  }
+  .cargo-fleet.pb-12 {
+    padding-bottom: 60px;
+  }
+  .cargo-fleet .h2 {
+    margin-bottom: 30px;
+  }
+  .cargo-fleet .h2-sub {
+    margin-bottom: 15px;
+  }
+  .metro-3__sub-title {
+    font-size: 19px;
+  }
+  .metro-3__sub-title.desc {
+    margin-bottom: 30px;
+  }
+  .metro-3 .mb-mob-2 {
+    margin-bottom: 30px;
+  }
+  .metro-3__row.row {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

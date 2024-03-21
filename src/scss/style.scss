@@ -633,6 +633,39 @@ textarea {
   color: $title;
 }
 
+// Cargo Fleet
+.cargo-fleet {
+  .h2 {
+    margin-bottom: 50px;
+  }
+}
+
+.metro-3 {
+  .h2-sub {
+    margin-bottom: 30px;
+  }
+
+  .desc:last-child {
+    margin-bottom: 0;
+  }
+
+  &__sub-title {
+    margin-bottom: 70px;
+    font-size: 24px;
+  }
+
+  &__in-sub {
+    display: block;
+  }
+
+  &__img-wrap {
+    img {
+      border-radius: $img-b-radius;
+      overflow: hidden;
+    }
+  }
+}
+
 // Footer
 .footer {
   padding-top: 80px;

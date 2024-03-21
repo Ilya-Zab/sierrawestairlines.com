@@ -292,6 +292,30 @@
       padding-left: 30px;
     }
   }
+
+  // Cargo Fleet
+  .cargo-fleet.pt-5-c {
+    padding-top: 40px;
+  }
+
+  .cargo-fleet.pb-12 {
+    padding-bottom: 80px;
+  }
+
+  .metro-3 {
+    .desc:first-child {
+      margin-bottom: 15px;
+    }
+
+    &__row.row {
+      margin-bottom: 40px;
+      flex-direction: column-reverse;
+    }
+
+    &__sub-title.desc {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 @media (max-width: 712px) {
@@ -600,6 +624,43 @@
 
     .flex-sm-wrap {
       flex-wrap: wrap;
+    }
+  }
+
+  // Cargo Fleet
+  .cargo-fleet.pt-5-c {
+    padding-top: 30px;
+  }
+
+  .cargo-fleet.pb-12 {
+    padding-bottom: 60px;
+  }
+
+  .cargo-fleet {
+    .h2 {
+      margin-bottom: 30px;
+    }
+
+    .h2-sub {
+      margin-bottom: 15px;
+    }
+  }
+
+  .metro-3 {
+    &__sub-title {
+      font-size: 19px;
+    }
+
+    &__sub-title.desc {
+      margin-bottom: 30px;
+    }
+
+    .mb-mob-2 {
+      margin-bottom: 30px;
+    }
+
+    &__row.row {
+      margin-bottom: 30px;
     }
   }
 }
