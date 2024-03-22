@@ -583,6 +583,36 @@ textarea {
   overflow: hidden;
 }
 
+.contacts .h2 {
+  margin-bottom: 70px;
+}
+
+.con-info {
+  max-width: 550px;
+}
+.con-info .h3 {
+  margin-bottom: 20px;
+}
+.con-info__item {
+  margin-bottom: 20px;
+}
+.con-info__item h4 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.con-info__bottom {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+.con-info__wrap_top {
+  margin-bottom: 50px;
+}
+
+.small-form__contacts .textarea {
+  height: 180px;
+}
+
 .footer {
   padding-top: 80px;
   padding-bottom: 60px;
@@ -832,6 +862,30 @@ textarea {
   .metro-3__sub-title.desc {
     margin-bottom: 50px;
   }
+  .contacts.pt-5-c {
+    padding-top: 40px;
+  }
+  .contacts.pb-12 {
+    padding-bottom: 80px;
+  }
+  .contacts .container {
+    max-width: 760px;
+  }
+  .contacts .h2 {
+    margin-bottom: 50px;
+  }
+  .contacts .row > div:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  .con-info {
+    max-width: 100%;
+  }
+  .con-info__bottom {
+    flex-wrap: nowrap;
+  }
+  .con-info__item .d-block {
+    font-size: 19px;
+  }
 }
 @media (max-width: 712px) {
   .footer {
@@ -851,6 +905,27 @@ textarea {
   }
   .all-rights {
     font-size: 14px;
+  }
+  .con-info .text-sm-center {
+    text-align: center !important;
+  }
+  .con-info__bottom {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+  .con-info__wrap_top {
+    margin-bottom: 30px;
+  }
+  .con-info__wrap_top div {
+    width: 100%;
+  }
+  .con-info__item {
+    margin-bottom: 0;
+    width: 260px;
+  }
+  .contacts .row > div:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 576px) {
@@ -1072,6 +1147,24 @@ textarea {
   }
   .metro-3__row.row {
     margin-bottom: 30px;
+  }
+  .contacts.pt-5-c {
+    padding-top: 30px;
+  }
+  .contacts .h2 {
+    margin-bottom: 30px;
+  }
+  .contacts.pb-12 {
+    padding-bottom: 60px;
+  }
+  .con-info .h3 {
+    font-size: 18px;
+  }
+  .con-info__item .d-block {
+    font-size: 17px;
+  }
+  .small-form__contacts .textarea {
+    max-height: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
