@@ -630,9 +630,61 @@ textarea {
   inset: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .employees__desc {
   margin-bottom: 30px;
+}
+
+.giving-back .schedule-table {
+  margin-bottom: 0;
+}
+.giving-back .h2 {
+  margin-bottom: 70px;
+}
+
+.giv-back-top__text {
+  max-width: 500px;
+}
+.giv-back-top__text .desc:last-child {
+  margin-bottom: 0;
+}
+.giv-back-top__img {
+  padding-top: 70%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.giv-back-top__img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.giv-back-bottom .h3 {
+  font-size: 16px;
+}
+.giv-back-bottom__icons, .giv-back-bottom__list {
+  height: 100%;
+}
+.giv-back-bottom .h3 {
+  margin-bottom: 20px;
+}
+.giv-back-bottom__icon {
+  margin-bottom: 30px;
+}
+.giv-back-bottom__icon img {
+  height: 130px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.giv-back-bottom .btn {
+  padding: 5px 10px;
+  font-size: 16px;
 }
 
 .footer {
@@ -922,6 +974,31 @@ textarea {
   }
   .employees .btn {
     margin: 0 auto;
+  }
+  .giving-back.pb-12 {
+    padding-bottom: 60px;
+  }
+  .giving-back_bottom.pb-12 {
+    padding-bottom: 80px;
+  }
+  .giving-back.pt-5-c {
+    padding-top: 40px;
+  }
+  .giving-back .h2 {
+    margin-bottom: 50px;
+  }
+  .giv-back-top__img {
+    margin-bottom: 40px;
+  }
+  .giv-back-top__text {
+    max-width: 100%;
+  }
+  .giv-back-bottom__table {
+    margin-bottom: 70px;
+  }
+  .giv-back-bottom__icons {
+    margin: 0 auto;
+    max-width: 500px;
   }
 }
 @media (max-width: 712px) {
@@ -1214,6 +1291,34 @@ textarea {
   }
   .employees__img-col {
     margin-bottom: 30px;
+  }
+  .giving-back.pt-5-c {
+    padding-top: 30px;
+  }
+  .giving-back.pb-12 {
+    padding-bottom: 30px;
+  }
+  .giving-back_bottom.pb-12 {
+    padding-bottom: 60px;
+  }
+  .giving-back .h2 {
+    margin-bottom: 30px;
+  }
+  .giv-back-top__img {
+    margin-bottom: 30px;
+  }
+  .giv-back-bottom__table {
+    margin-bottom: 60px;
+  }
+  .giv-back-bottom .h3 {
+    font-size: 14px;
+  }
+  .giv-back-bottom .btn {
+    font-size: 14px;
+  }
+  .giv-back-bottom ul {
+    flex-direction: column;
+    row-gap: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */
