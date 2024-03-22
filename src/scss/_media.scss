@@ -354,6 +354,29 @@
     }
   }
 
+  // Employees
+  .employees.pt-5-c {
+    padding-top: 40px;
+  }
+
+  .employees.pb-12 {
+    padding-bottom: 80px;
+  }
+
+  .employees {
+    .h2 {
+      margin-bottom: 50px;
+    }
+
+    &__img-col {
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      margin: 0 auto;
+    }
+  }
+
 }
 
 @media (max-width: 712px) {
@@ -766,6 +789,26 @@
       .textarea {
         max-height: 100%;
       }
+    }
+  }
+
+  // Employees
+
+  .employees.pb-12 {
+    padding-bottom: 60px;
+  }
+
+  .employees.pt-5-c {
+    padding-top: 30px;
+  }
+
+  .employees {
+    .h2 {
+      margin-bottom: 30px;
+    }
+
+    &__img-col {
+      margin-bottom: 30px;
     }
   }
 

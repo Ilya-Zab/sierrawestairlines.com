@@ -613,6 +613,28 @@ textarea {
   height: 180px;
 }
 
+.employees .h2 {
+  margin-bottom: 70px;
+}
+.employees .btn {
+  max-width: 256px;
+}
+.employees__img {
+  position: relative;
+  padding-top: 68%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.employees__img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.employees__desc {
+  margin-bottom: 30px;
+}
+
 .footer {
   padding-top: 80px;
   padding-bottom: 60px;
@@ -885,6 +907,21 @@ textarea {
   }
   .con-info__item .d-block {
     font-size: 19px;
+  }
+  .employees.pt-5-c {
+    padding-top: 40px;
+  }
+  .employees.pb-12 {
+    padding-bottom: 80px;
+  }
+  .employees .h2 {
+    margin-bottom: 50px;
+  }
+  .employees__img-col {
+    margin-bottom: 40px;
+  }
+  .employees .btn {
+    margin: 0 auto;
   }
 }
 @media (max-width: 712px) {
@@ -1165,6 +1202,18 @@ textarea {
   }
   .small-form__contacts .textarea {
     max-height: 100%;
+  }
+  .employees.pb-12 {
+    padding-bottom: 60px;
+  }
+  .employees.pt-5-c {
+    padding-top: 30px;
+  }
+  .employees .h2 {
+    margin-bottom: 30px;
+  }
+  .employees__img-col {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
