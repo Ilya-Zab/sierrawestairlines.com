@@ -21,13 +21,20 @@
 }
 @font-face {
   font-family: "SourceSans3";
+  src: url("../fonts/SourceSans3-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SourceSans3";
   src: url("../fonts/SourceSans3-Regular.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "SourceSans3-bold";
+  font-family: "SourceSans3";
   src: url("../fonts/SourceSans3-SemiBold.ttf");
   font-weight: bold;
   font-style: normal;
@@ -138,6 +145,12 @@ ul {
 .btn-light {
   background-color: transparent;
   border: 1px solid #fff;
+}
+
+.btn-light:hover {
+  background-color: #fc4046;
+  border-color: #fc4046;
+  color: #fff;
 }
 
 .btn-danger {
@@ -687,6 +700,46 @@ textarea {
   font-size: 16px;
 }
 
+.careers .h2 {
+  margin-bottom: 30px;
+}
+.careers .h2-sub {
+  margin-bottom: 15px;
+}
+.careers__bot-title {
+  margin-bottom: 70px;
+  font-size: 24px;
+  font-family: "SourceSans3", sans-serif;
+}
+.careers .h4 {
+  font-size: 16px;
+}
+.careers .grid-page__image {
+  margin-bottom: 30px;
+}
+.careers .grid-page {
+  margin-bottom: 50px;
+}
+.careers .grid-page__content .h3 {
+  margin-bottom: 0;
+}
+.careers__btn {
+  max-width: 195px;
+}
+
+.careers-icons {
+  margin-bottom: 70px;
+}
+.careers-icons__list {
+  gap: 60px;
+}
+.careers-icons__item {
+  width: 200px;
+}
+.careers-icons img {
+  margin-bottom: 25px;
+}
+
 .footer {
   padding-top: 80px;
   padding-bottom: 60px;
@@ -999,6 +1052,24 @@ textarea {
   .giv-back-bottom__icons {
     margin: 0 auto;
     max-width: 500px;
+  }
+  .careers.pt-5-c {
+    padding-top: 40px;
+  }
+  .careers.pb-12 {
+    padding-bottom: 80px;
+  }
+  .careers__bot-title {
+    margin-bottom: 60px;
+  }
+  .careers .grid-page {
+    margin-bottom: 30px;
+  }
+  .careers-icons {
+    margin-bottom: 60px;
+  }
+  .careers-icons__list {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 712px) {
@@ -1319,6 +1390,37 @@ textarea {
   .giv-back-bottom ul {
     flex-direction: column;
     row-gap: 60px;
+  }
+  .careers.pt-5-c {
+    padding-top: 30px;
+  }
+  .careers.pb-12 {
+    padding-bottom: 60px;
+  }
+  .careers .h2-sub {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .careers .h3 {
+    margin-bottom: 30px;
+  }
+  .careers .h4 {
+    font-size: 14px;
+  }
+  .careers__btn {
+    max-width: 130px;
+  }
+  .careers .grid-page {
+    grid-row-gap: 30px;
+  }
+  .careers .grid-page__image {
+    margin-bottom: 20px;
+  }
+  .careers-icons__list {
+    gap: 40px;
+  }
+  .careers-icons__item {
+    width: 100px;
   }
 }
 /*# sourceMappingURL=style.css.map */
