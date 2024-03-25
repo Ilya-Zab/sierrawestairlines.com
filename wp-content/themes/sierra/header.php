@@ -1,59 +1,86 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package sierra
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sierra' ); ?></a>
+	<?php wp_body_open(); ?>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$sierra_description = get_bloginfo( 'description', 'display' );
-			if ( $sierra_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $sierra_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sierra' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<header class="header">
+		<div class="container header__container">
+			<button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="animated-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</button>
+			<a href="/" class="logo">
+				<img src="<?= ASSETS_PATH ?>/img/logo.svg" alt="Logo">
+			</a>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="/about-us.html">
+							About
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="/services.html">
+							Services
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="/jumpseat.html">
+							Jumpseat
+						</a>
+					</li>
+					<li class="nav__item dropdown">
+						<a href="/fleet.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Fleet
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/executive-fleet.html">Executive Fleet</a></li>
+							<li><a class="dropdown-item" href="#">Cargo Fleet</a></li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a href="/contacts.html">
+							Contact
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="/employees.html">
+							Employees
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="/giving-back.html">
+							Giving
+						</a> back
+					</li>
+					<li class="nav__item">
+						<a href="/careers.html">
+							Careers
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="/">
+							Blog
+						</a>
+					</li>
+				</ul>
+				<a href="/" class="btn btn-danger header__btn_mob">
+					Request a quote
+				</a>
+			</nav>
+			<a href="/" class="btn btn-danger header__btn">
+				Request a quote
+			</a>
+		</div>
+	</header>
