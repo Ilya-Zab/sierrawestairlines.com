@@ -656,6 +656,7 @@ textarea {
     position: relative;
     border-radius: $img-b-radius;
     overflow: hidden;
+    cursor: pointer;
 
     img {
       position: absolute;
