@@ -584,6 +584,7 @@ textarea {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 .accordion__img-wrap img {
   position: absolute;

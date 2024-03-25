@@ -52,54 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
     openMobileMeny(burgerMenu, menu);
   });
 
+
+  const popImg = document.querySelector('.pop-img');
+  const img = document.querySelector('.pop-img__img');
+
   document.addEventListener('click', (event) => {
-    openModalImage(event);
-    closeModalImage(event);
+    if (!img) return;
+    const isImage = event.target.parentNode.classList.contains('accordion__img-wrap');
+    const isActive = !popImg.classList.contains('pop-img_active');
+    const isCloseBtn = event.target.classList.contains('pop-img__close');
+    if (isImage && isActive) {
+      openModalImage(event);
+    } else if (!isActive && isCloseBtn) {
+      closeModalImage(event);
+    }
   });
 
   function openModalImage(event) {
-    const imgSelector = 'accordion__img-wrap';
-    if (event.target.parentNode.classList.contains(imgSelector)) {
-      const popImg = document.querySelector('.pop-img');
-      const img = document.querySelector('.pop-img__img');
-
-      if (!popImg?.classList.contains('pop-img_active')) {
-        img.src = event.target.src;
-        popImg.classList.add('pop-img_active');
-      } else {
-        popImg.classList.remove('pop-img_active');
-      }
-    }
+    img.src = event.target.src;
+    popImg.classList.add('pop-img_active');
   }
 
   function closeModalImage(event) {
-    if (event.target.classList.contains('pop-img__close') || event.target.parentNode.classList.contains('pop-img_active')) {
-      event.target.parentNode.classList.remove('pop-img_active');
-    }
+    popImg.classList.remove('pop-img_active');
   }
-
-
-
-  // const popImg = document.querySelector('.pop-img');
-  // const img = document.querySelector('.pop-img__img');
-
-  // document.addEventListener('click', (event) => {
-  //   if (event.target.classList.contains('accordion__img-wrap')) {
-  //     if (!popImg.classList.contains('pop-img_active')) {
-  //       openModalImage(event);
-  //     } else {
-  //       closeModalImage(event);
-  //     }
-  //   }
-  // });
-
-  // function openModalImage(event) {
-  //   img.src = event.target.src;
-  //   popImg.classList.add('pop-img_active');
-  // }
-
-  // function closeModalImage(event) {
-  //   popImg.classList.remove('pop-img_active');
-  // }
-
 });
