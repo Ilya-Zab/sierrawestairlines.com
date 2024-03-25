@@ -317,14 +317,40 @@ textarea {
 }
 .blog-grid__img {
   margin-bottom: 40px;
+  padding-top: 60%;
+  position: relative;
   border-radius: 10px;
   overflow: hidden;
 }
 .blog-grid__img img {
-  min-height: 100%;
-  min-width: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.blog-grid__img_bt {
+  margin-bottom: 15px;
+}
+.blog-grid__btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.blog-grid__desc {
+  margin-bottom: 20px;
+}
+.blog-grid__desc_auth {
+  font-size: 18px;
+  color: #a5a5a5;
+}
+
+.blog .h2 {
+  margin-bottom: 70px;
+}
+.blog .blog-grid {
+  margin-bottom: 70px;
 }
 
 .main-experience__desc {
@@ -924,7 +950,7 @@ input[type=radio]:checked::before {
     grid-template-columns: auto;
     gap: 60px;
   }
-  .blog-grid__content p {
+  .blog-grid__content p:not(.blog-grid__desc) {
     margin-bottom: 0;
   }
   .main-experience .row:last-child {
@@ -1131,6 +1157,16 @@ input[type=radio]:checked::before {
   .request-quote .h2 {
     margin-bottom: 60px;
   }
+  .blog.pt-5-c {
+    padding-top: 40px;
+  }
+  .blog.pb-12 {
+    padding-bottom: 80px;
+  }
+  .blog .h2,
+  .blog .blog-grid {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 712px) {
   .footer {
@@ -1226,7 +1262,21 @@ input[type=radio]:checked::before {
     gap: 40px;
   }
   .blog-grid__img {
+    padding-top: 55%;
     margin-bottom: 20px;
+  }
+  .blog-grid__img_bt {
+    margin-bottom: 10px;
+  }
+  .blog-grid__desc {
+    margin-bottom: 15px;
+  }
+  .blog-grid__desc_auth {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .blog-grid__btn {
+    font-size: 14px;
   }
   .main-experience__desc {
     font-size: 19px;
@@ -1505,6 +1555,18 @@ input[type=radio]:checked::before {
   }
   .quote-form input {
     font-size: 14px;
+  }
+  .blog.pt-5-c {
+    padding-top: 30px;
+  }
+  .blog.pb-12 {
+    padding-bottom: 60px;
+  }
+  .blog .h2 {
+    margin-bottom: 30px;
+  }
+  .blog .blog-grid {
+    margin-bottom: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
