@@ -1,2 +1,6 @@
-node_modules
-package-lock.json
+/wp-config-production.php
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/twentytwentytwo/
+/wp-content/themes/sierra/node_modules
+/wp-content/themes/sierra/package-lock.json
