@@ -445,6 +445,21 @@
       flex-wrap: wrap;
     }
   }
+
+  // Request a Quote
+  .request-quote.pt-5-c {
+    padding-top: 40px;
+  }
+
+  .request-quote.pb-12 {
+    padding-bottom: 80px;
+  }
+
+  .request-quote {
+    .h2 {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 @media (max-width: 712px) {
@@ -967,6 +982,43 @@
 
     &__item {
       width: 100px;
+    }
+  }
+
+  // Request a Quote
+  .request-quote.pt-5-c {
+    padding-top: 30px;
+  }
+
+  .request-quote.pb-12 {
+    padding-bottom: 60px;
+  }
+
+  .request-quote {
+    .h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .quote-form {
+    .desc {
+      font-size: 14px;
+    }
+
+    .form-check-inline {
+      margin-right: 10px;
+    }
+
+    &__wrap {
+      margin-bottom: 10px;
+    }
+
+    &__wrap_area {
+      margin-bottom: 30px;
+    }
+
+    input {
+      font-size: 14px;
     }
   }
 }

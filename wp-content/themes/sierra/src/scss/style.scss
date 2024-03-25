@@ -864,6 +864,65 @@ textarea {
   }
 }
 
+// Request quote
+.request-quote {
+  .h2 {
+    margin-bottom: 70px;
+  }
+}
+
+.quote-form {
+  max-width: 650px;
+
+  .desc {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: $title;
+  }
+
+  input {
+    border-radius: 5px;
+    border: 1px solid $input-border;
+  }
+
+  &__wrap {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  &__wrap_area {
+    margin-bottom: 30px;
+  }
+
+  .form-check-inline {
+    margin-right: 30px;
+  }
+}
+
+.form-check-input:checked {
+  background-color: transparent;
+  border-color: $black;
+}
+
+.form-check-input:focus {
+  border-color: $black;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(206, 32, 38, 0.25);
+}
+
+input[type="radio"]:checked::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // Footer
 .footer {
   padding-top: 80px;
