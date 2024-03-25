@@ -813,25 +813,8 @@ textarea {
 
 .giv-back-top {
   &__text {
-    max-width: 500px;
-
     .desc:last-child {
       margin-bottom: 0;
-    }
-  }
-
-  &__img {
-    padding-top: 70%;
-    position: relative;
-    border-radius: $img-b-radius;
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 }
