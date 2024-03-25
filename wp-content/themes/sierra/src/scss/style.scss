@@ -338,6 +338,15 @@ textarea {
     margin-bottom: 15px;
   }
 
+  &__img_art {
+    margin-bottom: 50px;
+  }
+
+  &__sub {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
   &__btn {
     padding: 5px 10px;
     font-size: 16px;
@@ -352,6 +361,20 @@ textarea {
     font-size: 18px;
     color: $placeholder;
   }
+
+  &__desc_auth-article {
+    margin-bottom: 50px;
+  }
+}
+
+.blog-article {
+  .h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.article {
+  max-width: 800px;
 }
 
 .blog {
