@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header');
   const headerLogo = header.querySelector('.logo img');
-  console.log(header);
 
   function isHeaderHidden(header) {
     if (!header) return;
@@ -49,7 +48,58 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerMenu = document.querySelector('.animated-icon');
   const menu = document.querySelector('nav');
 
-  burgerMenu.addEventListener('click', () => {
+  burgerMenu?.addEventListener('click', () => {
     openMobileMeny(burgerMenu, menu);
   });
+
+  document.addEventListener('click', (event) => {
+    openModalImage(event);
+    closeModalImage(event);
+  });
+
+  function openModalImage(event) {
+    const imgSelector = 'accordion__img-wrap';
+    if (event.target.parentNode.classList.contains(imgSelector)) {
+      const popImg = document.querySelector('.pop-img');
+      const img = document.querySelector('.pop-img__img');
+
+      if (!popImg?.classList.contains('pop-img_active')) {
+        img.src = event.target.src;
+        popImg.classList.add('pop-img_active');
+      } else {
+        popImg.classList.remove('pop-img_active');
+      }
+    }
+  }
+
+  function closeModalImage(event) {
+    if (event.target.classList.contains('pop-img__close') || event.target.parentNode.classList.contains('pop-img_active')) {
+      event.target.parentNode.classList.remove('pop-img_active');
+    }
+  }
+
+
+
+  // const popImg = document.querySelector('.pop-img');
+  // const img = document.querySelector('.pop-img__img');
+
+  // document.addEventListener('click', (event) => {
+  //   if (event.target.classList.contains('accordion__img-wrap')) {
+  //     if (!popImg.classList.contains('pop-img_active')) {
+  //       openModalImage(event);
+  //     } else {
+  //       closeModalImage(event);
+  //     }
+  //   }
+  // });
+
+  // function openModalImage(event) {
+  //   img.src = event.target.src;
+  //   popImg.classList.add('pop-img_active');
+  // }
+
+  // function closeModalImage(event) {
+  //   popImg.classList.remove('pop-img_active');
+  // }
+
 });
