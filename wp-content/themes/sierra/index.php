@@ -1,7 +1,24 @@
 <?php
 get_header();
 
-get_template_part('template-parts/video-hero');
+get_template_part('template-parts/video-hero', null, array(
+    'video_url' => ASSETS_PATH . '/img/main.mp4',
+    'title' => 'Take Flight Today',
+    'btn_link' => '/',
+    'btn_text' => 'Book Now'
+));
+
+get_template_part('template-parts/hero', null, array(
+    'is_wide' => true,
+    'is_reverse' => false,
+    'bottom_btn' => true,
+    'btn_link' => '/',
+    'btn_text' => null,
+    'image_url' => ASSETS_PATH . '/img/exec-fleet.webp',
+    'main_title' => ' Executive Fleet',
+    'bold_title' => false,
+    'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+));
 
 ?>
 <section class="main-blog section-offset">

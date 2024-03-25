@@ -1,17 +1,48 @@
-<section class="hero">
-    <video class="hero__video" src="<?= ASSETS_PATH ?>/img/main.mp4" autoplay muted loop></video>
-
-    <div class="container hero__container">
-        <div class="row h-100">
-            <div class="col-md-12 align-items-center d-flex justify-content-center">
-                <div class="hero__content text-center">
-                    <h1 class="h1 hero__h1">
-                        Take Flight Today
-                    </h1>
-                    <a href="/" class="btn big-btn btn-light">Book Now</a>
-                </div>
-            </div>
+<div class="container">
+  <div class="media-flex">
+    <div class="row sub-title-offset flex-row-reverse justify-content-between">
+      <div class="col-xl-8 col-lg-8 col-sm-12 mb-lg-0 mb-sm-4 mb-mob-2">
+        <div class="media-flex__img-wrap">
+          <img src='<?= $args['image_url'] ?>' alt="" class="media-flex__img">
         </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-sm-12 d-flex flex-column justify-content-center media-flex__text">
+        <h3 class="h2-sub text-capitalize mb-lg-3 mb-sm-3 text-lg-start text-sm-center">
+          Executive Fleet
+        </h3>
+        <p class="desc mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <?php if (!empty($args['btn_text'])) : ?>
+          <a class="btn btn-danger">
+            Learn more
+          </a>
+        <?php endif ?>
+      </div>
     </div>
+  </div>
+</div>
 
-</section>
+
+<!-- <div class="row justify-content-between">
+      <div class="col-xl-8 col-lg-8 col-sm-12 mb-lg-0 mb-sm-4 mb-mob-2">
+        <div class="media-flex__img-wrap">
+          <img src="../img/cargo-fleet.webp" alt="" class="media-flex__img">
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-sm-12 d-flex flex-column justify-content-center media-flex__text">
+        <h3 class="h2-sub text-capitalize mb-lg-3 mb-sm-3 text-lg-start text-sm-center">
+          Cargo Fleet
+        </h3>
+        <p class="desc mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <a class="btn btn-danger">
+          Learn more
+        </a>
+      </div>
+    </div> -->
