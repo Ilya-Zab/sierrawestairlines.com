@@ -5,7 +5,24 @@
     </h2>
     <div class="row">
       <div class="col-lg-6 col-sm-12">
-        @@include('sched.table.html')
+        <div class="schedule">
+          <h2 class="h2-sub text-lg-start text-sm-center">Schedule</h2>
+          @@include('sched.table.html')
+          <div class="text-lg-start text-sm-center">
+            <button class="text-uppercase btn btn-danger mb-4">
+              APPLy Now
+            </button>
+            <div>
+              <span class="desc d-block">
+                After submitting your application form, please call us to confirm your
+                itinerary.
+              </span>
+              <span class="desc d-block schedule__jets">
+                1-800-JETS-R-US (800-538-7787)
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-lg-6 col-sm-12">
         @@include('svg-map.html')
