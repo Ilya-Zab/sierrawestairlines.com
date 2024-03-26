@@ -115,9 +115,20 @@ ul {
   color: $white;
 }
 
+.btn.btn-light:active {
+  background-color: $red;
+  border-color: $red;
+  color: $white;
+}
+
 .btn-danger {
   font-weight: 500;
   background-color: $red;
+}
+
+.btn-danger:hover {
+  background-color: $hover;
+  border-color: $hover;
 }
 
 .form-floating label {
@@ -806,6 +817,11 @@ textarea {
       height: 180px;
     }
   }
+
+  .textarea {
+    height: 100px;
+    max-height: 100% !important;
+  }
 }
 
 // Employees
@@ -971,20 +987,34 @@ textarea {
     margin-bottom: 30px;
   }
 
-  .form-check-inline {
-    margin-right: 30px;
+  .form-check-label {
+    display: inline;
   }
 }
 
+.form-check-inline {
+  margin-right: 30px;
+}
+
+.form-check .form-check-input {
+  float: none;
+}
+
+.form-check-input {
+  margin-top: 0;
+  vertical-align: middle;
+}
+
+
 .form-check-input:checked {
   background-color: transparent;
-  border-color: $black;
+  border-color: $placeholder;
 }
 
 .form-check-input:focus {
-  border-color: $black;
+  border-color: $placeholder;
   outline: 0;
-  box-shadow: 0 0 0 0.15rem rgba(206, 32, 38, 0.25);
+  box-shadow: none;
 }
 
 input[type="radio"]:checked::before {
