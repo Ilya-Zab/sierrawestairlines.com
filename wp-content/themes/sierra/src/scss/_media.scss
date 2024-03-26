@@ -302,10 +302,6 @@
   }
 
   .accordion {
-    &__list {
-      gap: 60px;
-    }
-
     &__list-img {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -313,6 +309,12 @@
     &__body_media {
       padding-right: 30px;
       padding-left: 30px;
+    }
+  }
+
+  .features-list {
+    &__list {
+      gap: 60px;
     }
   }
 
@@ -828,6 +830,14 @@
     }
   }
 
+  .features-list {
+    &__list {
+      li {
+        width: 100px;
+      }
+    }
+  }
+
   .accordion {
     &__body {
       padding-top: 15px;
@@ -841,12 +851,6 @@
 
     &__title {
       font-size: 14px;
-    }
-
-    &__list {
-      li {
-        width: 100px;
-      }
     }
 
     &__list-img {

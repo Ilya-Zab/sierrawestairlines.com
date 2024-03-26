@@ -410,9 +410,6 @@ textarea {
 .media-flex__text {
   max-width: 380px;
 }
-.media-flex .btn {
-  max-width: 195px;
-}
 
 .main-talk__desc {
   max-width: 800px;
@@ -541,19 +538,20 @@ textarea {
   margin-bottom: 70px;
 }
 
-.accordion__list {
+.features-list__list {
   gap: 80px;
 }
-.accordion__list li {
+.features-list__list li {
   width: 150px;
   height: auto;
   text-align: center;
 }
-.accordion__list li img {
+.features-list__list li img {
   margin-bottom: 26px;
   max-width: 40px;
   max-height: 40px;
 }
+
 .accordion__item {
   border-radius: 15px;
   border-radius: 15px !important;
@@ -1121,15 +1119,15 @@ input[type=radio]:checked::before {
   .executive-fleet.pb-12 {
     padding-bottom: 60px;
   }
-  .accordion__list {
-    gap: 60px;
-  }
   .accordion__list-img {
     grid-template-columns: repeat(3, 1fr);
   }
   .accordion__body_media {
     padding-right: 30px;
     padding-left: 30px;
+  }
+  .features-list__list {
+    gap: 60px;
   }
   .cargo-fleet.pt-5-c {
     padding-top: 40px;
@@ -1477,6 +1475,9 @@ input[type=radio]:checked::before {
   .executive-fleet .h2 {
     margin-bottom: 30px;
   }
+  .features-list__list li {
+    width: 100px;
+  }
   .accordion__body {
     padding-top: 15px;
     padding-bottom: 30px;
@@ -1487,9 +1488,6 @@ input[type=radio]:checked::before {
   }
   .accordion__title {
     font-size: 14px;
-  }
-  .accordion__list li {
-    width: 100px;
   }
   .accordion__list-img {
     grid-template-columns: repeat(2, 1fr);
