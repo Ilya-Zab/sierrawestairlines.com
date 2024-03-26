@@ -153,9 +153,20 @@ ul {
   color: #fff;
 }
 
+.btn.btn-light:active {
+  background-color: #ce2026;
+  border-color: #ce2026;
+  color: #fff;
+}
+
 .btn-danger {
   font-weight: 500;
   background-color: #ce2026;
+}
+
+.btn-danger:hover {
+  background-color: #fc4046;
+  border-color: #fc4046;
 }
 
 .form-floating label {
@@ -705,6 +716,10 @@ textarea {
 .small-form__contacts .textarea {
   height: 180px;
 }
+.small-form .textarea {
+  height: 100px;
+  max-height: 100% !important;
+}
 
 .employees .h2 {
   margin-bottom: 70px;
@@ -826,19 +841,32 @@ textarea {
 .quote-form__wrap_area {
   margin-bottom: 30px;
 }
-.quote-form .form-check-inline {
+.quote-form .form-check-label {
+  display: inline;
+}
+
+.form-check-inline {
   margin-right: 30px;
+}
+
+.form-check .form-check-input {
+  float: none;
+}
+
+.form-check-input {
+  margin-top: 0;
+  vertical-align: middle;
 }
 
 .form-check-input:checked {
   background-color: transparent;
-  border-color: #000;
+  border-color: #a5a5a5;
 }
 
 .form-check-input:focus {
-  border-color: #000;
+  border-color: #a5a5a5;
   outline: 0;
-  box-shadow: 0 0 0 0.15rem rgba(206, 32, 38, 0.25);
+  box-shadow: none;
 }
 
 input[type=radio]:checked::before {
@@ -1462,9 +1490,6 @@ input[type=radio]:checked::before {
   }
   .accordion__list li {
     width: 100px;
-  }
-  .accordion__list li:last-child {
-    margin-right: auto;
   }
   .accordion__list-img {
     grid-template-columns: repeat(2, 1fr);
