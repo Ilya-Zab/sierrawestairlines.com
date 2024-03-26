@@ -506,13 +506,13 @@ textarea {
 .schedule .desc:first-child {
   margin-bottom: 5px;
 }
+.schedule__jets {
+  color: #ce2026;
+}
 
 .schedule-table {
   margin-bottom: 15px;
   max-width: 500px;
-}
-.schedule-table__jets {
-  color: #ce2026;
 }
 .schedule-table td,
 .schedule-table th {

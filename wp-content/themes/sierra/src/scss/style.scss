@@ -551,15 +551,15 @@ textarea {
   .desc:first-child {
     margin-bottom: 5px;
   }
+
+  &__jets {
+    color: $red;
+  }
 }
 
 .schedule-table {
   margin-bottom: 15px;
   max-width: 500px;
-
-  &__jets {
-    color: $red;
-  }
 
   td,
   th {

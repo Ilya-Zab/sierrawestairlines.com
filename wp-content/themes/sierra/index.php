@@ -24,27 +24,36 @@ get_template_part('template-parts/hero', null, array(
 get_template_part('template-parts/features', null, array(
 
     'items_array' => [
-        0 => [
+        [
             'path' =>  ASSETS_PATH . '/img/wife.svg',
             'title' =>  'WI-FI',
         ],
-        1 => [
+        [
             'path' =>  ASSETS_PATH . '/img/lock.svg',
             'title' =>  'Enclosed Lavatory',
         ],
-        2 => [
+        [
             'path' =>  ASSETS_PATH . '/img/sofa.svg',
             'title' =>  'Movable/Reclining',
         ],
-        3 => [
+        [
             'path' =>  ASSETS_PATH . '/img/mug.svg',
             'title' =>  'Hot & Cold Drink Station',
         ],
-        4 => [
+        [
             'path' =>  ASSETS_PATH . '/img/bowl.svg',
             'title' =>  'Microwave',
         ]
     ],
+));
+
+get_template_part('template-parts/table', null, array(
+    [
+        "Takeoff location; Landing location; Days;\n
+        El Paso (ELP); Toledo (TOL); M - F;\n
+        Toledo (TOL); El Paso (ELP); M - F;\n
+        Laredo (LRD); El Paso (ELP); M - F;"
+    ]
 ));
 
 ?>
