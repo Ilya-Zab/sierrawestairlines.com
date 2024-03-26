@@ -432,10 +432,6 @@ textarea {
   &__text {
     max-width: 380px;
   }
-
-  .btn {
-    max-width: 195px;
-  }
 }
 
 .main-talk {
@@ -599,9 +595,7 @@ textarea {
   }
 }
 
-// Accordion
-.accordion {
-
+.features-list {
   &__list {
     gap: 80px;
 
@@ -617,6 +611,10 @@ textarea {
       }
     }
   }
+}
+
+// Accordion
+.accordion {
 
   &__item {
     border-radius: 15px;

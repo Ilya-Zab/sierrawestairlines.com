@@ -9,15 +9,42 @@ get_template_part('template-parts/video-hero', null, array(
 ));
 
 get_template_part('template-parts/hero', null, array(
-    'is_wide' => true,
-    'is_reverse' => false,
-    'bottom_btn' => true,
+    'is_img_wide' => true,
+    'is_block_reverse' => false,
+    'bottom_btn' => false,
     'btn_link' => '/',
-    'btn_text' => null,
+    'bottom_btn_link' => '/',
+    'btn_text' => 'Get a Quote',
     'image_url' => ASSETS_PATH . '/img/exec-fleet.webp',
-    'main_title' => ' Executive Fleet',
-    'bold_title' => false,
+    'main_title' => 'Executive Fleet',
+    'is_title_bold' => false,
     'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+));
+
+get_template_part('template-parts/features', null, array(
+
+    'items_array' => [
+        0 => [
+            'path' =>  ASSETS_PATH . '/img/wife.svg',
+            'title' =>  'WI-FI',
+        ],
+        1 => [
+            'path' =>  ASSETS_PATH . '/img/lock.svg',
+            'title' =>  'Enclosed Lavatory',
+        ],
+        2 => [
+            'path' =>  ASSETS_PATH . '/img/sofa.svg',
+            'title' =>  'Movable/Reclining',
+        ],
+        3 => [
+            'path' =>  ASSETS_PATH . '/img/mug.svg',
+            'title' =>  'Hot & Cold Drink Station',
+        ],
+        4 => [
+            'path' =>  ASSETS_PATH . '/img/bowl.svg',
+            'title' =>  'Microwave',
+        ]
+    ],
 ));
 
 ?>
