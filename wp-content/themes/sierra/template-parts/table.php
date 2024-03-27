@@ -25,7 +25,7 @@ foreach ($table_strings as $index => $line) {
                 <th scope="col" class="text-uppercase h3">
                     <?= $title . ':' ?>
                 </th>
-            <?php endforeach; ?>
+            <?php endforeach ?>
         </tr>
     </thead>
     <tbody>
@@ -33,8 +33,8 @@ foreach ($table_strings as $index => $line) {
             <tr>
                 <?php foreach ($row as $td) : ?>
                     <td class="desc"><?= $td ?></td>
-                <?php endforeach; ?>
+                <?php endforeach ?>
             <tr>
-            <?php endforeach; ?>
+            <?php endforeach ?>
     </tbody>
 </table>

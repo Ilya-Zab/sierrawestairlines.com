@@ -56,6 +56,35 @@ get_template_part('template-parts/table', null, array(
     ]
 ));
 
+get_template_part('template-parts/logos', null, array(
+    'items_array' => [
+        [
+            'path' =>  ASSETS_PATH . '/img/NATACS-Master-Logo.svg',
+            'title' =>  'Certificate very long name',
+        ],
+        [
+            'path' =>  ASSETS_PATH . '/img/WOB_logo.svg',
+            'title' =>  'Certificate name',
+        ],
+        [
+            'path' =>  ASSETS_PATH . '/img/NBAA_logo.svg',
+            'title' =>  'Certificate very long name',
+        ],
+        [
+            'path' =>  ASSETS_PATH . '/img/SWestA-Logo-cerf.svg',
+            'title' =>  'Certificate name',
+        ],
+        [
+            'path' =>  ASSETS_PATH . '/img/HazMat-Logo.svg',
+            'title' =>  'Certificate name',
+        ],
+        [
+            'path' =>  ASSETS_PATH . '/img/HazMat-Logo.svg',
+            'title' =>  'Certificate very long name',
+        ],
+    ]
+));
+
 ?>
 <section class="main-blog section-offset">
     <div class="container">
