@@ -98,14 +98,40 @@ get_template_part('template-parts/image', null, array(
 ));
 
 get_template_part('template-parts/title-subtitle', null, array(
-    'use_h1' => null,
-    'is_main' => false,
-    'title' => "main",
-    'subtitle' => null,
     'is_centered' => true,
+    'use_h1' => false,
+    'is_main' => false,
+    'title' => "Main",
+    'subtitle' => false,
+));
+
+get_template_part('template-parts/cards_list', null, array(
+    'items' => array(
+        array(
+            'path' =>  ASSETS_PATH . '/img/blog-test_1.jpg',
+            'title' => 'title',
+            'author' => 'Author | Date',
+            'text' => 'With our private jet offerings, we adapt every facet of your flight to suit your unique tastes and
+            necessities. Enjoy a travel experience that’s designed exclusively around your individual preferences and
+            demands whilst still being affordable',
+            'btn' => 'null',
+            'btn_link' => '/',
+        ),
+        array(
+            'path' =>  ASSETS_PATH . '/img/blog-test_1.jpg',
+            'title' => 'title',
+            'author' => null,
+            'text' => 'With our private jet offerings, we adapt every facet of your flight to suit your unique tastes and
+            necessities. Enjoy a travel experience that’s designed exclusively around your individual preferences and
+            demands whilst still being affordable',
+            'btn' => null,
+            'btn_link' => null,
+        )
+    )
 ));
 
 ?>
+
 <section class="main-blog section-offset">
     <div class="container">
         <div class="main-blog__titles sub-title-offset">

@@ -105,7 +105,6 @@ ul {
 
 .h1 {
   font-size: 56px;
-  color: #fff;
 }
 
 .h2 {
@@ -298,6 +297,7 @@ textarea {
 }
 .hero__h1 {
   margin-bottom: 40px;
+  color: #fff;
 }
 .hero__container {
   height: 100vh;
@@ -326,14 +326,19 @@ textarea {
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
 }
-.blog-grid__img {
+
+.card {
+  background-color: transparent;
+  border: none;
+}
+.card__img {
   margin-bottom: 40px;
   padding-top: 60%;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
 }
-.blog-grid__img img {
+.card__img img {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -341,29 +346,29 @@ textarea {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.blog-grid__img_bt {
+.card__img_bt {
   margin-bottom: 15px;
 }
-.blog-grid__img_art {
+.card__img_art {
   margin-bottom: 50px;
 }
-.blog-grid__sub {
+.card__sub {
   margin-top: 50px;
   margin-bottom: 30px;
 }
-.blog-grid__btn {
+.card__btn {
   padding: 5px 10px;
   font-size: 16px;
   border-radius: 5px;
 }
-.blog-grid__desc {
+.card__desc {
   margin-bottom: 20px;
 }
-.blog-grid__desc_auth {
+.card__desc_auth {
   font-size: 18px;
   color: #a5a5a5;
 }
-.blog-grid__desc_auth-article {
+.card__desc_auth-article {
   margin-bottom: 50px;
 }
 
