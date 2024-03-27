@@ -587,35 +587,41 @@ textarea {
 .accordion__big-img {
   margin-bottom: 70px;
 }
-.accordion__list-img {
+
+.single-video {
+  padding-right: 80px;
+  padding-left: 80px;
+}
+.single-video__video-wrap video {
+  max-height: 1140px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.grid-images {
+  padding-right: 80px;
+  padding-left: 80px;
+}
+.grid-images__list-img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 21px;
   flex-wrap: wrap;
 }
-.accordion__img-wrap {
+.grid-images__img-wrap {
   padding-top: 70%;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
-.accordion__img-wrap img {
+.grid-images__img-wrap img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-.accordion__body_media {
-  padding-right: 80px;
-  padding-left: 80px;
-}
-.accordion__video-wrap video {
-  max-height: 1140px;
-  border-radius: 10px;
-  max-width: 100%;
 }
 
 .accordion-button::after {
@@ -943,7 +949,7 @@ input[type=radio]:checked::before {
   .grid-page {
     grid-template-columns: repeat(2, 1fr);
   }
-  .accordion__list-img {
+  .grid-images__list-img {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -1131,15 +1137,19 @@ input[type=radio]:checked::before {
   .executive-fleet.pb-12 {
     padding-bottom: 60px;
   }
-  .accordion__list-img {
-    grid-template-columns: repeat(3, 1fr);
+  .features-list__list {
+    gap: 60px;
   }
-  .accordion__body_media {
+  .single-video {
     padding-right: 30px;
     padding-left: 30px;
   }
-  .features-list__list {
-    gap: 60px;
+  .grid-images {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .grid-images__list-img {
+    grid-template-columns: repeat(3, 1fr);
   }
   .cargo-fleet.pt-5-c {
     padding-top: 40px;
@@ -1501,15 +1511,19 @@ input[type=radio]:checked::before {
   .accordion__title {
     font-size: 14px;
   }
-  .accordion__list-img {
-    grid-template-columns: repeat(2, 1fr);
+  .accordion .flex-sm-wrap {
+    flex-wrap: wrap;
   }
-  .accordion__body_media {
+  .single-video {
     padding-right: 15px;
     padding-left: 15px;
   }
-  .accordion .flex-sm-wrap {
-    flex-wrap: wrap;
+  .grid-images {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .grid-images__list-img {
+    grid-template-columns: repeat(2, 1fr);
   }
   .cargo-fleet.pt-5-c {
     padding-top: 30px;

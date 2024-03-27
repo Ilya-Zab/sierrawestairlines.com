@@ -10,6 +10,7 @@ add_action('wp_enqueue_scripts', 'sierra_styles');
 
 function sierra_scripts()
 {
-    wp_enqueue_script('sierra-main', ASSETS_PATH . '/js/main.min.js', array(), time(), true);
+    wp_enqueue_script('sierra-main', ASSETS_PATH . '/js/main.js', array(), time(), true);
+    wp_enqueue_script('bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", array(), time(), true);
 }
 add_action('wp_enqueue_scripts', 'sierra_scripts');

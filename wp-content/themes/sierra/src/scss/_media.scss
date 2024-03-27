@@ -38,8 +38,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  // Executive Fleet
-  .accordion {
+  .grid-images {
     &__list-img {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -301,20 +300,23 @@
     padding-bottom: 60px;
   }
 
-  .accordion {
-    &__list-img {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    &__body_media {
-      padding-right: 30px;
-      padding-left: 30px;
-    }
-  }
-
   .features-list {
     &__list {
       gap: 60px;
+    }
+  }
+
+  .single-video {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .grid-images {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    &__list-img {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -853,17 +855,22 @@
       font-size: 14px;
     }
 
-    &__list-img {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    &__body_media {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-
     .flex-sm-wrap {
       flex-wrap: wrap;
+    }
+  }
+
+  .single-video {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .grid-images {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    &__list-img {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

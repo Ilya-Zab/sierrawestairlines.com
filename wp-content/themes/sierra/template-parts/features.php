@@ -7,6 +7,6 @@
           <?= $item['title'] ?>
         </h3>
       </li>
-    <?php endforeach; ?>
+    <?php endforeach ?>
   </ul>
 </div>

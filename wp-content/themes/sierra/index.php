@@ -130,6 +130,24 @@ get_template_part('template-parts/cards_list', null, array(
     )
 ));
 
+
+ob_start();
+get_template_part('template-parts/video', null, array(
+    'path' =>  ASSETS_PATH . '/img/lear-60-video.mp4',
+));
+$content = ob_get_contents();
+ob_end_clean();
+
+get_template_part('template-parts/accordion', null, array(
+    'items' => [
+        [
+            'title' => 'title',
+            'content' => $content,
+        ]
+    ]
+));
+
+
 ?>
 
 <section class="main-blog section-offset">
