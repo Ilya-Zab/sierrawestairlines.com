@@ -766,11 +766,18 @@ textarea {
   &__in-sub {
     display: block;
   }
+}
 
+.block-img {
   &__img-wrap {
+    border-radius: $img-b-radius;
+    overflow: hidden;
+
     img {
-      border-radius: $img-b-radius;
-      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      ;
     }
   }
 }

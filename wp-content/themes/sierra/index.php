@@ -85,6 +85,18 @@ get_template_part('template-parts/logos', null, array(
     ]
 ));
 
+get_template_part('template-parts/button', null, array(
+    'is_btn_centered' => false,
+    'is_btn_light' => false,
+    'btn_text' => 'Button',
+));
+
+get_template_part('template-parts/image', null, array(
+    'wide' => '700px',
+    'path' =>  ASSETS_PATH . '/img/metro-3-schema.webp',
+    'is_centered' => true,
+));
+
 ?>
 <section class="main-blog section-offset">
     <div class="container">
