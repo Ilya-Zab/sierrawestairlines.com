@@ -92,8 +92,16 @@ get_template_part('template-parts/button', null, array(
 ));
 
 get_template_part('template-parts/image', null, array(
-    'wide' => '700px',
+    'is_wide' => false,
     'path' =>  ASSETS_PATH . '/img/metro-3-schema.webp',
+    'is_centered' => true,
+));
+
+get_template_part('template-parts/title-subtitle', null, array(
+    'use_h1' => null,
+    'is_main' => false,
+    'title' => "main",
+    'subtitle' => null,
     'is_centered' => true,
 ));
 
