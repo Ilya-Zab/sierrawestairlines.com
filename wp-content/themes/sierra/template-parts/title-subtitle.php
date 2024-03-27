@@ -1,4 +1,4 @@
-<div class="titles <?php $args['is_centered'] ? 'text-center' : '' ?> ">
+<div class="titles <?= $args['is_centered'] ? 'text-center' : '' ?>">
   <?php if ($args['use_h1']) : ?>
     <h1 class="h1"><?= $args['use_h1'] ?></h1>
   <?php endif ?>
@@ -6,7 +6,7 @@
     <?= $args['title'] ?>
   </h2>
   <?php if ($args['subtitle']) : ?>
-    <h3 class="h3 main-blog__sub-title">
+    <h3 class="h3">
       <?= $args['subtitle'] ?>
     </h3>
   <?php endif ?>

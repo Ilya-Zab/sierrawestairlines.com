@@ -66,7 +66,6 @@ ul {
 
 .h1 {
   font-size: 56px;
-  color: $white;
 }
 
 .h2 {
@@ -294,6 +293,7 @@ textarea {
 
   &__h1 {
     margin-bottom: 40px;
+    color: $white;
   }
 
   &__container {
@@ -328,6 +328,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
 
   &__img {
     margin-bottom: 40px;
