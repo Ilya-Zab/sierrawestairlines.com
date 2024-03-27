@@ -131,13 +131,6 @@ get_template_part('template-parts/cards_list', null, array(
 ));
 
 
-ob_start();
-get_template_part('template-parts/video', null, array(
-    'path' =>  ASSETS_PATH . '/img/lear-60-video.mp4',
-));
-$content = ob_get_contents();
-ob_end_clean();
-
 get_template_part('template-parts/accordion', null, array(
     'items' => [
         [
@@ -145,6 +138,47 @@ get_template_part('template-parts/accordion', null, array(
             'content' => $content,
         ]
     ]
+));
+
+get_template_part('template-parts/partners', null, array(
+    'items' => [
+        [
+            'img_path' => ASSETS_PATH . '/img/wings.webp',
+            'title' => 'Wings of Rescue',
+            'btn' => 'Donate',
+            'btn_link' => '/'
+        ],
+        [
+            'img_path' => ASSETS_PATH . '/img/fido.webp',
+            'title' => 'Wings of Rescue',
+            'btn' => 'Donate',
+            'btn_link' => '/'
+        ]
+    ]
+));
+
+// ob_start();
+// get_template_part('template-parts/video', null, array(
+//     'path' =>  ASSETS_PATH . '/img/lear-60-video.mp4',
+// ));
+// $side_1 = ob_get_contents();
+// ob_end_clean();
+
+get_template_part('template-parts/split', null, array(
+    'items' => [
+        'sides' => [
+            $side_1,
+            $side_2
+        ]
+    ]
+));
+
+get_template_part('template-parts/short_code', null, array(
+    'content' => ''
+));
+
+get_template_part('template-parts/rich_text', null, array(
+    'content' => ''
 ));
 
 
