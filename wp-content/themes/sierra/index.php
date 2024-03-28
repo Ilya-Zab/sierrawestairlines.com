@@ -98,14 +98,92 @@ get_template_part('template-parts/image', null, array(
 ));
 
 get_template_part('template-parts/title-subtitle', null, array(
-    'use_h1' => null,
-    'is_main' => false,
-    'title' => "main",
-    'subtitle' => null,
     'is_centered' => true,
+    'use_h1' => false,
+    'is_main' => false,
+    'title' => "Main",
+    'subtitle' => false,
 ));
 
+get_template_part('template-parts/cards_list', null, array(
+    'items' => array(
+        array(
+            'path' =>  ASSETS_PATH . '/img/blog-test_1.jpg',
+            'title' => 'title',
+            'author' => 'Author | Date',
+            'text' => 'With our private jet offerings, we adapt every facet of your flight to suit your unique tastes and
+            necessities. Enjoy a travel experience that’s designed exclusively around your individual preferences and
+            demands whilst still being affordable',
+            'btn' => 'null',
+            'btn_link' => '/',
+        ),
+        array(
+            'path' =>  ASSETS_PATH . '/img/blog-test_1.jpg',
+            'title' => 'title',
+            'author' => null,
+            'text' => 'With our private jet offerings, we adapt every facet of your flight to suit your unique tastes and
+            necessities. Enjoy a travel experience that’s designed exclusively around your individual preferences and
+            demands whilst still being affordable',
+            'btn' => null,
+            'btn_link' => null,
+        )
+    )
+));
+
+
+get_template_part('template-parts/accordion', null, array(
+    'items' => [
+        [
+            'title' => 'title',
+            'content' => $content,
+        ]
+    ]
+));
+
+get_template_part('template-parts/partners', null, array(
+    'items' => [
+        [
+            'img_path' => ASSETS_PATH . '/img/wings.webp',
+            'title' => 'Wings of Rescue',
+            'btn' => 'Donate',
+            'btn_link' => '/'
+        ],
+        [
+            'img_path' => ASSETS_PATH . '/img/fido.webp',
+            'title' => 'Wings of Rescue',
+            'btn' => 'Donate',
+            'btn_link' => '/'
+        ]
+    ]
+));
+
+// ob_start();
+// get_template_part('template-parts/video', null, array(
+//     'path' =>  ASSETS_PATH . '/img/lear-60-video.mp4',
+// ));
+// $side_1 = ob_get_contents();
+// ob_end_clean();
+
+get_template_part('template-parts/split', null, array(
+    'items' => [
+        'sides' => [
+            $side_1,
+            $side_2
+        ]
+    ]
+));
+
+get_template_part('template-parts/short_code', null, array(
+    'content' => ''
+));
+
+get_template_part('template-parts/rich_text', null, array(
+    'content' => ''
+));
+
+
 ?>
+
 <section class="main-blog section-offset">
     <div class="container">
         <div class="main-blog__titles sub-title-offset">

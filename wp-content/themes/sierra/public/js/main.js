@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', (event) => {
     if (!img) return;
-    const isImage = event.target.parentNode.classList.contains('accordion__img-wrap');
+    const isImage = event.target.parentNode.classList.contains('grid-images__img-wrap');
     const isActive = !popImg.classList.contains('pop-img_active');
     const isCloseBtn = event.target.classList.contains('pop-img__close');
     if (isImage && isActive) {

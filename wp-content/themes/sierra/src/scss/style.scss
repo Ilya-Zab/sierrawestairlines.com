@@ -37,6 +37,16 @@ ul {
   list-style-type: none;
 }
 
+:not(.rich-container) ul,
+:not(.rich-container) a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+
 .section-offset {
   padding-top: 80px;
   padding-bottom: 50px;
@@ -66,7 +76,6 @@ ul {
 
 .h1 {
   font-size: 56px;
-  color: $white;
 }
 
 .h2 {
@@ -294,6 +303,7 @@ textarea {
 
   &__h1 {
     margin-bottom: 40px;
+    color: $white;
   }
 
   &__container {
@@ -328,6 +338,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
 
   &__img {
     margin-bottom: 40px;
@@ -652,6 +667,24 @@ textarea {
   &__big-img {
     margin-bottom: 70px;
   }
+}
+
+.single-video {
+  padding-right: 80px;
+  padding-left: 80px;
+
+  &__video-wrap {
+    video {
+      max-height: 1140px;
+      border-radius: $img-b-radius;
+      max-width: 100%;
+    }
+  }
+}
+
+.grid-images {
+  padding-right: 80px;
+  padding-left: 80px;
 
   &__list-img {
     display: grid;
@@ -673,19 +706,6 @@ textarea {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-  }
-
-  &__body_media {
-    padding-right: 80px;
-    padding-left: 80px;
-  }
-
-  &__video-wrap {
-    video {
-      max-height: 1140px;
-      border-radius: $img-b-radius;
-      max-width: 100%;
     }
   }
 }
@@ -878,7 +898,7 @@ textarea {
   }
 }
 
-.giv-back-bottom {
+.partners {
   .h3 {
     font-size: 16px;
   }
