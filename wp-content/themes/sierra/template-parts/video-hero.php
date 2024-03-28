@@ -1,5 +1,9 @@
+<?php
+$video_id = $args['video'];
+$video_url = wp_get_attachment_url($video_id);
+?>
 <section class="hero">
-    <video class="hero__video" src=<?= $args['video_url'] ?> autoplay muted loop></video>
+    <video class="hero__video" src=<?= $video_url ?> autoplay muted loop></video>
 
     <div class="container hero__container">
         <div class="row h-100">
@@ -8,7 +12,7 @@
                     <h1 class="h1 hero__h1">
                         <?= $args['title'] ?>
                     </h1>
-                    <a href=<?= $args['btn_link'] ?> class="btn big-btn btn-light"><?= $args['btn_text'] ?></a>
+                    <a href=<?= $args['button_url'] ?> class="btn big-btn btn-light"><?= $args['button_text'] ?></a>
                 </div>
             </div>
         </div>

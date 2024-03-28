@@ -1,10 +1,12 @@
-<?php if ($args['is_btn_centered']) : ?>
+<?php if ($args['is_center']) : ?>
   <div class="text-center">
   <?php else : ?>
     <div class="text-sm-center text-lg-start">
     <?php endif ?>
-    <button class="btn
+
+    <a href="<?= $args['button_url'] ?>" class="btn
     <?= $args['is_btn_light'] ? 'btn-light' : 'btn-danger' ?>">
-      <?= $args['btn_text'] ?>
-    </button>
+      <?= $args['button_text'] ?>
+    </a>
+
     </div>
