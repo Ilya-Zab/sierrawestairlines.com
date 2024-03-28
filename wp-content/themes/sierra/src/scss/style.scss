@@ -1010,6 +1010,10 @@ textarea {
 
   &__wrap_area {
     margin-bottom: 30px;
+
+    textarea {
+      max-height: 140px;
+    }
   }
 
   .form-check-label {
@@ -1030,29 +1034,16 @@ textarea {
   vertical-align: middle;
 }
 
-
-.form-check-input:checked {
-  background-color: transparent;
-  border-color: $placeholder;
+.custom-radio {
+  font-size: 16px;
 }
 
-.form-check-input:focus {
-  border-color: $placeholder;
-  outline: 0;
-  box-shadow: none;
+input[type='radio'] {
+  accent-color: #232323;
 }
 
-input[type="radio"]:checked::before {
-  content: '';
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #333;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.wpcf7-not-valid-tip {
+  font-size: 16px;
 }
 
 // Footer
