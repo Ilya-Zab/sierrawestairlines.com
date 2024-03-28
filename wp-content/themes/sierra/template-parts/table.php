@@ -1,5 +1,5 @@
 <?php
-$string = $args[0][0];
+$string = $args['table_content'];
 $table_strings = explode("\n", $string);
 
 $headers = [];
