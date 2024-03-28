@@ -48,12 +48,12 @@ get_template_part('template-parts/features', null, array(
 ));
 
 get_template_part('template-parts/table', null, array(
-    [
-        "Takeoff location; Landing location; Days;\n
+    'table_content' =>
+    "Takeoff location; Landing location; Days;\n
         El Paso (ELP); Toledo (TOL); M - F;\n
         Toledo (TOL); El Paso (ELP); M - F;\n
         Laredo (LRD); El Paso (ELP); M - F;"
-    ]
+
 ));
 
 get_template_part('template-parts/logos', null, array(
