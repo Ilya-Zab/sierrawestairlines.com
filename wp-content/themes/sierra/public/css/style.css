@@ -857,6 +857,9 @@ textarea {
 .quote-form__wrap_area {
   margin-bottom: 30px;
 }
+.quote-form__wrap_area textarea {
+  max-height: 140px;
+}
 .quote-form .form-check-label {
   display: inline;
 }
@@ -874,28 +877,16 @@ textarea {
   vertical-align: middle;
 }
 
-.form-check-input:checked {
-  background-color: transparent;
-  border-color: #a5a5a5;
+.custom-radio {
+  font-size: 16px;
 }
 
-.form-check-input:focus {
-  border-color: #a5a5a5;
-  outline: 0;
-  box-shadow: none;
+input[type=radio] {
+  accent-color: #232323;
 }
 
-input[type=radio]:checked::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #333;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.wpcf7-not-valid-tip {
+  font-size: 16px;
 }
 
 .footer {
@@ -1302,6 +1293,12 @@ input[type=radio]:checked::before {
   }
 }
 @media (max-width: 576px) {
+  .wpcf7-not-valid-tip {
+    font-size: 14px;
+  }
+  .custom-radio {
+    font-size: 14px;
+  }
   .header__container {
     padding-right: 20px;
     padding-left: 20px;

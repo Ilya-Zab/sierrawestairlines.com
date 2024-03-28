@@ -336,7 +336,7 @@ get_template_part('template-parts/rich_text', null, array(
                         <button type="submit" class="btn btn-danger">Let’s talk</button>
                     </div>
                 </form> -->
-                <?php echo do_shortcode(' [contact-form-7 id="202a79a" title="Contact form 1"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="5c1a64b" title="Contacts Form"] '); ?>
             </div>
         </div>
     </div>
