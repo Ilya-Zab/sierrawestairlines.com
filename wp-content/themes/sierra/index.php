@@ -317,7 +317,7 @@ get_template_part('template-parts/rich_text', null, array(
                 <img src="<?= ASSETS_PATH ?>/img/main-bottom.jpg" alt="" class="main-talk__img">
             </div>
             <div class="col-xl-6 col-lg-6 col-sm-12 mb-sm-4">
-                <form action="#" class="small-form">
+                <!-- <form action="#" class="small-form">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingText" placeholder="Name">
                         <label for="floatingText">Name*</label>
@@ -337,7 +337,8 @@ get_template_part('template-parts/rich_text', null, array(
                     <div class="text-sm-center text-lg-start">
                         <button type="submit" class="btn btn-danger">Let’s talk</button>
                     </div>
-                </form>
+                </form> -->
+                <?php echo do_shortcode(' [contact-form-7 id="202a79a" title="Contact form 1"]'); ?>
             </div>
         </div>
     </div>

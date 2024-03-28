@@ -60,3 +60,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Carbon Fields
  */
 require get_template_directory() . '/inc/carbon-fields-setup.php';
+
+// Remove p tag from Contacts Form 7
+add_filter('wpcf7_autop_or_not', '__return_false');
