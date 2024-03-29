@@ -278,7 +278,7 @@ function cf_add_title_subtitle($field)
 {
     $field->add_fields('title_subtitle', __('Title and subtitle', 'sierra'), array(
         Field::make('text', 'title', __('Title', 'sierra')),
-        Field::make('text', 'subtitle', __('Subtitle', 'sierra')),
+        Field::make('textarea', 'subtitle', __('Subtitle', 'sierra')),
         Field::make('checkbox', 'is_main', __('Big title', 'sierra')),
         Field::make('checkbox', 'is_center', __('Centered', 'sierra')),
         Field::make('checkbox', 'use_h1', __('Use H1', 'sierra'))
@@ -326,12 +326,9 @@ function cf_add_gallery($field)
 // Spacer
 function cf_add_spacer($field)
 {
-    $field->add_fields('spacer', __('Add space', 'sierra'), array(
+    $field->add_fields('spacer', __('Spacer', 'sierra'), array(
         Field::make('text', 'size', __('Space size', 'sierra'))
-            ->set_attribute('type', 'range')
-            ->set_attribute('step', '10')
-            ->set_attribute('min', '10')
-            ->set_attribute('max', '120')
+            ->set_attribute('type', 'number')
             ->set_default_value(10)
     ));
 }

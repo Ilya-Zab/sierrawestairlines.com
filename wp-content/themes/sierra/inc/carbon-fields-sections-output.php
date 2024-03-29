@@ -1,16 +1,6 @@
 <?php
 function cf_output_sections($sections)
 {
-    /**
-     * Sections to be used
-     * 
-     * cf_add_video
-     * cf_add_spacer
-     * cf_add_accordion
-     * cf_add_partners
-     * cf_add_features
-     * cf_add_gallery
-     */
 
     foreach ($sections as $section) {
         switch ($section['_type']) {
@@ -50,26 +40,35 @@ function cf_output_sections($sections)
             case 'table':
                 wrap_as_section('cf_table', $section);
                 break;
+            case 'accordion':
+                cf_accordion($section);
+                break;
+            case 'features':
+                wrap_as_section('cf_features', $section);
+                break;
+            case 'partners':
+                wrap_as_section('cf_partners', $section);
+                break;
+            case 'gallery':
+                wrap_as_section('cf_gallery', $section);
+                break;
+            case 'video':
+                wrap_as_section('cf_video', $section);
+                break;
+            case 'spacer':
+                cf_spacer($section);
+                break;
             default:
                 echo "The section <b>" . $section['_type'] . "</b> is not found<br>";
         }
     }
-    echo '<pre>';
-    print_r($sections);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($sections);
+    // echo '</pre>';
 }
 
 function cf_inner_section($sections)
 {
-    /**
-     * Blocks to be used
-     * 
-     * cf_add_video
-     * cf_add_partners
-     * cf_add_features
-     * cf_add_gallery
-     */
-
     ob_start();
     foreach ($sections as $section) {
         switch ($section['_type']) {
@@ -93,6 +92,21 @@ function cf_inner_section($sections)
                 break;
             case 'table':
                 cf_table($section);
+                break;
+            case 'features':
+                cf_features($section);
+                break;
+            case 'partners':
+                cf_partners($section);
+                break;
+            case 'gallery':
+                cf_gallery($section);
+                break;
+            case 'video':
+                cf_video($section);
+                break;
+            case 'spacer':
+                cf_spacer($section);
                 break;
             default:
                 echo "The block <b>" . $section['_type'] . "</b> is not found<br>";
@@ -138,6 +152,11 @@ function cf_button($data)
     get_template_part('template-parts/button', null, $data);
 }
 
+function cf_spacer($data)
+{
+    get_template_part('template-parts/spacer', null, $data);
+}
+
 function cf_split($split, $is_reversible = false)
 {
     $sides = $is_reversible ? $split['split_reversible'] : $split['split'];
@@ -159,6 +178,11 @@ function cf_image($data)
     get_template_part('template-parts/image', null, $data);
 }
 
+function cf_video($data)
+{
+    get_template_part('template-parts/video', null, $data);
+}
+
 function cf_shortcode($data)
 {
     echo do_shortcode($data['shortcode']);
@@ -174,7 +198,73 @@ function cf_logos($data)
     get_template_part('template-parts/logos', null, $data);
 }
 
+function cf_partners($data)
+{
+    get_template_part('template-parts/partners', null, $data);
+}
+
+function cf_features($data)
+{
+    get_template_part('template-parts/features', null, $data);
+}
+
+function cf_gallery($data)
+{
+    get_template_part('template-parts/images-grid', null, $data);
+}
+
 function cf_table($data)
 {
     get_template_part('template-parts/table', null, $data);
+}
+
+function cf_accordion($data)
+{
+    $accordion = array(
+        'accordion' => array()
+    );
+
+    foreach ($data['accordion'] as $accordion_part) {
+        $accordion['accordion'][] = array(
+            'title' => get_accordion_part_title($accordion_part),
+            'content' => cf_inner_section($accordion_part['inner_section'])
+        );
+    }
+
+    get_template_part('template-parts/accordion', null, $accordion);
+}
+
+function get_accordion_part_title($accordion_part)
+{
+    $blocks = $accordion_part['inner_section'];
+
+    $title = null;
+
+    foreach ($blocks as $block) {
+        if (isset($block['title']) && $block['title']) {
+            $title = $block['title'];
+            break;
+        }
+    }
+
+    if ($title) return $title;
+
+    $title_by_type = array(
+        'video' => __('Video', 'sierra'),
+        'partners' => __('Partners', 'sierra'),
+        'features' => __('Features', 'sierra'),
+        'gallery' => __('Gallery', 'sierra'),
+        'image' => __('Image', 'sierra'),
+        'logos' => __('Partners', 'sierra')
+    );
+    $first_block = reset($blocks);
+    if (isset($first_block['_type'])) {
+        $title = $title_by_type[$first_block['_type']];
+    }
+
+    if ($title) return $title;
+
+    $title = __('Title', 'sierra');
+
+    return $title;
 }

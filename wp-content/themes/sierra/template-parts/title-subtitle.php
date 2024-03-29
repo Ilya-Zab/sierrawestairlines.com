@@ -12,7 +12,7 @@
 
   <?php if ($args['subtitle']) : ?>
     <h3 class="<?= $args['is_main'] ? 'h3 main-blog__sub-title' : 'desc main-experience__desc mx-auto' ?>">
-      <?= $args['subtitle'] ?>
+      <?= nl2br($args['subtitle']) ?>
     </h3>
   <?php endif ?>
 

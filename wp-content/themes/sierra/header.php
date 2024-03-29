@@ -45,8 +45,8 @@
 							Fleet
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/executive-fleet.html">Executive Fleet</a></li>
-							<li><a class="dropdown-item" href="#">Cargo Fleet</a></li>
+							<li><a class="dropdown-item" href="/executive-fleet">Executive Fleet</a></li>
+							<li><a class="dropdown-item" href="/cargo-fleet">Cargo Fleet</a></li>
 						</ul>
 					</li>
 					<li class="nav__item">
@@ -70,7 +70,7 @@
 						</a>
 					</li>
 					<li class="nav__item">
-						<a href="/">
+						<a href="/blog">
 							Blog
 						</a>
 					</li>

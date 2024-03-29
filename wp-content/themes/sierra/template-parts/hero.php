@@ -23,7 +23,7 @@ $image_url = wp_get_attachment_image_url($args['image'], 'large');
                                     <?= $args['title'] ?>
                                 </h3>
                                 <div class="desc mb-4">
-                                    <?= $args['text'] ?>
+                                    <?= nl2br($args['text']) ?>
                                 </div>
                                 <?php if (!empty($args['button_text'])) : ?>
                                     <div class="media-flex__btn-wrap text-lg-start text-sm-center">
