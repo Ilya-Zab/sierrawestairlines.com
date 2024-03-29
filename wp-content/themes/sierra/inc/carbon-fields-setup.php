@@ -22,23 +22,24 @@ function crb_attach_post_options()
     ));
 
     // Add sections
+    cf_add_title_subtitle($sections_field);
     cf_add_rich_text($sections_field);
-    cf_add_table($sections_field);
-    cf_add_cards($sections_field);
     cf_add_image($sections_field);
+    cf_add_video($sections_field);
+    cf_add_button($sections_field);
+    cf_add_spacer($sections_field);
+    cf_add_table($sections_field);
+    cf_add_hero($sections_field);
+    cf_add_cards($sections_field);
+    cf_add_accordion($sections_field);
     cf_add_split($sections_field);
+    cf_add_split_reversible($sections_field);
     cf_add_logos($sections_field);
     cf_add_partners($sections_field);
-    cf_add_hero($sections_field);
-    cf_add_video_hero($sections_field);
-    cf_add_accordion($sections_field);
-    cf_add_video($sections_field);
-    cf_add_shortcode($sections_field);
-    cf_add_title_subtitle($sections_field);
-    cf_add_button($sections_field);
     cf_add_features($sections_field);
     cf_add_gallery($sections_field);
-    cf_add_spacer($sections_field);
+    cf_add_shortcode($sections_field);
+    cf_add_video_hero($sections_field);
 
     // Put into container
     $sections_container = Container::make('post_meta', __('Sections', 'sierra'));
@@ -87,6 +88,7 @@ function cf_add_table($field)
 function cf_add_cards($field)
 {
     $cards = Field::make('complex', 'cards', __('Cards', 'sierra'));
+    $cards->set_layout('tabbed-horizontal');
     $cards->setup_labels(array(
         'plural_name' => 'Cards',
         'singular_name' => 'card'
@@ -122,7 +124,7 @@ function cf_add_card($field)
 // Split
 function cf_add_split($field)
 {
-    $split = Field::make('complex', 'split', __('Split (50/50)', 'sierra'));
+    $split = Field::make('complex', 'split', __('Split section', 'sierra'));
     $split->setup_labels(array(
         'plural_name' => 'Sides',
         'singular_name' => 'side'
@@ -133,7 +135,24 @@ function cf_add_split($field)
 
     cf_add_inner_section($split);
 
-    $field->add_fields('split', __('Split (50/50)', 'sierra'), array($split));
+    $field->add_fields('split', __('Split section', 'sierra'), array($split));
+}
+
+// Split reversible
+function cf_add_split_reversible($field)
+{
+    $split = Field::make('complex', 'split_reversible', __('Split section (reversible)', 'sierra'));
+    $split->setup_labels(array(
+        'plural_name' => 'Sides',
+        'singular_name' => 'side'
+    ));
+    $split->set_layout('tabbed-horizontal');
+    $split->set_max(2);
+    $split->set_min(2);
+
+    cf_add_inner_section($split);
+
+    $field->add_fields('split_reversible', __('Split section (reversible)', 'sierra'), array($split));
 }
 
 // Inner section
@@ -145,17 +164,17 @@ function cf_add_inner_section($field)
         'singular_name' => 'block'
     ));
 
-    cf_add_image($inner_section);
+    cf_add_title_subtitle($inner_section);
     cf_add_rich_text($inner_section);
+    cf_add_image($inner_section);
+    cf_add_video($inner_section);
+    cf_add_button($inner_section);
     cf_add_table($inner_section);
     cf_add_logos($inner_section);
     cf_add_partners($inner_section);
-    cf_add_video($inner_section);
-    cf_add_shortcode($inner_section);
-    cf_add_title_subtitle($inner_section);
-    cf_add_button($inner_section);
     cf_add_features($inner_section);
     cf_add_gallery($inner_section);
+    cf_add_shortcode($inner_section);
 
     $field->add_fields('inner_section', __('Inner section', 'sierra'), array($inner_section));
 }
@@ -204,7 +223,8 @@ function cf_add_hero($field)
     $field->add_fields('hero', __('Hero', 'sierra'), array(
         Field::make('checkbox', 'is_reverse', __('Reverse', 'sierra')),
         Field::make('image', 'image', __('Image', 'sierra')),
-        Field::make('checkbox', 'is_wide', __('Wide image', 'sierra')),
+        Field::make('checkbox', 'is_wide', __('Wide image', 'sierra'))
+            ->set_default_value(true),
         Field::make('text', 'title', __('Title', 'sierra')),
         Field::make('checkbox', 'is_bold', __('Bold title', 'sierra')),
         Field::make('rich_text', 'text', __('Text', 'sierra')),
@@ -259,7 +279,8 @@ function cf_add_title_subtitle($field)
         Field::make('text', 'title', __('Title', 'sierra')),
         Field::make('text', 'subtitle', __('Subtitle', 'sierra')),
         Field::make('checkbox', 'is_main', __('Big title', 'sierra')),
-        Field::make('checkbox', 'is_center', __('Centered', 'sierra'))
+        Field::make('checkbox', 'is_center', __('Centered', 'sierra')),
+        Field::make('checkbox', 'use_h1', __('Use H1', 'sierra'))
     ));
 }
 

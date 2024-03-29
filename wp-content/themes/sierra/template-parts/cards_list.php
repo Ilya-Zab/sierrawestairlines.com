@@ -1,8 +1,12 @@
-<div class="blog-grid">
-    <?php
-    $items = $args['items'];
-    foreach ($items as $item) {
-        get_template_part('template-parts/card', null, $item);
-    }
-    ?>
-</div>
+<section class="main-blog">
+    <div class="container">
+        <div class="blog-grid">
+            <?php
+            $cards = $args['cards'];
+            foreach ($cards as $card) {
+                get_template_part('template-parts/card', null, $card);
+            }
+            ?>
+        </div>
+    </div>
+</section>

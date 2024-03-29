@@ -21,7 +21,7 @@
 				</div>
 			</button>
 			<a href="/" class="logo">
-				<img src="<?= ASSETS_PATH ?>/img/logo.svg" alt="Logo">
+				<img src="<?= ASSETS_PATH ?>/img/logo.svg" data-mini-logo-url="<?= ASSETS_PATH ?>/img/logo-sticky.svg" alt="Logo">
 			</a>
 			<nav class="nav">
 				<ul class="nav__list">

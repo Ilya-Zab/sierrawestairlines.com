@@ -165,11 +165,9 @@ get_template_part('template-parts/partners', null, array(
 // ob_end_clean();
 
 get_template_part('template-parts/split', null, array(
-    'items' => [
-        'sides' => [
-            $side_1,
-            $side_2
-        ]
+    'split' => [
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, facilis! Nobis sapiente aut, adipisci atque sint, eveniet expedita voluptates maiores voluptate pariatur architecto vero reiciendis, nisi exercitationem cumque delectus ab?',
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, facilis! Nobis sapiente aut, adipisci atque sint, eveniet expedita voluptates maiores voluptate pariatur architecto vero reiciendis, nisi exercitationem cumque delectus ab?'
     ]
 ));
 
@@ -338,7 +336,7 @@ get_template_part('template-parts/rich_text', null, array(
                         <button type="submit" class="btn btn-danger">Let’s talk</button>
                     </div>
                 </form> -->
-                <?php echo do_shortcode('[contact-form-7 id="5c1a64b" title="Contacts Form"] '); ?>
+                <?php echo do_shortcode(' [contact-form-7 id="5c1a64b" title="Contacts Form"]'); ?>
             </div>
         </div>
     </div>
