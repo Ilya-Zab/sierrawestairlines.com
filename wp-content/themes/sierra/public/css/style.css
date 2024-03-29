@@ -586,6 +586,10 @@ textarea {
   max-height: 40px;
 }
 
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 .accordion__item {
   border-radius: 15px;
   border-radius: 15px !important;
@@ -1134,7 +1138,7 @@ input[type=radio] {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 60px;
   }
-  .jumpseat {
+  .jumpseat.pb-12 {
     padding-bottom: 80px;
   }
   .schedule {
@@ -1488,6 +1492,9 @@ input[type=radio] {
   }
   .grid-page__image {
     margin-bottom: 20px;
+  }
+  .jumpseat.pb-12 {
+    padding-bottom: 60px;
   }
   .jumpseat {
     padding-top: 30px;
