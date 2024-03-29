@@ -671,6 +671,12 @@
     }
   }
 
+  .card {
+    &__img {
+      margin-bottom: 20px;
+    }
+  }
+
   .main-experience {
     &__desc {
       font-size: 19px;
