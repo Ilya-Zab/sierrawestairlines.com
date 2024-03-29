@@ -31,21 +31,11 @@ body {
   font-family: $text-font sans-serif;
 }
 
-ul {
+ul:not(.rich-container) {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
-// :not(.rich-container) ul,
-// :not(.rich-container) a {
-//   margin: 0;
-//   padding: 0;
-//   list-style-type: none;
-//   color: inherit;
-//   text-decoration: none;
-// }
-
 
 .section-offset {
   padding-top: 80px;
@@ -477,6 +467,10 @@ textarea {
   &__text {
     max-width: 380px;
   }
+
+  .row .desc:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .main-talk {
@@ -658,9 +652,12 @@ textarea {
   }
 }
 
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 // Accordion
 .accordion {
-
   &__item {
     border-radius: 15px;
     border-radius: 15px !important;

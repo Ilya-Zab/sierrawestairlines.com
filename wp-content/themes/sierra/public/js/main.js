@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerRect = header.getBoundingClientRect();
     const headerHeight = headerRect.height;
     const distanceToTop = window.scrollY;
-    headerLogo.src = '../img/logo-sticky.svg';
-    return distanceToTop > (headerHeight + 20)
+    headerLogo.src = headerLogo.getAttribute('data-mini-logo-url');
+    return distanceToTop > (headerHeight + 50)
   }
 
   function handleScroll() {
@@ -58,12 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', (event) => {
     if (!img) return;
-    const isImage = event.target.parentNode.classList.contains('grid-images__img-wrap');
+    const isImageCard = event.target.parentNode.classList.contains('grid-images__img-wrap');
     const isActive = !popImg.classList.contains('pop-img_active');
     const isCloseBtn = event.target.classList.contains('pop-img__close');
-    if (isImage && isActive) {
+    const isImage = event.target.classList.contains('pop-img__img');
+    if (isImageCard && isActive) {
       openModalImage(event);
-    } else if (!isActive && isCloseBtn) {
+    } else if (!isActive && isCloseBtn || !isActive && !isImage) {
       closeModalImage(event);
     }
   });
@@ -75,5 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModalImage(event) {
     popImg.classList.remove('pop-img_active');
+    popImg.addEventListener('transitionend', function onTransitionEnd() {
+      popImg.removeEventListener('transitionend', onTransitionEnd);
+      img.src = "";
+    });
   }
 });

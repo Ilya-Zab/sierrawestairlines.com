@@ -269,7 +269,7 @@
   }
 
   // Jumpseat
-  .jumpseat {
+  .jumpseat.pb-12 {
     padding-bottom: 80px;
   }
 
@@ -671,6 +671,12 @@
     }
   }
 
+  .card {
+    &__img {
+      margin-bottom: 20px;
+    }
+  }
+
   .main-experience {
     &__desc {
       font-size: 19px;
@@ -790,6 +796,10 @@
   }
 
   // Jumpseat
+  .jumpseat.pb-12 {
+    padding-bottom: 60px;
+  }
+
   .jumpseat {
     padding-top: 30px;
 
