@@ -321,7 +321,7 @@ get_template_part('template-parts/partners', null, array(
                         <button type="submit" class="btn btn-danger">Let’s talk</button>
                     </div>
                 </form> -->
-                <?php echo do_shortcode('[contact-form-7 id="5c1a64b" title="Contacts Form"] '); ?>
+                <?php echo do_shortcode(' [contact-form-7 id="5c1a64b" title="Contacts Form"]'); ?>
             </div>
         </div>
     </div>

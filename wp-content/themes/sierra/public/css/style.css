@@ -1137,9 +1137,6 @@ input[type=radio] {
   .jumpseat {
     padding-bottom: 80px;
   }
-  .jumpseat .row {
-    flex-direction: column-reverse;
-  }
   .schedule {
     display: flex;
     flex-direction: column;
