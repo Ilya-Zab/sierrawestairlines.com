@@ -628,9 +628,12 @@ textarea {
   }
 }
 
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 // Accordion
 .accordion {
-
   &__item {
     border-radius: 15px;
     border-radius: 15px !important;
