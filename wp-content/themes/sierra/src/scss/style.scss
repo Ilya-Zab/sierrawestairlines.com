@@ -93,12 +93,36 @@ ul {
   text-transform: uppercase;
 }
 
+.rich-container,
 .desc {
   font-weight: 400;
   font-size: 20px;
   font-family: $text-font;
   line-height: 1.4em;
   color: $desc;
+
+  a {
+    color: $red;
+    transition: .2s ease;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+
+  ul li {
+    list-style: disc;
+  }
+
+  ol,
+  ul {
+    margin-bottom: 0;
+    padding-left: 1rem;
+  }
+
+  li+br {
+    display: none;
+  }
 }
 
 .btn {
@@ -151,6 +175,12 @@ textarea {
 .logo {
   max-width: 165px;
   max-height: 66px;
+}
+
+.split-section {
+  .rich-container {
+    max-width: 550px;
+  }
 }
 
 // Burger

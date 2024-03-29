@@ -26,22 +26,22 @@
 			<nav class="nav">
 				<ul class="nav__list">
 					<li class="nav__item">
-						<a href="/about-us.html">
+						<a href="/about">
 							About
 						</a>
 					</li>
 					<li class="nav__item">
-						<a href="/services.html">
+						<a href="/services">
 							Services
 						</a>
 					</li>
 					<li class="nav__item">
-						<a href="/jumpseat.html">
+						<a href="/jumpseat">
 							Jumpseat
 						</a>
 					</li>
 					<li class="nav__item dropdown">
-						<a href="/fleet.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<a href="/fleet" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Fleet
 						</a>
 						<ul class="dropdown-menu">
@@ -50,22 +50,22 @@
 						</ul>
 					</li>
 					<li class="nav__item">
-						<a href="/contacts.html">
+						<a href="/contacts">
 							Contact
 						</a>
 					</li>
 					<li class="nav__item">
-						<a href="/employees.html">
+						<a href="/employees">
 							Employees
 						</a>
 					</li>
 					<li class="nav__item">
-						<a href="/giving-back.html">
+						<a href="/giving-back">
 							Giving
 						</a> back
 					</li>
 					<li class="nav__item">
-						<a href="/careers.html">
+						<a href="/careers">
 							Careers
 						</a>
 					</li>

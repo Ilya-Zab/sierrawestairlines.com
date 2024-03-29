@@ -1,5 +1,5 @@
 <?php
-$string = $args['table_content'];
+$string = $args['content'];
 $table_strings = explode("\n", $string);
 
 $headers = [];
@@ -23,7 +23,7 @@ foreach ($table_strings as $index => $line) {
         <tr>
             <?php foreach ($headers[0] as $title) : ?>
                 <th scope="col" class="text-uppercase h3">
-                    <?= $title . ':' ?>
+                    <?= $title ?>
                 </th>
             <?php endforeach ?>
         </tr>

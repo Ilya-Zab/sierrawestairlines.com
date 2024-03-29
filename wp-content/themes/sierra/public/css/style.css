@@ -122,12 +122,37 @@ ul {
   text-transform: uppercase;
 }
 
+.rich-container,
 .desc {
   font-weight: 400;
   font-size: 20px;
   font-family: "SourceSans3", sans-serif;
   line-height: 1.4em;
   color: #0a0a0a;
+}
+.rich-container a,
+.desc a {
+  color: #ce2026;
+  transition: 0.2s ease;
+}
+.rich-container a:hover,
+.desc a:hover {
+  color: #fc4046;
+}
+.rich-container ul li,
+.desc ul li {
+  list-style: disc;
+}
+.rich-container ol,
+.rich-container ul,
+.desc ol,
+.desc ul {
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+.rich-container li + br,
+.desc li + br {
+  display: none;
 }
 
 .btn {
@@ -179,6 +204,10 @@ textarea {
 .logo {
   max-width: 165px;
   max-height: 66px;
+}
+
+.split-section .rich-container {
+  max-width: 550px;
 }
 
 .burger {
