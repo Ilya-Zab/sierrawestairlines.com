@@ -165,11 +165,9 @@ get_template_part('template-parts/partners', null, array(
 // ob_end_clean();
 
 get_template_part('template-parts/split', null, array(
-    'items' => [
-        'sides' => [
-            $side_1,
-            $side_2
-        ]
+    'split' => [
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, facilis! Nobis sapiente aut, adipisci atque sint, eveniet expedita voluptates maiores voluptate pariatur architecto vero reiciendis, nisi exercitationem cumque delectus ab?',
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, facilis! Nobis sapiente aut, adipisci atque sint, eveniet expedita voluptates maiores voluptate pariatur architecto vero reiciendis, nisi exercitationem cumque delectus ab?'
     ]
 ));
 

@@ -1,7 +1,10 @@
+<?php
+$image_url = wp_get_attachment_image_url($args['image'], 'large');
+?>
 <div class="card">
-    <article class="card__item">
+    <article class="card__item <?= $args['centered'] ? 'text-center' : '' ?>">
         <div class="card__img card__img_bt">
-            <img src=<?= $args['path'] ?> alt=<?= $args['title'] ?>>
+            <img src=<?= $image_url ?> alt=<?= $args['title'] ?>>
         </div>
         <div class="card__content">
             <span class="desc card__desc card__desc_auth d-inline-block">
@@ -14,9 +17,9 @@
                 <?= $args['text'] ?>
             </p>
         </div>
-        <?php if ($args['btn']) : ?>
-            <a href=<?= $args['btn_link'] ?> class="btn btn-danger card__btn">
-                <?= $args['btn'] ?>
+        <?php if ($args['button_text']) : ?>
+            <a href=<?= $args['button_url'] ?> class="btn btn-danger card__btn">
+                <?= $args['button_text'] ?>
             </a>
         <?php endif ?>
     </article>
