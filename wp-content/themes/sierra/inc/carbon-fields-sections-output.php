@@ -4,13 +4,9 @@ function cf_output_sections($sections)
     /**
      * Sections to be used
      * 
-     * cf_add_rich_text
      * cf_add_video
-     * cf_add_button
      * cf_add_spacer
-     * cf_add_table
      * cf_add_accordion
-     * cf_add_logos
      * cf_add_partners
      * cf_add_features
      * cf_add_gallery
@@ -45,13 +41,22 @@ function cf_output_sections($sections)
             case 'shortcode':
                 wrap_as_section('cf_shortcode', $section);
                 break;
+            case 'rich_text':
+                wrap_as_section('cf_rich_text', $section);
+                break;
+            case 'logos':
+                wrap_as_section('cf_logos', $section);
+                break;
+            case 'table':
+                wrap_as_section('cf_table', $section);
+                break;
             default:
                 echo "The section <b>" . $section['_type'] . "</b> is not found<br>";
         }
     }
-    // echo '<pre>';
-    // print_r($sections);
-    // echo '</pre>';
+    echo '<pre>';
+    print_r($sections);
+    echo '</pre>';
 }
 
 function cf_inner_section($sections)
@@ -59,12 +64,7 @@ function cf_inner_section($sections)
     /**
      * Blocks to be used
      * 
-     * cf_add_title_subtitle
-     * cf_add_rich_text
      * cf_add_video
-     * cf_add_button
-     * cf_add_table
-     * cf_add_logos
      * cf_add_partners
      * cf_add_features
      * cf_add_gallery
@@ -85,6 +85,15 @@ function cf_inner_section($sections)
             case 'shortcode':
                 cf_shortcode($section);
                 break;
+            case 'rich_text':
+                cf_rich_text($section);
+                break;
+            case 'logos':
+                cf_logos($section);
+                break;
+            case 'table':
+                cf_table($section);
+                break;
             default:
                 echo "The block <b>" . $section['_type'] . "</b> is not found<br>";
         }
@@ -92,10 +101,6 @@ function cf_inner_section($sections)
 
     $inner_section = ob_get_contents();
     ob_clean();
-
-    // echo '<pre>';
-    // print_r($sections);
-    // echo '</pre>';
 
     return $inner_section;
 }
@@ -135,7 +140,7 @@ function cf_button($data)
 
 function cf_split($split, $is_reversible = false)
 {
-    $sides = $split['split'];
+    $sides = $is_reversible ? $split['split_reversible'] : $split['split'];
 
     foreach ($sides as &$side) {
         $side = isset($side['inner_section']) ? cf_inner_section($side['inner_section']) : '';
@@ -157,4 +162,19 @@ function cf_image($data)
 function cf_shortcode($data)
 {
     echo do_shortcode($data['shortcode']);
+}
+
+function cf_rich_text($data)
+{
+    get_template_part('template-parts/rich-text', null, $data);
+}
+
+function cf_logos($data)
+{
+    get_template_part('template-parts/logos', null, $data);
+}
+
+function cf_table($data)
+{
+    get_template_part('template-parts/table', null, $data);
 }

@@ -113,6 +113,7 @@ function cf_add_card($field)
         Field::make('text', 'title', __('Title', 'sierra')),
         Field::make('text', 'author', __('Author', 'sierra')),
         Field::make('textarea', 'text', __('Text', 'sierra')),
+        Field::make('text', 'link_url', __('Card link url', 'sierra')),
         Field::make('checkbox', 'centered', __('Align center', 'sierra')),
         Field::make('text', 'button_text', __('Button text', 'sierra'))
             ->set_width(50),

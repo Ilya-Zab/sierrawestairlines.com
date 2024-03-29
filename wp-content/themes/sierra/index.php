@@ -164,21 +164,6 @@ get_template_part('template-parts/partners', null, array(
 // $side_1 = ob_get_contents();
 // ob_end_clean();
 
-get_template_part('template-parts/split', null, array(
-    'split' => [
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, facilis! Nobis sapiente aut, adipisci atque sint, eveniet expedita voluptates maiores voluptate pariatur architecto vero reiciendis, nisi exercitationem cumque delectus ab?',
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, facilis! Nobis sapiente aut, adipisci atque sint, eveniet expedita voluptates maiores voluptate pariatur architecto vero reiciendis, nisi exercitationem cumque delectus ab?'
-    ]
-));
-
-get_template_part('template-parts/short_code', null, array(
-    'content' => ''
-));
-
-get_template_part('template-parts/rich_text', null, array(
-    'content' => ''
-));
-
 
 ?>
 
