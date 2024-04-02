@@ -50,7 +50,7 @@
 						</ul>
 					</li>
 					<li class="nav__item">
-						<a href="/contacts">
+						<a href="/contact">
 							Contact
 						</a>
 					</li>
