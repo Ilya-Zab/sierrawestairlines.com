@@ -173,6 +173,15 @@ textarea {
   }
 }
 
+.video-hero {
+  margin-bottom: 80px;
+}
+
+.carbon-sections section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 // Burger
 .burger {
   display: none;
@@ -351,6 +360,11 @@ textarea {
     font-weight: 300;
     text-transform: capitalize;
   }
+
+}
+
+.carbon-button.reduce-offset {
+  margin-top: -80px;
 }
 
 // Components
@@ -575,6 +589,53 @@ textarea {
   }
 }
 
+// Inner section
+.inner-section {
+  .sub-title-offset {
+    margin-bottom: 40px;
+  }
+
+  .schedule-table {
+    margin-bottom: 30px;
+  }
+
+  .carbon-button {
+    margin-bottom: 30px;
+  }
+
+  .carbon-features-list {
+    margin-bottom: 30px;
+  }
+
+  .carbon-image {
+    margin-bottom: 60px;
+  }
+
+  .carbon-images {
+    margin-bottom: 30px;
+  }
+
+  .carbon-logos {
+    margin-bottom: 30px;
+  }
+
+  .carbon-partners {
+    margin-bottom: 30px;
+  }
+
+  .carbon-text {
+    margin-bottom: 30px;
+  }
+
+  .single-video {
+    margin-bottom: 30px;
+  }
+
+  div:last-child {
+    margin-bottom: 0;
+  }
+}
+
 // Jumpseat
 .jumpseat {
   .h2 {
@@ -637,6 +698,7 @@ textarea {
 .features-list {
   &__list {
     gap: 80px;
+    flex-wrap: wrap;
 
     li {
       width: 150px;
@@ -993,21 +1055,6 @@ textarea {
   }
 }
 
-.careers-icons {
-  margin-bottom: 70px;
-
-  &__list {
-    gap: 60px;
-  }
-
-  &__item {
-    width: 200px;
-  }
-
-  img {
-    margin-bottom: 25px;
-  }
-}
 
 // Request quote
 .request-quote {

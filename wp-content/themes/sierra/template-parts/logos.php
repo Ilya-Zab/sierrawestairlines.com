@@ -1,4 +1,4 @@
-    <ul class="certificate-card__list row justify-content-center">
+    <ul class="certificate-card__list row justify-content-center carbon-logos">
       <?php
       foreach ($args['logos'] as $card) :
         $image_url = wp_get_attachment_image_url($card['image'], 'medium');

@@ -1,4 +1,4 @@
-<div class="grid-images">
+<div class="grid-images carbon-images">
   <div class="pop-img">
     <img src="<?= ASSETS_PATH ?>/img/close.svg" class="pop-img__close" alt="Close">
     <div class="pop-img__wrap">

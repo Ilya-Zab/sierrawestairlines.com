@@ -75,11 +75,11 @@
 						</a>
 					</li>
 				</ul>
-				<a href="/" class="btn btn-danger header__btn_mob">
+				<a href="/request-a-quote/" class="btn btn-danger header__btn_mob">
 					Request a quote
 				</a>
 			</nav>
-			<a href="/" class="btn btn-danger header__btn">
+			<a href="/request-a-quote/" class="btn btn-danger header__btn">
 				Request a quote
 			</a>
 		</div>

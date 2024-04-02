@@ -1,7 +1,7 @@
 <?php
 $image_url = wp_get_attachment_image_url($args['image'], 'large');
 ?>
-<section>
+<section class="pb-12">
     <div class="container">
         <div class="media-flex">
             <div class="row <?php echo $args['is_reverse'] ? 'flex-row-reverse' : ''; ?> justify-content-between">

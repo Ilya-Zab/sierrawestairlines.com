@@ -293,7 +293,8 @@ function cf_add_button($field)
             ->set_width(50),
         Field::make('text', 'button_url', __('Button url', 'sierra'))
             ->set_width(50),
-        Field::make('checkbox', 'is_center', __('Centered', 'sierra'))
+        Field::make('checkbox', 'is_center', __('Centered', 'sierra')),
+        Field::make('checkbox', 'reduce_offset', __('Reduce an offset with a previous section', 'sierra')),
     ));
 }
 

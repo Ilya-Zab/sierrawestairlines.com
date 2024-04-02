@@ -1,7 +1,7 @@
-<div class="titles <?= $args['is_center'] ? 'text-center' : '' ?>">
+<div class="titles sub-title-offset <?= $args['is_center'] ? 'text-center' : '' ?>">
 
   <?php if ($args['use_h1']) : ?>
-    <h1 class="h1"><?= $args['title'] ?></h1>
+    <h1 class="h2 pt-5-c"><?= $args['title'] ?></h1>
   <?php else : ?>
 
     <h2 class="<?= $args['is_main'] ? 'h2' : 'h2-sub' ?>">

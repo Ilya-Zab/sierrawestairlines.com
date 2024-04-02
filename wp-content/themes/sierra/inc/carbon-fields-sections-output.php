@@ -1,7 +1,7 @@
 <?php
 function cf_output_sections($sections)
 {
-
+    sections_start();
     foreach ($sections as $section) {
         switch ($section['_type']) {
             case 'video_hero':
@@ -62,6 +62,7 @@ function cf_output_sections($sections)
                 echo "The section <b>" . $section['_type'] . "</b> is not found<br>";
         }
     }
+    sections_end();
     // echo '<pre>';
     // print_r($sections);
     // echo '</pre>';
@@ -70,6 +71,7 @@ function cf_output_sections($sections)
 function cf_inner_section($sections)
 {
     ob_start();
+    inner_section_start();
     foreach ($sections as $section) {
         switch ($section['_type']) {
             case 'title_subtitle':
@@ -112,6 +114,7 @@ function cf_inner_section($sections)
                 echo "The block <b>" . $section['_type'] . "</b> is not found<br>";
         }
     }
+    inner_section_end();
 
     $inner_section = ob_get_contents();
     ob_clean();

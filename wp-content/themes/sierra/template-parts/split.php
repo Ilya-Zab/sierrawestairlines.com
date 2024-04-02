@@ -1,4 +1,4 @@
-<section class="split-section">
+<section class="split-section pb-12">
   <div class="container">
     <div class="row align-items-center <?= $args['is_reversible'] ? "flex-lg-row flex-column-reverse" : "" ?>">
       <div class="col-12 col-lg-6">

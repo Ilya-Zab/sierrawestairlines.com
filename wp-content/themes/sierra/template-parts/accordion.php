@@ -1,4 +1,4 @@
-<section>
+<section class="pb-12">
     <div class="container">
         <div class="accordion" id="accordion">
             <?php foreach ($args['accordion'] as $i => $item) : ?>

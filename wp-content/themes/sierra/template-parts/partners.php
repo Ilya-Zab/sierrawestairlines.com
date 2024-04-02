@@ -1,4 +1,4 @@
-<div class="row partners">
+<div class="row partners carbon-partners">
     <div class="partners__icons">
         <ul class="d-flex justify-content-lg-around justify-content-sm-between justify-content-between align-items-center partners__list">
 

@@ -2,7 +2,7 @@
 $video_id = $args['video'];
 $video_url = wp_get_attachment_url($video_id);
 ?>
-<section class="hero">
+<section class="hero video-hero">
     <video class="hero__video" src=<?= $video_url ?> autoplay muted loop></video>
 
     <div class="container hero__container">
