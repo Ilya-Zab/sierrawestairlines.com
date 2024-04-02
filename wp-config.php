@@ -21,15 +21,15 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'u133582545_sierra');
+define('DB_NAME', 'u133582545_sierra_test');
 // define('DB_NAME', 'gzba45409287511');
 
 /** Database username */
-define('DB_USER', 'u133582545_sierra');
+define('DB_USER', 'u133582545_sierra_test');
 // define('DB_USER', 'gzba45409287511');
 
 /** Database password */
-define('DB_PASSWORD', '!4mi#>oB');
+define('DB_PASSWORD', 'Q0@8aq*9D');
 // define('DB_PASSWORD', 'ltA}9)+rK');
 
 /** Database hostname */
