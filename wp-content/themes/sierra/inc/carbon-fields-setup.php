@@ -1,18 +1,11 @@
 <?php
 
-add_action('after_setup_theme', 'crb_load');
-function crb_load()
-{
-    require_once('carbon-fields/vendor/autoload.php');
-    \Carbon_Fields\Carbon_Fields::boot();
-}
-
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 use ParagonIE\Sodium\File;
 
-add_action('carbon_fields_register_fields', 'crb_attach_post_options');
-function crb_attach_post_options()
+add_action('carbon_fields_register_fields', 'crb_post_meta_setup');
+function crb_post_meta_setup()
 {
     // Create sections
     $sections_field = Field::make('complex', 'sierra_sections', __('Sections', 'sierra'));
