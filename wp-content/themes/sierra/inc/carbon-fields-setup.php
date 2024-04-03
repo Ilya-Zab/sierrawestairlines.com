@@ -1,18 +1,11 @@
 <?php
 
-add_action('after_setup_theme', 'crb_load');
-function crb_load()
-{
-    require_once('carbon-fields/vendor/autoload.php');
-    \Carbon_Fields\Carbon_Fields::boot();
-}
-
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 use ParagonIE\Sodium\File;
 
-add_action('carbon_fields_register_fields', 'crb_attach_post_options');
-function crb_attach_post_options()
+add_action('carbon_fields_register_fields', 'crb_post_meta_setup');
+function crb_post_meta_setup()
 {
     // Create sections
     $sections_field = Field::make('complex', 'sierra_sections', __('Sections', 'sierra'));
@@ -278,7 +271,7 @@ function cf_add_title_subtitle($field)
 {
     $field->add_fields('title_subtitle', __('Title and subtitle', 'sierra'), array(
         Field::make('text', 'title', __('Title', 'sierra')),
-        Field::make('text', 'subtitle', __('Subtitle', 'sierra')),
+        Field::make('textarea', 'subtitle', __('Subtitle', 'sierra')),
         Field::make('checkbox', 'is_main', __('Big title', 'sierra')),
         Field::make('checkbox', 'is_center', __('Centered', 'sierra')),
         Field::make('checkbox', 'use_h1', __('Use H1', 'sierra'))
@@ -293,7 +286,8 @@ function cf_add_button($field)
             ->set_width(50),
         Field::make('text', 'button_url', __('Button url', 'sierra'))
             ->set_width(50),
-        Field::make('checkbox', 'is_center', __('Centered', 'sierra'))
+        Field::make('checkbox', 'is_center', __('Centered', 'sierra')),
+        Field::make('checkbox', 'reduce_offset', __('Reduce an offset with a previous section', 'sierra')),
     ));
 }
 
@@ -326,12 +320,9 @@ function cf_add_gallery($field)
 // Spacer
 function cf_add_spacer($field)
 {
-    $field->add_fields('spacer', __('Add space', 'sierra'), array(
+    $field->add_fields('spacer', __('Spacer', 'sierra'), array(
         Field::make('text', 'size', __('Space size', 'sierra'))
-            ->set_attribute('type', 'range')
-            ->set_attribute('step', '10')
-            ->set_attribute('min', '10')
-            ->set_attribute('max', '120')
+            ->set_attribute('type', 'number')
             ->set_default_value(10)
     ));
 }

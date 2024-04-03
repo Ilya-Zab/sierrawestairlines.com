@@ -1,40 +1,27 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package sierra
- */
-
 get_header();
 ?>
+<section class="blog-article pb-12 pt-5-c">
+	<div class="container">
+		<h2 class="h2 text-center">
+			<?php the_title(); ?>
+		</h2>
 
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'sierra' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'sierra' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
+		<div class="article mx-auto">
+			<article class="blog-grid__item">
+				<div class="desc blog-grid__desc blog-grid__desc_auth blog-grid__desc_auth-article d-block text-center mb-3">
+					<?= get_the_author_meta('display_name', get_post_field('post_author', get_the_ID())); ?> | <?= get_the_date('j F Y'); ?>
+				</div>
+				<div class="blog-grid__img blog-grid__img_bt blog-grid__img_art">
+					<?php the_post_thumbnail('large') ?>
+				</div>
+				<div class="blog-grid__content rich-container">
+					<?php the_content(); ?>
+				</div>
+			</article>
+		</div>
+	</div>
+</section>
 <?php
-get_sidebar();
+
 get_footer();

@@ -8,13 +8,15 @@ $image_url = wp_get_attachment_image_url($args['image'], 'large');
         <div class="card">
         <?php endif; ?>
         <article class="card__item <?= $args['centered'] ? 'text-center' : '' ?>">
-            <div class="card__img card__img_bt">
+            <div class="card__img <?= ($args['author'] !== '') ? 'card__img_bt' : '' ?>">
                 <img src=<?= $image_url ?> alt=<?= $args['title'] ?>>
             </div>
             <div class="card__content">
-                <span class="desc card__desc card__desc_auth d-inline-block">
-                    <?= $args['author'] ?>
-                </span>
+                <?php if ($args['author'] !== '') : ?>
+                    <span class="desc card__desc card__desc_auth d-inline-block">
+                        <?= $args['author'] ?>
+                    </span>
+                <?php endif ?>
                 <h3 class="h3 mb-sm-3 mb-xs-2">
                     <?= $args['title'] ?>
                 </h3>

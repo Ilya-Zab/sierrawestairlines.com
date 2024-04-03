@@ -77,6 +77,10 @@
     z-index: 101;
   }
 
+  .video-hero {
+    margin-bottom: 40px;
+  }
+
   .header {
     padding: 12px 0;
 
@@ -548,6 +552,10 @@
 
 @media (max-width: 576px) {
 
+  .video-hero {
+    margin-bottom: 30px;
+  }
+
   .wpcf7-not-valid-tip {
     font-size: 14px;
   }
@@ -668,6 +676,12 @@
   .blog-article {
     .h2 {
       margin-bottom: 15px;
+    }
+  }
+
+  .card {
+    &__img {
+      margin-bottom: 20px;
     }
   }
 
@@ -1039,15 +1053,6 @@
     }
   }
 
-  .careers-icons {
-    &__list {
-      gap: 40px;
-    }
-
-    &__item {
-      width: 100px;
-    }
-  }
 
   // Request a Quote
   .request-quote.pt-5-c {

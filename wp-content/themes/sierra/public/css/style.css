@@ -70,7 +70,7 @@ body {
   font-family: "SourceSans3", sans-serif sans-serif;
 }
 
-ul {
+ul:not(.rich-container) {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -208,6 +208,15 @@ textarea {
 
 .split-section .rich-container {
   max-width: 550px;
+}
+
+.video-hero {
+  margin-bottom: 80px;
+}
+
+.carbon-sections section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .burger {
@@ -350,6 +359,10 @@ textarea {
   text-transform: capitalize;
 }
 
+.carbon-button.reduce-offset {
+  margin-top: -80px;
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -444,6 +457,9 @@ textarea {
 .media-flex__text {
   max-width: 380px;
 }
+.media-flex .row .desc:last-child {
+  margin-bottom: 0;
+}
 
 .main-talk__desc {
   max-width: 800px;
@@ -530,6 +546,40 @@ textarea {
   border-radius: 10px;
 }
 
+.inner-section .sub-title-offset {
+  margin-bottom: 40px;
+}
+.inner-section .schedule-table {
+  margin-bottom: 30px;
+}
+.inner-section .carbon-button {
+  margin-bottom: 30px;
+}
+.inner-section .carbon-features-list {
+  margin-bottom: 30px;
+}
+.inner-section .carbon-image {
+  margin-bottom: 60px;
+}
+.inner-section .carbon-images {
+  margin-bottom: 30px;
+}
+.inner-section .carbon-logos {
+  margin-bottom: 30px;
+}
+.inner-section .carbon-partners {
+  margin-bottom: 30px;
+}
+.inner-section .carbon-text {
+  margin-bottom: 30px;
+}
+.inner-section .single-video {
+  margin-bottom: 30px;
+}
+.inner-section div:last-child {
+  margin-bottom: 0;
+}
+
 .jumpseat .h2 {
   margin-bottom: 70px;
 }
@@ -574,6 +624,7 @@ textarea {
 
 .features-list__list {
   gap: 80px;
+  flex-wrap: wrap;
 }
 .features-list__list li {
   width: 150px;
@@ -854,19 +905,6 @@ textarea {
   max-width: 195px;
 }
 
-.careers-icons {
-  margin-bottom: 70px;
-}
-.careers-icons__list {
-  gap: 60px;
-}
-.careers-icons__item {
-  width: 200px;
-}
-.careers-icons img {
-  margin-bottom: 25px;
-}
-
 .request-quote .h2 {
   margin-bottom: 70px;
 }
@@ -1001,6 +1039,9 @@ input[type=radio] {
   .burger {
     margin-right: 15px;
     z-index: 101;
+  }
+  .video-hero {
+    margin-bottom: 40px;
   }
   .header {
     padding: 12px 0;
@@ -1323,6 +1364,9 @@ input[type=radio] {
   }
 }
 @media (max-width: 576px) {
+  .video-hero {
+    margin-bottom: 30px;
+  }
   .wpcf7-not-valid-tip {
     font-size: 14px;
   }
@@ -1409,6 +1453,9 @@ input[type=radio] {
   }
   .blog-article .h2 {
     margin-bottom: 15px;
+  }
+  .card__img {
+    margin-bottom: 20px;
   }
   .main-experience__desc {
     font-size: 19px;
@@ -1652,12 +1699,6 @@ input[type=radio] {
   }
   .careers .grid-page__image {
     margin-bottom: 20px;
-  }
-  .careers-icons__list {
-    gap: 40px;
-  }
-  .careers-icons__item {
-    width: 100px;
   }
   .request-quote.pt-5-c {
     padding-top: 30px;

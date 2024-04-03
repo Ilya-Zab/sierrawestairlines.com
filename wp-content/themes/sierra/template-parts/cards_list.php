@@ -1,4 +1,4 @@
-<section class="main-blog">
+<section class="main-blog pb-12">
     <div class="container">
         <div class="blog-grid">
             <?php
