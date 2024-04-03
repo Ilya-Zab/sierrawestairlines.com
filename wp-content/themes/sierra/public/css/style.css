@@ -1366,6 +1366,7 @@ input[type=radio] {
   }
   .nav__list {
     gap: 20px;
+    text-align: center;
   }
   .nav__list li {
     font-size: 16px;
