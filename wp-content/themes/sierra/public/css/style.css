@@ -1006,6 +1006,10 @@ input[type=radio] {
   font-size: 16px;
 }
 
+.wpcf7-spinner {
+  position: absolute;
+}
+
 .footer {
   padding-top: 80px;
   padding-bottom: 60px;
@@ -1083,6 +1087,9 @@ input[type=radio] {
   }
   .pb-12 {
     padding-bottom: 80px;
+  }
+  .carbon-button.reduce-offset {
+    margin-top: -40px;
   }
   .logo {
     margin-right: auto;
@@ -1687,6 +1694,9 @@ input[type=radio] {
   }
   .pt-5-c {
     padding-top: 30px;
+  }
+  .carbon-button.reduce-offset {
+    margin-top: -10px;
   }
   .pb-12 {
     padding-bottom: 40px;
