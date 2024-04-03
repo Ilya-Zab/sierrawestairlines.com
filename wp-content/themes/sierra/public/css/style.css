@@ -1536,9 +1536,6 @@ input[type=radio] {
   .executive-fleet .h2 {
     margin-bottom: 30px;
   }
-  .features-list__list li {
-    width: 100px;
-  }
   .accordion__body {
     padding-top: 15px;
     padding-bottom: 30px;
@@ -1678,7 +1675,8 @@ input[type=radio] {
   .con-info__bottom {
     flex-direction: column;
     row-gap: 30px;
-    text-align: center;
+    margin: 0 auto;
+    max-width: 220px;
   }
   .con-info__wrap_top {
     margin-bottom: 30px;

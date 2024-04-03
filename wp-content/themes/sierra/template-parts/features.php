@@ -5,7 +5,7 @@
       $image_url = wp_get_attachment_image_url($item['image'], 'medium');
     ?>
       <li class="d-flex flex-column align-items-center">
-        <img src="<?= $image_url ?>" alt=<?= $item['text'] ?>>
+        <img src="<?= $image_url ?>" alt="<?= $item['text'] ?>">
         <h3 class="accordion__title text-uppercase">
           <?= $item['text'] ?>
         </h3>

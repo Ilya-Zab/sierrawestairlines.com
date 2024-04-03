@@ -46,6 +46,7 @@ function cf_add_rich_text($field)
     $field->add_fields('rich_text', __('Rich text', 'sierra'), array(
         Field::make('text', 'title', __('Title', 'sierra')),
         Field::make('rich_text', 'text', __('Rich text', 'sierra')),
+        Field::make('checkbox', 'center_mobile', __('Align center for mobile', 'sierra'))
     ));
 }
 
