@@ -264,6 +264,8 @@ textarea {
   padding: 17px 0;
   align-items: center;
   background-color: $custom-white;
+  position: relative;
+  z-index: 100;
 
   &__container {
     margin: 0 auto;
