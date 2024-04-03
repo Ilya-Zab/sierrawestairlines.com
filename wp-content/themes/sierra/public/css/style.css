@@ -1370,6 +1370,9 @@ input[type=radio] {
   .nav__list li {
     font-size: 16px;
   }
+  .nav .sub-menu {
+    position: relative;
+  }
   .mb-mob-2 {
     margin-bottom: 1rem;
   }
