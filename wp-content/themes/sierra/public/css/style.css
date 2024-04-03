@@ -1106,6 +1106,7 @@ input[type=radio] {
   }
   #menu-main-menu {
     text-align: center;
+    overflow: auto;
   }
   .logo {
     margin-right: auto;
