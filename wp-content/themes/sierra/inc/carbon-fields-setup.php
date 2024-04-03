@@ -294,6 +294,7 @@ function cf_add_button($field)
             ))
             ->set_default_value('left'),
         Field::make('checkbox', 'reduce_offset', __('Reduce an offset with a previous section', 'sierra')),
+        Field::make('checkbox', 'is_blank', __('Open in new tab', 'sierra')),
     ));
 }
 
