@@ -33,7 +33,7 @@
 
 				));
 				?>
-				<a href="/request-a-quote/" class="btn btn-danger header__btn">
+				<a href="/request-a-quote/" class="btn btn-danger header__btn_mob">
 					Request a quote
 				</a>
 			</div>
