@@ -122,26 +122,31 @@
     }
   }
 
+  .nav-wrap {
+    overflow: auto;
+  }
+
   .nav {
     min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     transition: transform .5s ease-in-out, opacity .5s ease-in-out;
     transform: translatex(-1000px);
     background: $custom-white;
     opacity: 0;
-    overflow: auto;
+
 
     &__list {
       margin-bottom: 30px;
       flex-direction: column;
       width: 100%;
       gap: 30px;
-      overflow: auto;
 
       li {
         font-size: 21px;

@@ -24,13 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll);
 
   function blockBody() {
-    const container = document.querySelector('.container');
     document.documentElement.style.paddingRight = window.innerWidth - document.body.offsetWidth + 'px';
     document.documentElement.style.overflow = 'hidden';
   }
 
   function unblockBody() {
-    const container = document.querySelector('.container');
     document.documentElement.style.paddingRight = 0;
     document.documentElement.style.overflow = 'auto';
   }

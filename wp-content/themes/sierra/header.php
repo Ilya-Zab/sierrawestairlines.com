@@ -23,15 +23,20 @@
 			<a href="/" class="logo">
 				<img src="<?= ASSETS_PATH ?>/img/logo.svg" data-mini-logo-url="<?= ASSETS_PATH ?>/img/logo-sticky.svg" alt="Logo">
 			</a>
-			<?php
-			wp_nav_menu(array(
-				'menu' => 'main-menu',
-				'menu_class' => 'nav__list',
-				'container' => 'nav',
-				'container_class' => 'nav',
+			<div class="nav-wrap">
+				<?php
+				wp_nav_menu(array(
+					'menu' => 'main-menu',
+					'menu_class' => 'nav__list',
+					'container' => 'nav',
+					'container_class' => 'nav',
 
-			));
-			?>
+				));
+				?>
+				<a href="/request-a-quote/" class="btn btn-danger header__btn">
+					Request a quote
+				</a>
+			</div>
 			<a href="/request-a-quote/" class="btn btn-danger header__btn">
 				Request a quote
 			</a>
