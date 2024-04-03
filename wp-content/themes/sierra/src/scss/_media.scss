@@ -67,6 +67,14 @@
 }
 
 @media(max-width: 992px) {
+  .pt-5-c {
+    padding-top: 40px;
+  }
+
+  .pb-12 {
+    padding-bottom: 80px;
+  }
+
   .logo {
     margin-right: auto;
     z-index: 101;
@@ -173,16 +181,6 @@
     }
   }
 
-  .blog-article.pb-12 {
-    padding-bottom: 80px;
-  }
-
-  .blog-article.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .article {}
-
   .media-flex {
     .row {
       flex-direction: column;
@@ -273,10 +271,6 @@
   }
 
   // Jumpseat
-  .jumpseat.pb-12 {
-    padding-bottom: 80px;
-  }
-
   .schedule {
     display: flex;
     flex-direction: column;
@@ -292,14 +286,6 @@
   }
 
   // Executive Fleet
-  .executive-fleet.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .executive-fleet.pb-12 {
-    padding-bottom: 60px;
-  }
-
   .features-list {
     &__list {
       gap: 60px;
@@ -321,14 +307,6 @@
   }
 
   // Cargo Fleet
-  .cargo-fleet.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .cargo-fleet.pb-12 {
-    padding-bottom: 80px;
-  }
-
   .metro-3 {
     .desc:first-child {
       margin-bottom: 15px;
@@ -345,14 +323,6 @@
   }
 
   // Contact
-  .contacts.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .contacts.pb-12 {
-    padding-bottom: 80px;
-  }
-
   .contacts {
     .container {
       max-width: 760px;
@@ -382,14 +352,6 @@
   }
 
   // Employees
-  .employees.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .employees.pb-12 {
-    padding-bottom: 80px;
-  }
-
   .employees {
     .h2 {
       margin-bottom: 50px;
@@ -405,14 +367,6 @@
   }
 
   // Giving Back
-  .giving-back.pb-12 {
-    padding-bottom: 60px;
-  }
-
-  .giving-back.pt-5-c {
-    padding-top: 40px;
-  }
-
   .giving-back {
     .h2 {
       margin-bottom: 50px;
@@ -431,14 +385,6 @@
   }
 
   // Careers 
-  .careers.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .careers.pb-12 {
-    padding-bottom: 80px;
-  }
-
   .careers {
     &__bot-title {
       margin-bottom: 60px;
@@ -458,14 +404,6 @@
   }
 
   // Request a Quote
-  .request-quote.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .request-quote.pb-12 {
-    padding-bottom: 80px;
-  }
-
   .request-quote {
     .h2 {
       margin-bottom: 60px;
@@ -473,14 +411,6 @@
   }
 
   // Blog
-  .blog.pt-5-c {
-    padding-top: 40px;
-  }
-
-  .blog.pb-12 {
-    padding-bottom: 80px;
-  }
-
   .blog {
 
     .h2,
@@ -551,6 +481,14 @@
 }
 
 @media (max-width: 576px) {
+
+  .pt-5-c {
+    padding-top: 30px;
+  }
+
+  .pb-12 {
+    padding-bottom: 40px;
+  }
 
   .video-hero {
     margin-bottom: 30px;
@@ -663,14 +601,6 @@
       margin-top: 20px;
       font-size: 24px;
     }
-  }
-
-  .blog-article.pb-12 {
-    padding-bottom: 40px;
-  }
-
-  .blog-article.pt-5-c {
-    padding-top: 30px;
   }
 
   .blog-article {
@@ -804,10 +734,6 @@
   }
 
   // Jumpseat
-  .jumpseat.pb-12 {
-    padding-bottom: 60px;
-  }
-
   .jumpseat {
     padding-top: 30px;
 
@@ -840,14 +766,6 @@
   }
 
   // Executive Fleet
-  .executive-fleet.pt-5-c {
-    padding-top: 30px;
-  }
-
-  .executive-fleet.pb-12 {
-    padding-bottom: 50px;
-  }
-
   .executive-fleet {
     .h2 {
       margin-bottom: 30px;
@@ -897,14 +815,6 @@
   }
 
   // Cargo Fleet
-  .cargo-fleet.pt-5-c {
-    padding-top: 30px;
-  }
-
-  .cargo-fleet.pb-12 {
-    padding-bottom: 60px;
-  }
-
   .cargo-fleet {
     .h2 {
       margin-bottom: 30px;
@@ -934,16 +844,8 @@
   }
 
   // Contacts
-  .contacts.pt-5-c {
-    padding-top: 30px;
-  }
-
   .contacts .h2 {
     margin-bottom: 30px;
-  }
-
-  .contacts.pb-12 {
-    padding-bottom: 60px;
   }
 
   .con-info {
@@ -968,14 +870,6 @@
   }
 
   // Employees
-  .employees.pb-12 {
-    padding-bottom: 60px;
-  }
-
-  .employees.pt-5-c {
-    padding-top: 30px;
-  }
-
   .employees {
     .h2 {
       margin-bottom: 30px;
@@ -987,14 +881,6 @@
   }
 
   //Giving back 
-  .giving-back.pt-5-c {
-    padding-top: 30px;
-  }
-
-  .giving-back.pb-12 {
-    padding-bottom: 30px;
-  }
-
   .giving-back {
     .h2 {
       margin-bottom: 30px;
@@ -1017,14 +903,6 @@
   }
 
   // Careers
-  .careers.pt-5-c {
-    padding-top: 30px;
-  }
-
-  .careers.pb-12 {
-    padding-bottom: 60px;
-  }
-
   .careers {
     .h2-sub {
       margin-bottom: 10px;
@@ -1055,14 +933,6 @@
 
 
   // Request a Quote
-  .request-quote.pt-5-c {
-    padding-top: 30px;
-  }
-
-  .request-quote.pb-12 {
-    padding-bottom: 60px;
-  }
-
   .request-quote {
     .h2 {
       margin-bottom: 30px;
@@ -1093,14 +963,6 @@
 
 
   // Blog
-  .blog.pt-5-c {
-    padding-top: 30px;
-  }
-
-  .blog.pb-12 {
-    padding-bottom: 60px;
-  }
-
   .blog {
     .h2 {
       margin-bottom: 30px;
