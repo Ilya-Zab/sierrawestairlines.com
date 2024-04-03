@@ -17,7 +17,7 @@
 		</address>
 	</div>
 	<div class="all-rights text-center">
-		© <?= date('Y') ?> Sierra West Airlines. All Rights Reserved. | <a href="/">Privacy Statement</a>
+		© <?= date('Y') ?> Sierra West Airlines. All Rights Reserved. | <a href="/privacy-policy/">Privacy Statement</a>
 	</div>
 </footer>
 
