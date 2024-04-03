@@ -1106,7 +1106,6 @@ input[type=radio] {
   }
   #menu-main-menu {
     text-align: center;
-    overflow: auto;
   }
   .logo {
     margin-right: auto;
@@ -1135,13 +1134,21 @@ input[type=radio] {
     padding-right: 60px;
     padding-left: 60px;
   }
+  .nav-wrap {
+    overflow: auto;
+    position: fixed;
+    top: 0 right 0;
+    left: 0;
+  }
   .nav {
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translatex(-1000px);
@@ -1362,17 +1369,7 @@ input[type=radio] {
     font-size: 16px;
   }
   .nav .sub-menu {
-    position: relative;
-    visibility: visible;
-    opacity: 1;
     display: none;
-    background-color: transparent;
-  }
-  .nav .sub-menu:hover {
-    display: block;
-  }
-  .nav a:hover + .sub-menu {
-    display: block;
   }
   .mb-mob-2 {
     margin-bottom: 1rem;
