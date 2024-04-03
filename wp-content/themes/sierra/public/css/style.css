@@ -432,6 +432,9 @@ textarea {
 .card__desc {
   margin-bottom: 20px;
 }
+.card .desc:last-child {
+  margin-bottom: 0;
+}
 .card__desc_auth {
   font-size: 18px;
   color: #a5a5a5;
@@ -1165,145 +1168,154 @@ input[type=radio] {
   .media-flex__btn-bot {
     margin-top: 50px;
   }
-  .fleet {
+  .split-section__img-bot {
+    margin-bottom: 30px;
+  }
+  .split-section .fleet {
     padding-top: 40px;
     padding-bottom: 80px;
   }
-  .fleet .h2 {
+  .split-section .fleet .h2 {
     margin-bottom: 50px;
   }
-  .fleet .mb-sm-4 {
+  .split-section .fleet .mb-sm-4 {
     margin-bottom: 40px !important;
   }
-  .fleet .sub-title-offset {
+  .split-section .fleet .sub-title-offset {
     margin-bottom: 60px;
   }
-  .image-desc {
-    padding-bottom: 20px;
-  }
-  .image-desc .h2 {
-    margin-bottom: 50px;
-  }
-  .image-desc__img {
-    margin-bottom: 40px;
-  }
-  .image-desc__content {
+  .split-section .fleet .rich-container {
     max-width: 100%;
   }
-  .image-desc__container .row {
+  .split-section .split-section .rich-container {
+    max-width: 550px;
+  }
+  .split-section .image-desc {
+    padding-bottom: 20px;
+  }
+  .split-section .image-desc .h2 {
+    margin-bottom: 50px;
+  }
+  .split-section .image-desc__img {
+    margin-bottom: 40px;
+  }
+  .split-section .image-desc__content {
+    max-width: 100%;
+  }
+  .split-section .image-desc__container .row {
     flex-direction: column-reverse;
   }
-  .certificate-card__list {
+  .split-section .certificate-card__list {
     grid-template-rows: auto;
     grid-template-columns: auto auto auto;
   }
-  .certificate-card__item {
+  .split-section .certificate-card__item {
     max-width: 200px;
   }
-  .services {
+  .split-section .services {
     padding-top: 40px;
     padding-bottom: 80px;
   }
-  .services .h2 {
+  .split-section .services .h2 {
     margin-bottom: 50px;
   }
-  .grid-page {
+  .split-section .grid-page {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 60px;
   }
-  .schedule {
+  .split-section .schedule {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .schedule-table {
+  .split-section .schedule-table {
     margin: 0 auto 40px;
   }
-  .svg-map {
+  .split-section .svg-map {
     padding-bottom: 50px;
   }
-  .features-list__list {
+  .split-section .features-list__list {
     gap: 60px;
   }
-  .single-video {
+  .split-section .single-video {
     padding-right: 30px;
     padding-left: 30px;
   }
-  .grid-images {
+  .split-section .grid-images {
     padding-right: 30px;
     padding-left: 30px;
   }
-  .grid-images__list-img {
+  .split-section .grid-images__list-img {
     grid-template-columns: repeat(3, 1fr);
   }
-  .metro-3 .desc:first-child {
+  .split-section .metro-3 .desc:first-child {
     margin-bottom: 15px;
   }
-  .metro-3__row.row {
+  .split-section .metro-3__row.row {
     margin-bottom: 40px;
     flex-direction: column-reverse;
   }
-  .metro-3__sub-title.desc {
+  .split-section .metro-3__sub-title.desc {
     margin-bottom: 50px;
   }
-  .contacts .container {
+  .split-section .contacts .container {
     max-width: 760px;
   }
-  .contacts .h2 {
+  .split-section .contacts .h2 {
     margin-bottom: 50px;
   }
-  .contacts .row > div:not(:last-child) {
+  .split-section .contacts .row > div:not(:last-child) {
     margin-bottom: 60px;
   }
-  .con-info {
+  .split-section .con-info {
     max-width: 100%;
   }
-  .con-info__bottom {
+  .split-section .con-info__bottom {
     flex-wrap: nowrap;
   }
-  .con-info__item .d-block {
+  .split-section .con-info__item .d-block {
     font-size: 19px;
   }
-  .employees .h2 {
+  .split-section .employees .h2 {
     margin-bottom: 50px;
   }
-  .employees__img-col {
+  .split-section .employees__img-col {
     margin-bottom: 40px;
   }
-  .employees .btn {
+  .split-section .employees .btn {
     margin: 0 auto;
   }
-  .giving-back .h2 {
+  .split-section .giving-back .h2 {
     margin-bottom: 50px;
   }
-  .partners__icons {
+  .split-section .partners__icons {
     margin: 0 auto;
     max-width: 500px;
   }
-  .giv-back-top > div:not(:last-child) {
+  .split-section .giv-back-top > div:not(:last-child) {
     margin-bottom: 50px;
   }
-  .careers__bot-title {
+  .split-section .careers__bot-title {
     margin-bottom: 60px;
   }
-  .careers .grid-page {
+  .split-section .careers .grid-page {
     margin-bottom: 30px;
   }
-  .careers-icons {
+  .split-section .careers-icons {
     margin-bottom: 60px;
   }
-  .careers-icons__list {
+  .split-section .careers-icons__list {
     flex-wrap: wrap;
   }
-  .request-quote .h2 {
+  .split-section .request-quote .h2 {
     margin-bottom: 60px;
   }
-  .blog .h2,
-  .blog .blog-grid {
+  .split-section .blog .h2,
+  .split-section .blog .blog-grid {
     margin-bottom: 50px;
   }
 }
-@media (max-width: 712px) {
+@media (max-width: 992px) and (max-width: 712px) {
   .footer {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1344,7 +1356,10 @@ input[type=radio] {
     margin-bottom: 40px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 992px) and (max-width: 576px) {
+  .h2-sub {
+    font-size: 24px;
+  }
   .pt-5-c {
     padding-top: 30px;
   }
@@ -1364,6 +1379,8 @@ input[type=radio] {
     padding-right: 20px;
     padding-left: 20px;
   }
+}
+@media (max-width: 992px) {
   .nav__list {
     gap: 20px;
   }
@@ -1450,9 +1467,6 @@ input[type=radio] {
   .media-flex__row_lear > div:first-child {
     margin-bottom: 30px;
   }
-  .media-flex .h2-sub {
-    font-size: 24px;
-  }
   .media-flex .h2-sub.mb-mob-1 {
     margin-bottom: 10px;
   }
@@ -1479,7 +1493,6 @@ input[type=radio] {
   }
   .fleet .h2-sub {
     margin-bottom: 15px;
-    font-size: 24px;
   }
   .fleet .mb-sm-4 {
     margin-bottom: 30px !important;
@@ -1495,9 +1508,6 @@ input[type=radio] {
   }
   .certificate {
     padding-bottom: 60px;
-  }
-  .certificate .h2-sub {
-    font-size: 24px;
   }
   .certificate-card__list {
     padding-right: 20px;
@@ -1532,7 +1542,6 @@ input[type=radio] {
   }
   .schedule .h2-sub {
     margin-bottom: 20px;
-    font-size: 24px;
   }
   .schedule .btn {
     margin-bottom: 25px !important;
@@ -1628,7 +1637,6 @@ input[type=radio] {
   }
   .careers .h2-sub {
     margin-bottom: 10px;
-    font-size: 24px;
   }
   .careers .h3 {
     margin-bottom: 30px;

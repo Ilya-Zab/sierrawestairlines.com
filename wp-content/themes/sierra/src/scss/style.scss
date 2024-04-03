@@ -450,6 +450,10 @@ textarea {
     margin-bottom: 20px;
   }
 
+  .desc:last-child {
+    margin-bottom: 0;
+  }
+
   &__desc_auth {
     font-size: 18px;
     color: $placeholder;
