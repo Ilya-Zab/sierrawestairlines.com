@@ -73,6 +73,7 @@ ul:not(.rich-container) {
 }
 
 .h2-sub {
+  margin-bottom: 30px;
   font-size: 36px;
   color: $title;
 }
@@ -267,6 +268,8 @@ textarea {
   position: relative;
   z-index: 100;
 
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
   &__container {
     margin: 0 auto;
     max-width: 1440px;
@@ -295,8 +298,6 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav {
@@ -358,10 +359,23 @@ textarea {
   }
 }
 
+.hero::after {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
   width: 100%;
+
+  ::after {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
 
   &__h1 {
     margin-bottom: 40px;
@@ -915,10 +929,6 @@ textarea {
 }
 
 .metro-3 {
-  .h2-sub {
-    margin-bottom: 30px;
-  }
-
   .desc:last-child {
     margin-bottom: 0;
   }
@@ -1174,6 +1184,10 @@ input[type='radio'] {
 
 .wpcf7-not-valid-tip {
   font-size: 16px;
+}
+
+.wpcf7-spinner {
+  position: absolute;
 }
 
 // Footer
