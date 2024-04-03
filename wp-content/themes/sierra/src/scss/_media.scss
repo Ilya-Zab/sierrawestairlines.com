@@ -85,7 +85,6 @@
 
   #menu-main-menu {
     text-align: center;
-    overflow: auto;
   }
 
   .logo {
@@ -135,6 +134,7 @@
     transform: translatex(-1000px);
     background: $custom-white;
     opacity: 0;
+    overflow: auto;
 
     &__list {
       margin-bottom: 30px;

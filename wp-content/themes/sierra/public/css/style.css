@@ -1106,7 +1106,6 @@ input[type=radio] {
   }
   #menu-main-menu {
     text-align: center;
-    overflow: auto;
   }
   .logo {
     margin-right: auto;
@@ -1147,6 +1146,7 @@ input[type=radio] {
     transform: translatex(-1000px);
     background: #f5f5f5;
     opacity: 0;
+    overflow: auto;
   }
   .nav__list {
     margin-bottom: 30px;
