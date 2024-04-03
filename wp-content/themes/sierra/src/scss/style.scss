@@ -405,6 +405,22 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
+
+  &__img {
+    padding-top: 50%;
+    position: relative;
+    border-radius: $img-b-radius;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
+  }
+
 }
 
 .card {
@@ -448,6 +464,10 @@ textarea {
 
   &__desc {
     margin-bottom: 20px;
+  }
+
+  .desc:last-child {
+    margin-bottom: 0;
   }
 
   &__desc_auth {

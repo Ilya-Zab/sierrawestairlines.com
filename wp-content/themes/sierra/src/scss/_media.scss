@@ -89,6 +89,10 @@
     margin-bottom: 40px;
   }
 
+  .con-info {
+    max-width: 100%;
+  }
+
   .header {
     padding: 12px 0;
 
@@ -129,7 +133,6 @@
         font-size: 21px;
       }
     }
-
   }
 
   .nav_open {
@@ -207,314 +210,239 @@
     }
   }
 
-  // Fleet
-  .fleet {
-    padding-top: 40px;
-    padding-bottom: 80px;
-
-    .h2 {
-      margin-bottom: 50px;
+  .split-section {
+    &__img-bot {
+      margin-bottom: 30px;
     }
 
-    .mb-sm-4 {
-      margin-bottom: 40px !important;
-    }
-
-    .sub-title-offset {
-      margin-bottom: 60px;
-    }
-  }
-
-  // About us
-  .image-desc {
-    padding-bottom: 20px;
-
-    .h2 {
-      margin-bottom: 50px;
-    }
-
-    &__img {
-      margin-bottom: 40px;
-    }
-
-    &__content {
+    .rich-container {
       max-width: 100%;
     }
 
-    &__container {
-      .row {
-        flex-direction: column-reverse;
+    // Fleet
+    .fleet {
+      padding-top: 40px;
+      padding-bottom: 80px;
+
+      .h2 {
+        margin-bottom: 50px;
+      }
+
+      .mb-sm-4 {
+        margin-bottom: 40px !important;
+      }
+
+      .sub-title-offset {
+        margin-bottom: 60px;
+      }
+
+      .rich-container {
+        max-width: 100%;
       }
     }
-  }
 
-  .certificate-card {
-    &__list {
-      grid-template-rows: auto;
-      grid-template-columns: auto auto auto;
-    }
+    // About us
+    .image-desc {
+      padding-bottom: 20px;
 
-    &__item {
-      max-width: 200px;
-    }
-  }
+      .h2 {
+        margin-bottom: 50px;
+      }
 
-  // Services
-  .services {
-    padding-top: 40px;
-    padding-bottom: 80px;
+      &__img {
+        margin-bottom: 40px;
+      }
 
-    .h2 {
-      margin-bottom: 50px;
-    }
-  }
+      &__content {
+        max-width: 100%;
+      }
 
-  .grid-page {
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 60px;
-  }
-
-  // Jumpseat
-  .schedule {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .schedule-table {
-    margin: 0 auto 40px;
-  }
-
-  .svg-map {
-    padding-bottom: 50px;
-  }
-
-  // Executive Fleet
-  .features-list {
-    &__list {
-      gap: 60px;
-    }
-  }
-
-  .single-video {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-
-  .grid-images {
-    padding-right: 30px;
-    padding-left: 30px;
-
-    &__list-img {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  // Cargo Fleet
-  .metro-3 {
-    .desc:first-child {
-      margin-bottom: 15px;
-    }
-
-    &__row.row {
-      margin-bottom: 40px;
-      flex-direction: column-reverse;
-    }
-
-    &__sub-title.desc {
-      margin-bottom: 50px;
-    }
-  }
-
-  // Contact
-  .contacts {
-    .container {
-      max-width: 760px;
-    }
-
-    .h2 {
-      margin-bottom: 50px;
-    }
-
-    .row>div:not(:last-child) {
-      margin-bottom: 60px;
-    }
-  }
-
-  .con-info {
-    max-width: 100%;
-
-    &__bottom {
-      flex-wrap: nowrap;
-    }
-
-    &__item {
-      .d-block {
-        font-size: 19px;
+      &__container {
+        .row {
+          flex-direction: column-reverse;
+        }
       }
     }
-  }
 
-  // Employees
-  .employees {
-    .h2 {
-      margin-bottom: 50px;
+    .certificate-card {
+      &__list {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto;
+      }
+
+      &__item {
+        max-width: 200px;
+      }
     }
 
-    &__img-col {
-      margin-bottom: 40px;
-    }
+    // Services
+    .services {
+      padding-top: 40px;
+      padding-bottom: 80px;
 
-    .btn {
-      margin: 0 auto;
-    }
-  }
-
-  // Giving Back
-  .giving-back {
-    .h2 {
-      margin-bottom: 50px;
-    }
-  }
-
-  .partners {
-    &__icons {
-      margin: 0 auto;
-      max-width: 500px;
-    }
-  }
-
-  .giv-back-top>div:not(:last-child) {
-    margin-bottom: 50px;
-  }
-
-  // Careers 
-  .careers {
-    &__bot-title {
-      margin-bottom: 60px;
+      .h2 {
+        margin-bottom: 50px;
+      }
     }
 
     .grid-page {
-      margin-bottom: 30px;
-    }
-  }
-
-  .careers-icons {
-    margin-bottom: 60px;
-
-    &__list {
-      flex-wrap: wrap;
-    }
-  }
-
-  // Request a Quote
-  .request-quote {
-    .h2 {
-      margin-bottom: 60px;
-    }
-  }
-
-  // Blog
-  .blog {
-
-    .h2,
-    .blog-grid {
-      margin-bottom: 50px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 60px;
     }
 
-  }
-
-}
-
-@media (max-width: 712px) {
-  .footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    &__container {
-      margin-bottom: 40px;
-    }
-  }
-
-  .address {
-    grid-template-columns: auto;
-    text-align: center;
-
-    &__item:first-child {
-      margin-bottom: 12px;
-      font-size: 16px;
-    }
-  }
-
-  .all-rights {
-    font-size: 14px;
-  }
-
-  // Contacts
-  .con-info {
-
-    .text-sm-center {
-      text-align: center !important;
-    }
-
-    &__bottom {
+    // Jumpseat
+    .schedule {
+      display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: 30px;
     }
 
-    &__wrap_top {
-      margin-bottom: 30px;
+    .schedule-table {
+      margin: 0 auto 40px;
+    }
 
-      div {
-        width: 100%;
+    .svg-map {
+      padding-bottom: 50px;
+    }
+
+    // Executive Fleet
+    .features-list {
+      &__list {
+        gap: 60px;
       }
     }
 
-    &__item {
-      margin-bottom: 0;
-      width: 260px;
+    .single-video {
+      padding-right: 30px;
+      padding-left: 30px;
     }
-  }
 
-  .contacts {
-    .row>div:not(:last-child) {
-      margin-bottom: 40px;
+    .grid-images {
+      padding-right: 30px;
+      padding-left: 30px;
+
+      &__list-img {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
-  }
-}
 
-@media (max-width: 576px) {
+    // Cargo Fleet
+    .metro-3 {
+      .desc:first-child {
+        margin-bottom: 15px;
+      }
 
-  .pt-5-c {
-    padding-top: 30px;
-  }
+      &__row.row {
+        margin-bottom: 40px;
+        flex-direction: column-reverse;
+      }
 
-  .pb-12 {
-    padding-bottom: 40px;
-  }
-
-  .video-hero {
-    margin-bottom: 30px;
-  }
-
-  .wpcf7-not-valid-tip {
-    font-size: 14px;
-  }
-
-  .custom-radio {
-    font-size: 14px;
-  }
-
-  .header {
-    &__container {
-      padding-right: 20px;
-      padding-left: 20px;
+      &__sub-title.desc {
+        margin-bottom: 50px;
+      }
     }
+
+    // Contact
+    .contacts {
+      .container {
+        max-width: 760px;
+      }
+
+      .h2 {
+        margin-bottom: 50px;
+      }
+
+      .row>div:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
+
+    .con-info {
+      max-width: 100%;
+
+      &__bottom {
+        flex-wrap: nowrap;
+      }
+
+      &__item {
+        .d-block {
+          font-size: 19px;
+        }
+      }
+    }
+
+    // Employees
+    .employees {
+      .h2 {
+        margin-bottom: 50px;
+      }
+
+      &__img-col {
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        margin: 0 auto;
+      }
+    }
+
+    // Giving Back
+    .giving-back {
+      .h2 {
+        margin-bottom: 50px;
+      }
+    }
+
+    .partners {
+      &__icons {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+    }
+
+    .giv-back-top>div:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    // Careers 
+    .careers {
+      &__bot-title {
+        margin-bottom: 60px;
+      }
+
+      .grid-page {
+        margin-bottom: 30px;
+      }
+    }
+
+    .careers-icons {
+      margin-bottom: 60px;
+
+      &__list {
+        flex-wrap: wrap;
+      }
+    }
+
+    // Request a Quote
+    .request-quote {
+      .h2 {
+        margin-bottom: 60px;
+      }
+    }
+
+    // Blog
+    .blog {
+
+      .h2,
+      .blog-grid {
+        margin-bottom: 50px;
+      }
+
+    }
+
   }
 
   .nav {
-
     &__list {
       gap: 20px;
 
@@ -655,10 +583,6 @@
       margin-bottom: 30px;
     }
 
-    .h2-sub {
-      font-size: 24px;
-    }
-
     .h2-sub.mb-mob-1 {
       margin-bottom: 10px;
     }
@@ -695,7 +619,6 @@
 
     .h2-sub {
       margin-bottom: 15px;
-      font-size: 24px;
     }
 
     .mb-sm-4 {
@@ -718,10 +641,6 @@
 
   .certificate {
     padding-bottom: 60px;
-
-    .h2-sub {
-      font-size: 24px;
-    }
   }
 
   .certificate-card {
@@ -770,7 +689,6 @@
   .schedule {
     .h2-sub {
       margin-bottom: 20px;
-      font-size: 24px;
     }
 
     .btn {
@@ -931,7 +849,6 @@
   .careers {
     .h2-sub {
       margin-bottom: 10px;
-      font-size: 24px;
     }
 
     .h3 {
@@ -995,6 +912,96 @@
 
     .blog-grid {
       margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 712px) {
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__container {
+      margin-bottom: 40px;
+    }
+  }
+
+  .address {
+    grid-template-columns: auto;
+    text-align: center;
+
+    &__item:first-child {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+  }
+
+  .all-rights {
+    font-size: 14px;
+  }
+
+  // Contacts
+  .con-info {
+    .text-sm-center {
+      text-align: center !important;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      row-gap: 30px;
+      text-align: center;
+    }
+
+    &__wrap_top {
+      margin-bottom: 30px;
+
+      div {
+        width: 100%;
+      }
+    }
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+
+  .contacts {
+    .row>div:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  .h2-sub {
+    font-size: 24px;
+  }
+
+  .pt-5-c {
+    padding-top: 30px;
+  }
+
+  .pb-12 {
+    padding-bottom: 40px;
+  }
+
+  .video-hero {
+    margin-bottom: 30px;
+  }
+
+  .wpcf7-not-valid-tip {
+    font-size: 14px;
+  }
+
+  .custom-radio {
+    font-size: 14px;
+  }
+
+  .header {
+    &__container {
+      padding-right: 20px;
+      padding-left: 20px;
     }
   }
 }
