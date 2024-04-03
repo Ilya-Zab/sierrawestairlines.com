@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function scrollToForm() {
     const headerHeight = document.querySelector('header').offsetHeight;
     const mainFormOffset = document.getElementById('main-form').offsetTop;
-    const scrollToPosition = mainFormOffset - headerHeight;
+    const scrollToPosition = mainFormOffset - (headerHeight + 30);
     window.scrollTo({
       top: scrollToPosition,
       behavior: 'smooth'
