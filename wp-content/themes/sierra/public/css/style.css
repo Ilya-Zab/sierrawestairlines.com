@@ -1032,6 +1032,12 @@ input[type=radio] {
   }
 }
 @media (max-width: 992px) {
+  .pt-5-c {
+    padding-top: 40px;
+  }
+  .pb-12 {
+    padding-bottom: 80px;
+  }
   .logo {
     margin-right: auto;
     z-index: 101;
@@ -1112,12 +1118,6 @@ input[type=radio] {
   .main-experience .row:last-child {
     margin-bottom: 0;
   }
-  .blog-article.pb-12 {
-    padding-bottom: 80px;
-  }
-  .blog-article.pt-5-c {
-    padding-top: 40px;
-  }
   .media-flex .row {
     flex-direction: column;
   }
@@ -1179,9 +1179,6 @@ input[type=radio] {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 60px;
   }
-  .jumpseat.pb-12 {
-    padding-bottom: 80px;
-  }
   .schedule {
     display: flex;
     flex-direction: column;
@@ -1192,12 +1189,6 @@ input[type=radio] {
   }
   .svg-map {
     padding-bottom: 50px;
-  }
-  .executive-fleet.pt-5-c {
-    padding-top: 40px;
-  }
-  .executive-fleet.pb-12 {
-    padding-bottom: 60px;
   }
   .features-list__list {
     gap: 60px;
@@ -1213,12 +1204,6 @@ input[type=radio] {
   .grid-images__list-img {
     grid-template-columns: repeat(3, 1fr);
   }
-  .cargo-fleet.pt-5-c {
-    padding-top: 40px;
-  }
-  .cargo-fleet.pb-12 {
-    padding-bottom: 80px;
-  }
   .metro-3 .desc:first-child {
     margin-bottom: 15px;
   }
@@ -1228,12 +1213,6 @@ input[type=radio] {
   }
   .metro-3__sub-title.desc {
     margin-bottom: 50px;
-  }
-  .contacts.pt-5-c {
-    padding-top: 40px;
-  }
-  .contacts.pb-12 {
-    padding-bottom: 80px;
   }
   .contacts .container {
     max-width: 760px;
@@ -1253,12 +1232,6 @@ input[type=radio] {
   .con-info__item .d-block {
     font-size: 19px;
   }
-  .employees.pt-5-c {
-    padding-top: 40px;
-  }
-  .employees.pb-12 {
-    padding-bottom: 80px;
-  }
   .employees .h2 {
     margin-bottom: 50px;
   }
@@ -1267,12 +1240,6 @@ input[type=radio] {
   }
   .employees .btn {
     margin: 0 auto;
-  }
-  .giving-back.pb-12 {
-    padding-bottom: 60px;
-  }
-  .giving-back.pt-5-c {
-    padding-top: 40px;
   }
   .giving-back .h2 {
     margin-bottom: 50px;
@@ -1283,12 +1250,6 @@ input[type=radio] {
   }
   .giv-back-top > div:not(:last-child) {
     margin-bottom: 50px;
-  }
-  .careers.pt-5-c {
-    padding-top: 40px;
-  }
-  .careers.pb-12 {
-    padding-bottom: 80px;
   }
   .careers__bot-title {
     margin-bottom: 60px;
@@ -1302,20 +1263,8 @@ input[type=radio] {
   .careers-icons__list {
     flex-wrap: wrap;
   }
-  .request-quote.pt-5-c {
-    padding-top: 40px;
-  }
-  .request-quote.pb-12 {
-    padding-bottom: 80px;
-  }
   .request-quote .h2 {
     margin-bottom: 60px;
-  }
-  .blog.pt-5-c {
-    padding-top: 40px;
-  }
-  .blog.pb-12 {
-    padding-bottom: 80px;
   }
   .blog .h2,
   .blog .blog-grid {
@@ -1364,6 +1313,12 @@ input[type=radio] {
   }
 }
 @media (max-width: 576px) {
+  .pt-5-c {
+    padding-top: 30px;
+  }
+  .pb-12 {
+    padding-bottom: 40px;
+  }
   .video-hero {
     margin-bottom: 30px;
   }
@@ -1444,12 +1399,6 @@ input[type=radio] {
   .blog-grid__sub {
     margin-top: 20px;
     font-size: 24px;
-  }
-  .blog-article.pb-12 {
-    padding-bottom: 40px;
-  }
-  .blog-article.pt-5-c {
-    padding-top: 30px;
   }
   .blog-article .h2 {
     margin-bottom: 15px;
@@ -1540,9 +1489,6 @@ input[type=radio] {
   .grid-page__image {
     margin-bottom: 20px;
   }
-  .jumpseat.pb-12 {
-    padding-bottom: 60px;
-  }
   .jumpseat {
     padding-top: 30px;
   }
@@ -1564,12 +1510,6 @@ input[type=radio] {
   }
   .svg-map {
     padding-bottom: 40px;
-  }
-  .executive-fleet.pt-5-c {
-    padding-top: 30px;
-  }
-  .executive-fleet.pb-12 {
-    padding-bottom: 50px;
   }
   .executive-fleet .h2 {
     margin-bottom: 30px;
@@ -1602,12 +1542,6 @@ input[type=radio] {
   .grid-images__list-img {
     grid-template-columns: repeat(2, 1fr);
   }
-  .cargo-fleet.pt-5-c {
-    padding-top: 30px;
-  }
-  .cargo-fleet.pb-12 {
-    padding-bottom: 60px;
-  }
   .cargo-fleet .h2 {
     margin-bottom: 30px;
   }
@@ -1626,14 +1560,8 @@ input[type=radio] {
   .metro-3__row.row {
     margin-bottom: 30px;
   }
-  .contacts.pt-5-c {
-    padding-top: 30px;
-  }
   .contacts .h2 {
     margin-bottom: 30px;
-  }
-  .contacts.pb-12 {
-    padding-bottom: 60px;
   }
   .con-info .h3 {
     font-size: 18px;
@@ -1644,23 +1572,11 @@ input[type=radio] {
   .small-form__contacts .textarea {
     max-height: 100%;
   }
-  .employees.pb-12 {
-    padding-bottom: 60px;
-  }
-  .employees.pt-5-c {
-    padding-top: 30px;
-  }
   .employees .h2 {
     margin-bottom: 30px;
   }
   .employees__img-col {
     margin-bottom: 30px;
-  }
-  .giving-back.pt-5-c {
-    padding-top: 30px;
-  }
-  .giving-back.pb-12 {
-    padding-bottom: 30px;
   }
   .giving-back .h2 {
     margin-bottom: 30px;
@@ -1674,12 +1590,6 @@ input[type=radio] {
   .partners ul {
     flex-direction: column;
     row-gap: 60px;
-  }
-  .careers.pt-5-c {
-    padding-top: 30px;
-  }
-  .careers.pb-12 {
-    padding-bottom: 60px;
   }
   .careers .h2-sub {
     margin-bottom: 10px;
@@ -1700,12 +1610,6 @@ input[type=radio] {
   .careers .grid-page__image {
     margin-bottom: 20px;
   }
-  .request-quote.pt-5-c {
-    padding-top: 30px;
-  }
-  .request-quote.pb-12 {
-    padding-bottom: 60px;
-  }
   .request-quote .h2 {
     margin-bottom: 30px;
   }
@@ -1723,12 +1627,6 @@ input[type=radio] {
   }
   .quote-form input {
     font-size: 14px;
-  }
-  .blog.pt-5-c {
-    padding-top: 30px;
-  }
-  .blog.pb-12 {
-    padding-bottom: 60px;
   }
   .blog .h2 {
     margin-bottom: 30px;
