@@ -460,6 +460,9 @@ textarea {
 .media-flex .row .desc:last-child {
   margin-bottom: 0;
 }
+.media-flex__btn-bot {
+  margin-top: 70px;
+}
 
 .main-talk__desc {
   max-width: 800px;
@@ -1133,6 +1136,9 @@ input[type=radio] {
   .media-flex__row_lear > div:first-child {
     margin-bottom: 50px;
   }
+  .media-flex__btn-bot {
+    margin-top: 50px;
+  }
   .fleet {
     padding-top: 40px;
     padding-bottom: 80px;
@@ -1423,6 +1429,9 @@ input[type=radio] {
   }
   .media-flex .h2-sub.mb-mob-1 {
     margin-bottom: 10px;
+  }
+  .media-flex__btn-bot {
+    margin-top: 30px;
   }
   .main-talk__desc {
     font-size: 19px;

@@ -25,7 +25,7 @@ $image_url = wp_get_attachment_image_url($args['image'], 'large');
                                 <div class="desc mb-4">
                                     <?= nl2br($args['text']) ?>
                                 </div>
-                                <?php if (!empty($args['button_text'])) : ?>
+                                <?php if (!empty($args['button_text']) && !$args['is_button_below']) : ?>
                                     <div class="media-flex__btn-wrap text-lg-start text-sm-center">
                                         <a class="btn btn-danger" href=<?= $args['button_url'] ?>>
                                             <?= $args['button_text'] ?>
@@ -36,7 +36,7 @@ $image_url = wp_get_attachment_image_url($args['image'], 'large');
                             </div>
                     </div>
                     <?php if ($args['is_button_below']) : ?>
-                        <div class="main-experience__bottom text-center">
+                        <div class="main-experience__bottom text-center media-flex__btn-bot">
                             <a href=<?= $args['button_url'] ?> class="btn btn-danger">
                                 <?= $args['button_text'] ?>
                             </a>
