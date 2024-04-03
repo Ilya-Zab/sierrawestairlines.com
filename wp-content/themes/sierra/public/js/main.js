@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const burgerMenu = document.querySelector('.animated-icon');
-  const menu = document.querySelector('nav');
+  const menu = document.querySelector('.nav-wrap');
 
   burgerMenu?.addEventListener('click', () => {
     openMobileMeny(burgerMenu, menu);
