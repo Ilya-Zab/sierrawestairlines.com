@@ -19,6 +19,12 @@ function sierra_setup()
 	 */
 	add_theme_support('post-thumbnails');
 
+	/**
+	 * Menus
+	 */
+	register_nav_menu('main-menu', __('Main menu', 'sierra'));
+
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -37,6 +43,7 @@ function sierra_setup()
 	);
 }
 add_action('after_setup_theme', 'sierra_setup');
+
 
 /**
  * Enqueue scripts and styles.

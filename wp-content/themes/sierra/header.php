@@ -23,62 +23,15 @@
 			<a href="/" class="logo">
 				<img src="<?= ASSETS_PATH ?>/img/logo.svg" data-mini-logo-url="<?= ASSETS_PATH ?>/img/logo-sticky.svg" alt="Logo">
 			</a>
-			<nav class="nav">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<a href="/about">
-							About
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="/services">
-							Services
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="/jumpseat">
-							Jumpseat
-						</a>
-					</li>
-					<li class="nav__item dropdown">
-						<a href="/fleet" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Fleet
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/executive-fleet">Executive Fleet</a></li>
-							<li><a class="dropdown-item" href="/cargo-fleet">Cargo Fleet</a></li>
-						</ul>
-					</li>
-					<li class="nav__item">
-						<a href="/contact">
-							Contact
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="/employees">
-							Employees
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="/giving-back">
-							Giving
-						</a> back
-					</li>
-					<li class="nav__item">
-						<a href="/careers">
-							Careers
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="/blog">
-							Blog
-						</a>
-					</li>
-				</ul>
-				<a href="/request-a-quote/" class="btn btn-danger header__btn_mob">
-					Request a quote
-				</a>
-			</nav>
+			<?php
+			wp_nav_menu(array(
+				'menu' => 'main-menu',
+				'menu_class' => 'nav__list',
+				'container' => 'nav',
+				'container_class' => 'nav',
+
+			));
+			?>
 			<a href="/request-a-quote/" class="btn btn-danger header__btn">
 				Request a quote
 			</a>
