@@ -1134,6 +1134,12 @@ input[type=radio] {
     padding-right: 60px;
     padding-left: 60px;
   }
+  .nav-wrap {
+    overflow: auto;
+    position: fixed;
+    top: 0 right 0;
+    left: 0;
+  }
   .nav {
     min-height: 100vh;
     flex-direction: column;
@@ -1148,14 +1154,12 @@ input[type=radio] {
     transform: translatex(-1000px);
     background: #f5f5f5;
     opacity: 0;
-    overflow: auto;
   }
   .nav__list {
     margin-bottom: 30px;
     flex-direction: column;
     width: 100%;
     gap: 30px;
-    overflow: auto;
   }
   .nav__list li {
     font-size: 21px;
