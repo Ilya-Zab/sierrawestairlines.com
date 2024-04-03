@@ -284,6 +284,8 @@ textarea {
   }
 }
 
+
+
 .header__sticky {
   padding: 10px 0;
   height: auto;
@@ -321,6 +323,35 @@ textarea {
 
     li:active {
       color: $red;
+    }
+
+    a {
+      padding: 0.5em 0;
+      display: inline-block;
+    }
+
+    .sub-menu {
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s ease;
+      position: absolute;
+      padding: 0.2rem 0;
+      background-color: #fff;
+      border-radius: 10px;
+
+      a {
+        padding: 0.2rem 0.8rem;
+      }
+
+      &:hover {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    a:hover+.sub-menu {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

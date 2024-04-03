@@ -327,6 +327,30 @@ textarea {
 .nav__list li:active {
   color: #ce2026;
 }
+.nav__list a {
+  padding: 0.5em 0;
+  display: inline-block;
+}
+.nav__list .sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+  position: absolute;
+  padding: 0.2rem 0;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.nav__list .sub-menu a {
+  padding: 0.2rem 0.8rem;
+}
+.nav__list .sub-menu:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.nav__list a:hover + .sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
 
 .hero {
   position: relative;
