@@ -45,12 +45,12 @@
 							Fleet
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/executive-fleet.html">Executive Fleet</a></li>
-							<li><a class="dropdown-item" href="#">Cargo Fleet</a></li>
+							<li><a class="dropdown-item" href="/executive-fleet">Executive Fleet</a></li>
+							<li><a class="dropdown-item" href="/cargo-fleet">Cargo Fleet</a></li>
 						</ul>
 					</li>
 					<li class="nav__item">
-						<a href="/contacts">
+						<a href="/contact">
 							Contact
 						</a>
 					</li>
@@ -70,16 +70,16 @@
 						</a>
 					</li>
 					<li class="nav__item">
-						<a href="/">
+						<a href="/blog">
 							Blog
 						</a>
 					</li>
 				</ul>
-				<a href="/" class="btn btn-danger header__btn_mob">
+				<a href="/request-a-quote/" class="btn btn-danger header__btn_mob">
 					Request a quote
 				</a>
 			</nav>
-			<a href="/" class="btn btn-danger header__btn">
+			<a href="/request-a-quote/" class="btn btn-danger header__btn">
 				Request a quote
 			</a>
 		</div>

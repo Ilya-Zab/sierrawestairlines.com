@@ -53,6 +53,13 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+add_action('after_setup_theme', 'crb_load');
+function crb_load()
+{
+	require_once(get_template_directory() . '/inc/carbon-fields/vendor/autoload.php');
+	\Carbon_Fields\Carbon_Fields::boot();
+}
+
 /**
  * Load Carbon Fields
  */
@@ -63,5 +70,24 @@ require get_template_directory() . '/inc/carbon-fields-setup.php';
  */
 require get_template_directory() . '/inc/carbon-fields-sections-output.php';
 
+/**
+ * Carbon site settings
+ */
+require get_template_directory() . '/inc/carbon-site-settings.php';
+
 // Remove p tag from Contacts Form 7
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+function sierra_excerpt_length($length)
+{
+	return 35;
+}
+add_filter('excerpt_length', 'sierra_excerpt_length', 999);
+
+
+function sierra_excerpt_more($more)
+{
+	return '...';
+}
+add_filter('excerpt_more', 'sierra_excerpt_more');

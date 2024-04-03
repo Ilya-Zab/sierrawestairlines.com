@@ -21,6 +21,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+<<<<<<< HEAD
 // define('DB_NAME', 'cj7a45416637672');
 define('DB_NAME', 'u133582545_sierra');
 
@@ -31,6 +32,18 @@ define('DB_USER', 'u133582545_sierra');
 /** Database password */
 // define('DB_PASSWORD', 'vzIi0Q2!HV!');
 define('DB_PASSWORD', '!4mi#>oB');
+=======
+define('DB_NAME', 'u133582545_sierra_test');
+// define('DB_NAME', 'gzba45409287511');
+
+/** Database username */
+define('DB_USER', 'u133582545_sierra_test');
+// define('DB_USER', 'gzba45409287511');
+
+/** Database password */
+define('DB_PASSWORD', 'Q0@8aq*9D');
+// define('DB_PASSWORD', 'ltA}9)+rK');
+>>>>>>> 8acd91725a71899cc9b35ef15e90f360ac38936a
 
 /** Database hostname */
 // define('DB_HOST', '160.153.156.21:3311');
