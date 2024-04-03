@@ -538,6 +538,22 @@
         font-size: 16px;
       }
     }
+
+    .sub-menu {
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      display: none;
+      background-color: transparent;
+
+      &:hover {
+        display: block;
+      }
+    }
+
+    a:hover+.sub-menu {
+      display: block;
+    }
   }
 
   .mb-mob-2 {

@@ -1387,6 +1387,19 @@ input[type=radio] {
   .nav__list li {
     font-size: 16px;
   }
+  .nav .sub-menu {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    display: none;
+    background-color: transparent;
+  }
+  .nav .sub-menu:hover {
+    display: block;
+  }
+  .nav a:hover + .sub-menu {
+    display: block;
+  }
   .mb-mob-2 {
     margin-bottom: 1rem;
   }
