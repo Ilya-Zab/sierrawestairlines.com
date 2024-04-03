@@ -22,11 +22,11 @@ $image_url = wp_get_attachment_image_url($args['image'], 'large');
                                 <h3 class="<?= $args['is_bold'] ? 'h2-sub' : 'h3' ?> text-capitalize mb-lg-3 mb-sm-3 text-lg-start text-sm-center">
                                     <?= $args['title'] ?>
                                 </h3>
-                                <div class="desc mb-4">
+                                <div class="desc">
                                     <?= nl2br($args['text']) ?>
                                 </div>
                                 <?php if (!empty($args['button_text']) && !$args['is_button_below']) : ?>
-                                    <div class="media-flex__btn-wrap text-lg-start text-sm-center">
+                                    <div class="media-flex__btn-wrap text-lg-start text-sm-center mt-4">
                                         <a class="btn btn-danger" href=<?= $args['button_url'] ?>>
                                             <?= $args['button_text'] ?>
                                         </a>
