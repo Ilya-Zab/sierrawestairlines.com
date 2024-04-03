@@ -724,13 +724,7 @@
     }
   }
 
-  .features-list {
-    &__list {
-      li {
-        width: 100px;
-      }
-    }
-  }
+
 
   .accordion {
     &__body {
@@ -954,7 +948,8 @@
     &__bottom {
       flex-direction: column;
       row-gap: 30px;
-      text-align: center;
+      margin: 0 auto;
+      max-width: 220px
     }
 
     &__wrap_top {
