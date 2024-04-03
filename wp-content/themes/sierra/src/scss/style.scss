@@ -489,7 +489,6 @@ textarea {
 }
 
 .media-flex {
-
   &__img-wrap {
     padding-top: 45%;
     position: relative;
@@ -515,6 +514,10 @@ textarea {
 
   .row .desc:last-child {
     margin-bottom: 0;
+  }
+
+  &__btn-bot {
+    margin-top: 70px;
   }
 }
 
