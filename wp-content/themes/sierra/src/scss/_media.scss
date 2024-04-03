@@ -123,10 +123,11 @@
   }
 
   .nav-wrap {
-    padding: 80px 0 50px;
+    padding: 30px 0 50px;
     overflow: auto;
     position: fixed;
     inset: 0;
+    top: 60px;
     background-color: $custom-white;
     opacity: 0;
     transform: translatex(-1000px);
@@ -140,8 +141,6 @@
     align-items: center;
     justify-content: center;
     background: $custom-white;
-
-
 
     &__list {
       margin-bottom: 30px;
