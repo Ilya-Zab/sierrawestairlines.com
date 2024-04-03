@@ -83,22 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const btn = document.querySelector('.hero__content .big-btn');
+  if (btn) {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      scrollToForm();
+    });
+  }
+
   function scrollToForm() {
     const headerHeight = document.querySelector('header').offsetHeight;
     const mainFormOffset = document.getElementById('main-form').offsetTop;
-    const scrollToPosition = mainFormOffset - headerHeight;
+    const scrollToPosition = mainFormOffset - (headerHeight + 50);
     window.scrollTo({
       top: scrollToPosition,
       behavior: 'smooth'
     });
   }
-
-  const btn = document.querySelector('.hero__content .big-btn');
-  btn.addEventListener('click', (event) => {
-    event.preventDefault();
-    scrollToForm();
-  });
-
-
 
 });

@@ -996,6 +996,18 @@
     font-size: 14px;
   }
 
+  // Executive Fleet
+  .features-list {
+    &__list {
+      gap: 60px 10px;
+
+      li {
+        width: 120px;
+      }
+    }
+  }
+
+
   .header {
     &__container {
       padding-right: 20px;
