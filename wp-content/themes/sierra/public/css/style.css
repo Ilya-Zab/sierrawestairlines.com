@@ -131,24 +131,6 @@ ul:not(.rich-container) {
   line-height: 1.4em;
   color: #0a0a0a;
 }
-.rich-container h1,
-.rich-container h2,
-.rich-container h3,
-.rich-container h4,
-.rich-container h5,
-.desc h1,
-.desc h2,
-.desc h3,
-.desc h4,
-.desc h5 {
-  font-family: "NunitoSans", sans-serif, Arial;
-  font-weight: 600;
-  line-height: 1.3em;
-}
-.rich-container h3,
-.desc h3 {
-  font-size: 21px;
-}
 .rich-container a,
 .desc a {
   color: #ce2026;
@@ -498,6 +480,18 @@ textarea {
 
 .article {
   max-width: 800px;
+}
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5 {
+  font-family: "NunitoSans", sans-serif, Arial;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+.article h3 {
+  font-size: 21px;
 }
 
 .blog .h2 {
@@ -1242,11 +1236,11 @@ input[type=radio] {
   .split-section .rich-container {
     max-width: 100%;
   }
-  .split-section .rich-container h3 {
+  .split-section .article h3 {
     font-size: 17px;
   }
-  .split-section .rich-container h2 {
-    font-size: 24px;
+  .split-section .article h2 {
+    font-size: 24px !important;
   }
   .split-section .fleet {
     padding-top: 40px;

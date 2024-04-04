@@ -236,13 +236,15 @@
 
     .rich-container {
       max-width: 100%;
+    }
 
+    .article {
       h3 {
         font-size: 17px;
       }
 
       h2 {
-        font-size: 24px;
+        font-size: 24px !important;
       }
     }
 
