@@ -144,7 +144,6 @@ ul:not(.rich-container) {
   font-family: "NunitoSans", sans-serif, Arial;
   font-weight: 600;
   line-height: 1.3em;
-  color: #3f3f3f;
 }
 .rich-container h3,
 .desc h3 {
@@ -1242,6 +1241,12 @@ input[type=radio] {
   }
   .split-section .rich-container {
     max-width: 100%;
+  }
+  .split-section .rich-container h3 {
+    font-size: 17px;
+  }
+  .split-section .rich-container h2 {
+    font-size: 24px;
   }
   .split-section .fleet {
     padding-top: 40px;
