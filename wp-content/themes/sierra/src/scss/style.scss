@@ -102,7 +102,6 @@ ul:not(.rich-container) {
   }
 
   ul li {
-    margin-bottom: 20px;
     list-style: disc;
   }
 
@@ -114,6 +113,10 @@ ul:not(.rich-container) {
 
   li+br {
     display: none;
+  }
+
+  li {
+    margin-bottom: 20px;
   }
 
   img {

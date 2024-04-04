@@ -142,7 +142,6 @@ ul:not(.rich-container) {
 }
 .rich-container ul li,
 .desc ul li {
-  margin-bottom: 20px;
   list-style: disc;
 }
 .rich-container ol,
@@ -155,6 +154,10 @@ ul:not(.rich-container) {
 .rich-container li + br,
 .desc li + br {
   display: none;
+}
+.rich-container li,
+.desc li {
+  margin-bottom: 20px;
 }
 .rich-container img,
 .desc img {
