@@ -148,7 +148,6 @@ ul:not(.rich-container) {
 }
 .rich-container h3,
 .desc h3 {
-  font-weight: 400;
   font-size: 21px;
 }
 .rich-container a,
