@@ -114,6 +114,13 @@ ul:not(.rich-container) {
   li+br {
     display: none;
   }
+
+  img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: $img-b-radius;
+    overflow: hidden;
+  }
 }
 
 .btn {
