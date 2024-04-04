@@ -131,6 +131,21 @@ ul:not(.rich-container) {
   line-height: 1.4em;
   color: #0a0a0a;
 }
+.rich-container h1,
+.rich-container h2,
+.rich-container h3,
+.rich-container h4,
+.rich-container h5,
+.desc h1,
+.desc h2,
+.desc h3,
+.desc h4,
+.desc h5 {
+  font-family: "NunitoSans", sans-serif, Arial;
+  font-weight: 600;
+  line-height: 1.3em;
+  color: #3f3f3f;
+}
 .rich-container a,
 .desc a {
   color: #ce2026;

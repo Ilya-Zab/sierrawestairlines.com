@@ -92,6 +92,17 @@ ul:not(.rich-container) {
   line-height: 1.4em;
   color: $desc;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $title-font, Arial;
+    font-weight: 600;
+    line-height: 1.3em;
+    color: $title;
+  }
+
   a {
     color: $red;
     transition: .2s ease;
