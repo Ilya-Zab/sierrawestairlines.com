@@ -98,3 +98,31 @@ function sierra_excerpt_more($more)
 	return '...';
 }
 add_filter('excerpt_more', 'sierra_excerpt_more');
+
+/**
+
+ * Filter to change the schema data.
+
+ * Replace $schema_type with schema name like article, review, etc.
+
+ *
+
+ * @param array $entity Snippet Data
+
+ *
+
+ * @return array
+
+ */
+
+add_filter("rank_math/snippet/rich_snippet_{$schema_type}_entity", function ($entity) {
+
+	if (isset($entity['author'])) {
+
+		$entity['@type'] = "YourDesiredTypeHere";
+
+		return $entity;
+	}
+
+	return $entity;
+});
