@@ -142,6 +142,7 @@ ul:not(.rich-container) {
 }
 .rich-container ul li,
 .desc ul li {
+  margin-bottom: 20px;
   list-style: disc;
 }
 .rich-container ol,
