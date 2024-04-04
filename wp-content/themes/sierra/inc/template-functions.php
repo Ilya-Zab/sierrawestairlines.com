@@ -72,7 +72,9 @@ function section_start()
 ?>
     <section class="blog-article pb-12">
         <div class="container">
-            <?php the_content() ?>
+            <div class="rich-container">
+                <?php the_content(); ?>
+            </div>
         </div>
     </section>
 <?php
