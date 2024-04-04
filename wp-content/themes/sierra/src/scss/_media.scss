@@ -177,10 +177,6 @@
     grid-template-columns: auto;
     gap: 60px;
 
-    // &__content p:not(.blog-grid__desc) {
-    //   margin-bottom: 0;
-    // }
-
     &__desc_auth-article {
       margin-bottom: 30px;
     }
@@ -236,6 +232,10 @@
 
     .rich-container {
       max-width: 100%;
+
+      p {
+        margin-bottom: 20px;
+      }
     }
 
     .article {

@@ -164,7 +164,7 @@ ul:not(.rich-container) {
 }
 .rich-container p,
 .desc p {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .btn {
@@ -1236,6 +1236,9 @@ input[type=radio] {
   }
   .split-section .rich-container {
     max-width: 100%;
+  }
+  .split-section .rich-container p {
+    margin-bottom: 20px;
   }
   .split-section .article h3 {
     font-size: 17px;
