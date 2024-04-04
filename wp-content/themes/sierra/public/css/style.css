@@ -162,6 +162,10 @@ ul:not(.rich-container) {
   border-radius: 10px;
   overflow: hidden;
 }
+.rich-container p,
+.desc p {
+  margin-bottom: 15px;
+}
 
 .btn {
   padding: 10px 30px;

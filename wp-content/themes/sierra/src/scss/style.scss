@@ -121,6 +121,10 @@ ul:not(.rich-container) {
     border-radius: $img-b-radius;
     overflow: hidden;
   }
+
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 .btn {
