@@ -1200,9 +1200,6 @@ input[type=radio] {
     grid-template-columns: auto;
     gap: 60px;
   }
-  .blog-grid__content p:not(.blog-grid__desc) {
-    margin-bottom: 0;
-  }
   .blog-grid__desc_auth-article {
     margin-bottom: 30px;
   }
