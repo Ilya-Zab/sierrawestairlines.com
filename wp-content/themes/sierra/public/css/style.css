@@ -146,6 +146,11 @@ ul:not(.rich-container) {
   line-height: 1.3em;
   color: #3f3f3f;
 }
+.rich-container h3,
+.desc h3 {
+  font-weight: 400;
+  font-size: 21px;
+}
 .rich-container a,
 .desc a {
   color: #ce2026;

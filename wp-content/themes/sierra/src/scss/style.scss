@@ -103,6 +103,11 @@ ul:not(.rich-container) {
     color: $title;
   }
 
+  h3 {
+    font-weight: 400;
+    font-size: 21px;
+  }
+
   a {
     color: $red;
     transition: .2s ease;
