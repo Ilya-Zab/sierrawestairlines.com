@@ -75,6 +75,18 @@
     padding-bottom: 80px;
   }
 
+  .carbon-button.reduce-offset {
+    margin-top: -40px;
+  }
+
+  .h2-sub {
+    margin-bottom: 15px;
+  }
+
+  #menu-main-menu {
+    text-align: center;
+  }
+
   .logo {
     margin-right: auto;
     z-index: 101;
@@ -101,7 +113,7 @@
     }
 
     &__btn_mob {
-      display: block;
+      display: inline-block;
     }
 
     &__container {
@@ -110,18 +122,25 @@
     }
   }
 
+  .nav-wrap {
+    padding: 30px 0 50px;
+    overflow: auto;
+    position: fixed;
+    inset: 0;
+    top: 60px;
+    background-color: $custom-white;
+    opacity: 0;
+    transform: translatex(-1000px);
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+    z-index: 100;
+    text-align: center;
+  }
+
   .nav {
-    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    inset: 0;
-    z-index: 100;
-    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
-    transform: translatex(-1000px);
     background: $custom-white;
-    opacity: 0;
 
     &__list {
       margin-bottom: 30px;
@@ -157,10 +176,6 @@
   .blog-grid {
     grid-template-columns: auto;
     gap: 60px;
-
-    &__content p:not(.blog-grid__desc) {
-      margin-bottom: 0;
-    }
 
     &__desc_auth-article {
       margin-bottom: 30px;
@@ -217,6 +232,20 @@
 
     .rich-container {
       max-width: 100%;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .article {
+      h3 {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
     }
 
     // Fleet
@@ -449,22 +478,11 @@
       li {
         font-size: 16px;
       }
+
     }
 
     .sub-menu {
-      position: relative;
-      visibility: visible;
-      opacity: 1;
       display: none;
-      background-color: transparent;
-
-      &:hover {
-        display: block;
-      }
-    }
-
-    a:hover+.sub-menu {
-      display: block;
     }
   }
 
@@ -616,10 +634,6 @@
       margin-bottom: 30px;
     }
 
-    .h2-sub {
-      margin-bottom: 15px;
-    }
-
     .mb-sm-4 {
       margin-bottom: 30px !important;
     }
@@ -714,13 +728,7 @@
     }
   }
 
-  .features-list {
-    &__list {
-      li {
-        width: 100px;
-      }
-    }
-  }
+
 
   .accordion {
     &__body {
@@ -760,10 +768,6 @@
   .cargo-fleet {
     .h2 {
       margin-bottom: 30px;
-    }
-
-    .h2-sub {
-      margin-bottom: 15px;
     }
   }
 
@@ -948,7 +952,8 @@
     &__bottom {
       flex-direction: column;
       row-gap: 30px;
-      text-align: center;
+      margin: 0 auto;
+      max-width: 220px
     }
 
     &__wrap_top {
@@ -981,6 +986,10 @@
     padding-top: 30px;
   }
 
+  .carbon-button.reduce-offset {
+    margin-top: -10px;
+  }
+
   .pb-12 {
     padding-bottom: 40px;
   }
@@ -996,6 +1005,18 @@
   .custom-radio {
     font-size: 14px;
   }
+
+  // Executive Fleet
+  .features-list {
+    &__list {
+      gap: 60px 10px;
+
+      li {
+        width: 120px;
+      }
+    }
+  }
+
 
   .header {
     &__container {

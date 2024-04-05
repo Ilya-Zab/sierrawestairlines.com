@@ -46,6 +46,7 @@ function cf_add_rich_text($field)
     $field->add_fields('rich_text', __('Rich text', 'sierra'), array(
         Field::make('text', 'title', __('Title', 'sierra')),
         Field::make('rich_text', 'text', __('Rich text', 'sierra')),
+        Field::make('checkbox', 'center_mobile', __('Align center for mobile', 'sierra'))
     ));
 }
 
@@ -286,8 +287,15 @@ function cf_add_button($field)
             ->set_width(50),
         Field::make('text', 'button_url', __('Button url', 'sierra'))
             ->set_width(50),
-        Field::make('checkbox', 'is_center', __('Centered', 'sierra')),
+        Field::make('radio', 'alignment', __('Choose Option'))
+            ->set_options(array(
+                'start' => __('Left', 'sierra'),
+                'center' => __('Center', 'sierra'),
+                'end' => __('Right', 'sierra'),
+            ))
+            ->set_default_value('left'),
         Field::make('checkbox', 'reduce_offset', __('Reduce an offset with a previous section', 'sierra')),
+        Field::make('checkbox', 'is_blank', __('Open in new tab', 'sierra')),
     ));
 }
 

@@ -1,4 +1,4 @@
-<div class="titles sub-title-offset <?= $args['is_center'] ? 'text-center' : '' ?>">
+<div class="titles sub-title-offset text-center <?= $args['is_center'] ? '' : 'text-lg-start' ?>">
 
   <?php if ($args['use_h1']) : ?>
     <h1 class="h2 pt-5-c"><?= $args['title'] ?></h1>

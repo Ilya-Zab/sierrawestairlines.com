@@ -73,6 +73,7 @@ ul:not(.rich-container) {
 }
 
 .h2-sub {
+  margin-bottom: 30px;
   font-size: 36px;
   color: $title;
 }
@@ -112,6 +113,21 @@ ul:not(.rich-container) {
 
   li+br {
     display: none;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: $img-b-radius;
+    overflow: hidden;
+  }
+
+  p {
+    margin-bottom: 25px;
   }
 }
 
@@ -267,6 +283,8 @@ textarea {
   position: relative;
   z-index: 100;
 
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
   &__container {
     margin: 0 auto;
     max-width: 1440px;
@@ -286,8 +304,6 @@ textarea {
   }
 }
 
-
-
 .header__sticky {
   padding: 10px 0;
   height: auto;
@@ -295,12 +311,9 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav {
-
   &__list {
     margin: 0;
     padding: 0;
@@ -358,10 +371,20 @@ textarea {
   }
 }
 
+
 .hero {
+
   position: relative;
   min-height: 100vh;
   width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
 
   &__h1 {
     margin-bottom: 40px;
@@ -370,6 +393,8 @@ textarea {
 
   &__container {
     height: 100vh;
+    position: relative;
+    z-index: 3;
 
     .row div {
       z-index: 2;
@@ -488,6 +513,20 @@ textarea {
 
 .article {
   max-width: 800px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $title-font, Arial;
+    font-weight: 600;
+    line-height: 1.3em;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
 }
 
 .blog {
@@ -915,10 +954,6 @@ textarea {
 }
 
 .metro-3 {
-  .h2-sub {
-    margin-bottom: 30px;
-  }
-
   .desc:last-child {
     margin-bottom: 0;
   }
@@ -1174,6 +1209,10 @@ input[type='radio'] {
 
 .wpcf7-not-valid-tip {
   font-size: 16px;
+}
+
+.wpcf7-spinner {
+  position: absolute;
 }
 
 // Footer

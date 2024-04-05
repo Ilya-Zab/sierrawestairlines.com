@@ -15,7 +15,7 @@
                         <h3 class="h3">
                             <?= $item['text'] ?>
                         </h3>
-                        <a href=<?= $item['button_url'] ?> class="text-uppercase btn btn-danger">
+                        <a href=<?= $item['button_url'] ?> class="text-uppercase btn btn-danger" target="_blank">
                             <?= $item['button_text'] ?>
                         </a>
                     </div>
